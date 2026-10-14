@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- assign ph_date = "{date}" -%}
+{%- assign ph_n = "{n}" -%}
+{%- comment -%} The glossary, from _data/LANGUAGE/glossary.yml, sorted A to Z. {%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign terms = site.data[page.lang].glossary | sort_natural: "term" -%}
+{%- assign letters = "" -%}{%- assign az_list = "" -%}
+{%- capture rows -%}
+{%- for e in terms -%}
+{%- assign letter = e.term | slice: 0 | upcase -%}
+{%- assign mark = letter | prepend: "|" | append: "|" -%}
+{%- if letters contains mark -%}{%- assign dt_id = "" -%}{%- else -%}{%- assign letters = letters | append: mark -%}{%- assign az_list = az_list | append: letter | append: " " -%}{%- capture dt_id %} id="letter-{{ letter | downcase }}"{% endcapture -%}{%- endif %}
+        <div id="{{ e.id }}"><dt{{ dt_id }}>{% if e.italic %}<em>{{ e.term }}</em>{% else %}{{ e.term }}{% endif %}</dt><dd>{{ e.definition | markdownify | remove: "<p>" | remove: "</p>" | strip }}</dd></div>
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign az = az_list | split: " " -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        <p class="reviewed">{{ page.note | replace: ph_n, terms.size | replace: ph_date, t.reviewed }}</p>
+      </header>
+
+      <div class="glossary-tools">
+        <nav class="az" aria-label="{{ page.az_label }}">
+          <ul>{% for l in az %}<li><a href="#letter-{{ l | downcase }}">{{ l }}</a></li>{% endfor %}</ul>
+        </nav>
+        <div class="filter js-only">
+          <label for="glossary-filter">{{ page.filter_label }}</label>
+          <input id="glossary-filter" type="search" placeholder="{{ page.filter_placeholder }}">
+        </div>
+      </div>
+      <p id="glossary-count" class="reviewed" aria-live="polite"></p>
+
+      <dl class="glossary">
+{{ rows }}
+      </dl>
+    </div>

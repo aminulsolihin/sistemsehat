@@ -1,6 +1,6 @@
 """Content report: how readable the built site is, and where the writing breaks WRITING-GUIDE.md.
 
-    python3 src/build.py && python3 tools/content_report.py
+    bundle exec jekyll build && python3 tools/content_report.py     # reads _site/
 
 Advisory: it lists things to look at and never fails a build, because good writing is a judgement.
 Add --strict to fail when a rule has no example or an abbreviation is not in the glossary.
@@ -11,7 +11,7 @@ import re
 import sys
 from pathlib import Path
 
-DOCS = Path(__file__).resolve().parent.parent / "docs"
+DOCS = Path(__file__).resolve().parent.parent / "_site"
 # names everyone in the audience knows, and edition codes such as AMD1 in "IEC 60601-1:2005+AMD1:2012"
 ALLOWED = {"EN", "ID", "US", "PLN", "NEST360", "BPJS"}
 PAGES = ["index", "guides", "specification", "pricing", "process", "regulation", "technology",
@@ -87,7 +87,7 @@ def main():
     if paths:
         DOCS = Path(paths[0])
     if not DOCS.exists():
-        sys.exit("docs/ does not exist. Run: python3 src/build.py")
+        sys.exit(f"{DOCS} does not exist. Build the site first: bundle exec jekyll build")
     problems = 0
     for lang, base in (("en", DOCS), ("id", DOCS / "id")):
         gloss = (base / "glossary.html").read_text(encoding="utf-8")

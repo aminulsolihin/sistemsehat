@@ -1,0 +1,16 @@
+{%- comment -%} The table of dossiers in preparation, from _data/LANGUAGE/dossiers.yml. {%- endcomment -%}
+{%- assign d = site.data[page.lang].dossiers -%}
+<div class="table-wrap">
+  <table role="table">
+    <thead role="rowgroup">
+      <tr role="row">{% for c in d.columns %}<th scope="col" role="columnheader">{{ c }}</th>{% endfor %}</tr>
+    </thead>
+    <tbody role="rowgroup">
+{%- for row in d.rows %}
+      <tr role="row"><th scope="row" role="rowheader">{{ row.area }}</th><td role="cell" data-label="{{ d.columns[1] }}">{{ row.dossiers }}</td><td role="cell" data-label="{{ d.columns[2] }}">
+        {%- if row.status == "in-preparation" -%}<span class="status">{{ d.in_preparation }}</span>
+        {%- else -%}{{ row.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}{%- endif -%}</td></tr>
+{%- endfor %}
+    </tbody>
+  </table>
+</div>

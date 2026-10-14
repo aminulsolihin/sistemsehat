@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- assign ph_n = "{n}" -%}
+{%- comment -%} The list of guides. Cards come from the guide pages themselves (question, summary, icon). {%- endcomment -%}
+{%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" | sort: "order" -%}
+{%- assign total = 0 -%}
+{%- for g in guides -%}{%- assign total = total | plus: g.rules.size -%}{%- endfor -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | replace: ph_n, total }}</p>
+        <p class="reviewed">{{ page.note }}</p>
+      </header>
+
+      <div class="section-head">
+        <h2 class="section-title">{{ page.main_heading }}</h2>
+      </div>
+      <ul class="cards cards-3">
+{%- for g in guides limit: 3 %}
+{% include guide-card.html guide=g heading="h2" %}
+{%- endfor %}
+      </ul>
+
+      <div class="section-head section-head-sub">
+        <h2 class="section-title">{{ page.support_heading }}</h2>
+      </div>
+      <ul class="cards cards-2">
+{%- for g in guides offset: 3 %}
+{% include guide-card.html guide=g heading="h2" %}
+{%- endfor %}
+      </ul>
+
+      <section class="related related-spaced" aria-labelledby="related-title">
+        <h2 id="related-title">{{ page.related_heading }}</h2>
+        <ul class="link-list">
+{%- for item in page.related %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a><span>{{ item.text }}</span></li>
+{%- endfor %}
+        </ul>
+      </section>
+    </div>

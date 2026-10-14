@@ -1,0 +1,384 @@
+# One entry per term. Keep the id the same in both languages: links and the language switch use it.
+# find: the words that mark the term in the guides. The first one on each page becomes a link here.
+#   Write them as they appear. All lowercase matches any capitals; with capitals it must match exactly.
+# italic: true for a term in another language (shown in italics).
+# The page sorts the terms; their order here does not matter.
+
+- id: acceptance-test
+  term: Uji terima
+  definition: >-
+    Pemeriksaan saat alat diserahkan, untuk memastikan alat berfungsi dan sesuai kontrak sebelum
+    pembeli menerimanya.
+  find:
+    - uji terima
+
+- id: adverse-event
+  term: Kejadian tidak diinginkan (KTD)
+  definition: Kejadian ketika alat mencederai, atau dapat mencederai, pasien atau pengguna.
+  find:
+    - kejadian tidak diinginkan
+    - KTD
+
+- id: akd-and-akl
+  term: AKD dan AKL
+  definition: >-
+    Huruf awal nomor izin edar alat kesehatan di Indonesia. AKD berarti alat dibuat di dalam
+    negeri; AKL berarti alat impor.
+  find:
+    - AKD
+    - AKL
+
+- id: alkes
+  term: Alkes
+  definition: Singkatan dari alat kesehatan.
+  find:
+    - Alkes
+
+- id: amendment
+  term: Adendum
+  definition: >-
+    Perubahan resmi atas dokumen pemilihan, disampaikan kepada semua peserta sebelum batas waktu
+    penawaran.
+  find:
+    - adendum
+
+- id: asean
+  term: ASEAN
+  definition: >-
+    Perhimpunan Bangsa-Bangsa Asia Tenggara. ASEAN Medical Device Directive menetapkan kelas
+    risiko A sampai D yang diikuti Indonesia.
+  find:
+    - ASEAN
+
+- id: bidder
+  term: Peserta
+  definition: Pelaku usaha yang mengajukan penawaran dalam tender.
+  find:
+    - peserta
+
+- id: calibration
+  term: Kalibrasi
+  definition: >-
+    Pemeriksaan hasil ukur alat terhadap acuan yang diketahui, dan penyetelan bila perlu.
+  find:
+    - kalibrasi
+    - dikalibrasi
+    - mengalibrasi
+
+- id: cdakb
+  term: CDAKB
+  definition: >-
+    Cara Distribusi Alat Kesehatan yang Baik: pedoman yang wajib diterapkan distributor alat
+    kesehatan di Indonesia.
+  find:
+    - CDAKB
+
+- id: commissioning
+  term: Uji fungsi
+  definition: Pengujian alat yang baru dipasang untuk memastikan alat berfungsi sebelum dipakai.
+  find:
+    - uji fungsi
+
+- id: consumables
+  term: Bahan habis pakai
+  definition: >-
+    Barang yang dihabiskan alat saat dipakai, seperti reagen, sensor, filter, atau kertas.
+  find:
+    - bahan habis pakai
+
+- id: cpakb
+  term: CPAKB
+  definition: >-
+    Cara Pembuatan Alat Kesehatan yang Baik: pedoman produksi yang disertifikasi untuk produsen
+    alat kesehatan di Indonesia.
+  find:
+    - CPAKB
+
+- id: e-watch-alkes
+  term: e-Watch Alkes
+  definition: >-
+    Sistem pemantauan nasional alat kesehatan yang dikelola Kementerian Kesehatan. Masalah pada
+    alat dilaporkan di sini.
+  find:
+    - e-Watch Alkes
+
+- id: ecri
+  term: ECRI
+  definition: >-
+    Organisasi nirlaba independen di Amerika Serikat yang menguji alat kesehatan dan melaporkan
+    keselamatannya.
+  find:
+    - ECRI
+
+- id: emdn
+  term: EMDN
+  definition: >-
+    European Medical Device Nomenclature: sistem penamaan jenis alat kesehatan yang terutama
+    dipakai di negara-negara Eropa.
+  find:
+    - EMDN
+
+- id: gmdn
+  term: GMDN
+  definition: >-
+    Global Medical Device Nomenclature: sistem penamaan jenis alat kesehatan yang dipakai
+    otoritas regulasi di banyak negara.
+  find:
+    - GMDN
+
+- id: hps
+  term: HPS
+  definition: >-
+    Harga perkiraan sendiri: perkiraan harga yang disusun pembeli pemerintah sebelum tender,
+    untuk menilai harga penawaran.
+  find:
+    - HPS
+
+- id: hta
+  term: HTA
+  definition: >-
+    Penilaian teknologi kesehatan (<em lang="en">health technology assessment</em>): telaah
+    terstruktur atas hasil dan biaya suatu teknologi, untuk memutuskan apakah sistem kesehatan
+    perlu membiayainya.
+  find:
+    - HTA
+    - penilaian teknologi kesehatan
+
+- id: iec
+  term: IEC
+  definition: >-
+    International Electrotechnical Commission. Lembaga ini menerbitkan standar keselamatan untuk
+    peralatan listrik medis, seperti IEC 60601-1.
+  find:
+    - IEC
+
+- id: inaproc-katalog-elektronik
+  term: INAPROC Katalog Elektronik
+  definition: Katalog elektronik nasional untuk pengadaan pemerintah, dikelola LKPP.
+  find:
+    - INAPROC Katalog Elektronik
+
+- id: info-alkes
+  term: Info Alkes
+  definition: >-
+    Basis data publik Kementerian Kesehatan tentang alat kesehatan, produsen, dan distributor
+    yang terdaftar.
+  find:
+    - Info Alkes
+
+- id: ipsrs
+  term: IPSRS
+  definition: >-
+    Instalasi Pemeliharaan Sarana Rumah Sakit: unit rumah sakit yang merawat peralatan dan
+    bangunan.
+  find:
+    - IPSRS
+
+- id: iso
+  term: ISO
+  definition: >-
+    International Organization for Standardization. Lembaga ini menerbitkan standar seperti ISO
+    13485 tentang manajemen mutu produsen alat kesehatan.
+  find:
+    - ISO
+
+- id: ivd
+  term: IVD
+  definition: >-
+    Alat kesehatan diagnostik in vitro: alat untuk menguji sampel dari tubuh, seperti darah atau
+    urine.
+  find:
+    - IVD
+    - diagnostik in vitro
+
+- id: izin-edar
+  term: Izin edar
+  definition: >-
+    Izin dari Kementerian Kesehatan yang wajib dimiliki alat kesehatan sebelum boleh dijual di
+    Indonesia.
+  find:
+    - izin edar
+
+- id: jisdor
+  term: JISDOR
+  definition: >-
+    Jakarta Interbank Spot Dollar Rate: kurs referensi harian rupiah terhadap dolar Amerika
+    Serikat yang diterbitkan Bank Indonesia.
+  find:
+    - JISDOR
+
+- id: jkn
+  term: JKN
+  definition: Jaminan Kesehatan Nasional, dikelola BPJS Kesehatan.
+  find:
+    - JKN
+
+- id: lkpp
+  term: LKPP
+  definition: >-
+    Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah: lembaga yang menyusun kebijakan
+    pengadaan pemerintah.
+  find:
+    - LKPP
+
+- id: lot
+  term: Paket
+  definition: >-
+    Bagian tender yang ditawar dan dikontrakkan tersendiri, sering kali satu jenis alat atau
+    satu wilayah. Dalam dokumen berbahasa Inggris disebut <em lang="en">lot</em>.
+  find:
+    - paket
+
+- id: model-specification
+  term: Spesifikasi acuan
+  definition: >-
+    Spesifikasi untuk satu jenis alat yang tidak menyebut merek, sebagai titik awal yang
+    disesuaikan pembeli dengan kebutuhannya.
+  find:
+    - spesifikasi acuan
+
+- id: particular-standard
+  term: Standar khusus
+  definition: >-
+    Standar dalam seri IEC 60601-2 yang memuat persyaratan tambahan untuk satu jenis peralatan
+    listrik medis.
+  find:
+    - standar khusus
+
+- id: pokja-pemilihan
+  term: Pokja Pemilihan
+  definition: >-
+    Kelompok kerja yang menjalankan tender pemerintah: menyusun dokumen pemilihan, menjawab
+    pertanyaan peserta, dan mengevaluasi penawaran.
+  find:
+    - Pokja Pemilihan
+    - Pokja
+
+- id: poned
+  term: PONED
+  definition: >-
+    Pelayanan Obstetri Neonatal Emergensi Dasar: layanan gawat darurat dasar untuk ibu dan bayi
+    baru lahir, di puskesmas yang ditunjuk.
+  find:
+    - PONED
+
+- id: ppk
+  term: PPK
+  definition: >-
+    Pejabat Pembuat Komitmen: pejabat yang menetapkan spesifikasi teknis dan HPS, serta
+    menandatangani dan mengelola kontrak.
+  find:
+    - PPK
+
+- id: pre-bid-meeting
+  term: Pemberian penjelasan
+  definition: >-
+    Rapat tempat pembeli menjelaskan tender dan menjawab pertanyaan calon peserta. Sering
+    disebut *aanwijzing*.
+  find:
+    - pemberian penjelasan
+
+- id: puskesmas
+  term: Puskesmas
+  definition: 'Pusat kesehatan masyarakat: fasilitas yang memberikan pelayanan kesehatan primer.'
+  find:
+    - puskesmas
+
+- id: rated-criteria
+  term: Sistem nilai
+  definition: Metode evaluasi yang memberi skor pada mutu penawaran di samping harganya.
+  find:
+    - sistem nilai
+
+- id: reagent
+  term: Reagen
+  definition: >-
+    Bahan kimia yang dipakai analyzer laboratorium untuk menjalankan tes. Reagen dibeli berulang
+    kali.
+  find:
+    - reagen
+
+- id: reference-price
+  term: Harga acuan
+  definition: >-
+    Kisaran harga suatu alat yang disusun dari sumber yang dikutip, masing-masing dengan
+    cakupannya, untuk menilai harga penawaran.
+  find:
+    - harga acuan
+
+- id: risk-class
+  term: Kelas risiko
+  definition: >-
+    Salah satu dari empat kelas, A sampai D, yang mengelompokkan alat kesehatan dari risiko
+    rendah sampai tinggi.
+  find:
+    - kelas risiko
+
+- id: supplier
+  term: Penyedia
+  definition: Pelaku usaha yang menjual dan mengirim barang dalam pengadaan pemerintah.
+  find:
+    - penyedia
+
+- id: test-report
+  term: Laporan uji
+  definition: >-
+    Dokumen dari laboratorium penguji yang menunjukkan bahwa alat telah diuji terhadap suatu
+    standar, beserta hasilnya.
+  find:
+    - laporan uji
+
+- id: tkdn
+  term: TKDN
+  definition: >-
+    Tingkat Komponen Dalam Negeri: persentase kandungan lokal suatu produk yang telah
+    disertifikasi.
+  find:
+    - TKDN
+
+- id: total-cost-of-ownership
+  term: Biaya kepemilikan total
+  definition: >-
+    Seluruh biaya alat selama masa pakainya: pembelian, pengiriman, pemasangan, bahan habis
+    pakai, pemeliharaan, pelatihan, dan penghapusan.
+  find:
+    - biaya kepemilikan total
+
+- id: umdns
+  term: UMDNS
+  definition: >-
+    Universal Medical Device Nomenclature System: sistem penamaan jenis alat kesehatan yang
+    dikelola ECRI.
+  find:
+    - UMDNS
+
+- id: unfpa
+  term: UNFPA
+  definition: >-
+    Dana Kependudukan Perserikatan Bangsa-Bangsa, badan yang menangani kesehatan seksual dan
+    reproduksi.
+  find:
+    - UNFPA
+
+- id: unicef
+  term: UNICEF
+  definition: >-
+    Dana Anak-Anak Perserikatan Bangsa-Bangsa. Lembaga ini membeli alat kesehatan untuk banyak
+    negara dan menerbitkan spesifikasi serta harganya.
+  find:
+    - UNICEF
+
+- id: ups
+  term: UPS
+  definition: >-
+    Uninterruptible power supply: unit baterai yang menjaga alat tetap menyala saat listrik
+    padam.
+  find:
+    - UPS
+
+- id: who
+  term: WHO
+  definition: Organisasi Kesehatan Dunia, badan Perserikatan Bangsa-Bangsa untuk kesehatan.
+  find:
+    - WHO
+    - Organisasi Kesehatan Dunia

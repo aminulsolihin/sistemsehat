@@ -1,0 +1,15 @@
+# Dossiers in preparation: shown on the home page and on the dossiers page.
+# status: in-preparation, or a link to the published dossier, e.g. "[Read it](dossiers/infant-warmer.html)".
+
+columns:
+  - Area
+  - Dossiers
+  - Status
+rows:
+  - area: Newborn care
+    dossiers: One device
+    status: in-preparation
+  - area: Primary care laboratory
+    dossiers: Two analyzers
+    status: in-preparation
+in_preparation: In preparation

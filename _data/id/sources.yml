@@ -1,0 +1,83 @@
+# The Sources page (library.html), one group per heading. Every item is also found by the site search.
+
+- group: Spesifikasi dan daftar alat
+  items:
+    - title: Templat dan panduan pengguna spesifikasi teknis
+      url: https://www.who.int/publications/m/item/user-guide-who-technical-specification-for-medical-devices
+      publisher: Organisasi Kesehatan Dunia (WHO)
+      use: >-
+        Templat berisi lima puluh isian dalam tiga belas bagian. Setiap kajian di sini memakai
+        struktur ini.
+    - title: MeDevIS
+      url: https://medevis.who-healthtechnologies.org/
+      publisher: Organisasi Kesehatan Dunia (WHO)
+      use: >-
+        Lebih dari 2.300 jenis alat, dapat ditelusuri menurut tingkat layanan, unit layanan, dan
+        jenisnya.
+    - title: UNICEF Supply Catalogue
+      url: https://supply.unicef.org/
+      publisher: UNICEF
+      use: >-
+        Spesifikasi lengkap yang ditulis untuk tempat dengan sumber daya terbatas, dengan harga
+        indikatif.
+    - title: Spesifikasi teknis untuk unit perawatan neonatal khusus
+      url: https://www.nhsrcindia.org/sites/default/files/2021-05/Technical%20Specifications%20of%20Medical%20Devices%20for%20Special%20Neonatal%20Care%20Unit.pdf
+      publisher: National Health Systems Resource Centre, India
+      use: >-
+        Contoh kumpulan spesifikasi acuan nasional, disusun bersama klinisi, insinyur, dan
+        produsen.
+    - title: Daftar alat kesehatan prioritas antarlembaga
+      url: https://www.who.int/publications/i/item/9789241565028
+      publisher: WHO, UNFPA, dan UNICEF
+      use: >-
+        Alat apa yang sesuai untuk tingkat layanan mana, untuk kesehatan ibu, bayi baru lahir,
+        dan anak.
+
+- group: Harga
+  items:
+    - title: Alat bantu pengadaan dan harga acuan
+      url: https://www.theglobalfund.org/en/sourcing-management/procurement-tools
+      publisher: The Global Fund
+      use: >-
+        Harga acuan dan waktu pengiriman per kategori produk, serta perkiraan biaya angkut,
+        asuransi, dan pemeriksaan mutu.
+    - title: INAPROC Katalog Elektronik
+      url: https://katalog.inaproc.id/
+      publisher: LKPP, Indonesia
+      use: Penawaran dari penyedia dalam negeri di katalog elektronik nasional.
+
+- group: Proses dan praktik
+  items:
+    - title: Open contracting for health
+      url: https://www.open-contracting.org/what-is-open-contracting/health/
+      publisher: Open Contracting Partnership
+      use: >-
+        Panduan dan contoh dari berbagai negara tentang publikasi dan pemanfaatan data pengadaan
+        kesehatan.
+    - title: Implementation Toolkit for Small and Sick Newborn Care
+      url: https://www.newborntoolkit.org/
+      publisher: NEST360 dan UNICEF
+      use: >-
+        Panduan praktis yang disusun per tugas, termasuk bagian tentang peralatan dan
+        perbekalan.
+
+- group: Bukti dan keselamatan
+  items:
+    - title: ECRI
+      url: https://home.ecri.org/
+      publisher: ECRI, organisasi nirlaba independen
+      use: >-
+        Evaluasi alat dan daftar tahunan bahaya teknologi kesehatan. Evaluasinya khusus untuk
+        anggota.
+    - title: PubMed
+      url: https://pubmed.ncbi.nlm.nih.gov/
+      publisher: US National Library of Medicine
+      use: Studi yang ditelaah sejawat tentang alat dan teknologi di baliknya.
+    - title: Info Alkes
+      url: https://infoalkes.kemkes.go.id/
+      publisher: Kementerian Kesehatan
+      use: Memastikan alat memiliki izin edar di Indonesia, dan siapa pemasoknya.
+    - title: e-Watch Alkes
+      url: https://e-watch-alkes.kemkes.go.id/
+      publisher: Kementerian Kesehatan
+      use: Sistem pemantauan nasional alat kesehatan.

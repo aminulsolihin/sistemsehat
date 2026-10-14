@@ -1,0 +1,25 @@
+{%- comment -%}
+  A table from YAML: {% include table.html table=page.tables.NAME %}
+  The first cell of each row is the row heading. Cells can use Markdown (links, *italics*).
+  Roles and data-label keep the table's meaning on phones, where each row is shown as a block.
+{%- endcomment -%}
+{%- assign tb = include.table -%}
+<div class="table-wrap">
+  <table role="table">
+    <thead role="rowgroup">
+      <tr role="row">{% for c in tb.columns %}<th scope="col" role="columnheader">{{ c | markdownify | remove: "<p>" | remove: "</p>" | strip }}</th>{% endfor %}</tr>
+    </thead>
+    <tbody role="rowgroup">
+{%- for row in tb.rows %}
+      <tr role="row">
+        {%- for cell in row -%}
+        {%- assign html = cell | markdownify | remove: "<p>" | remove: "</p>" | strip -%}
+        {%- if forloop.first -%}<th scope="row" role="rowheader">{{ html }}</th>
+        {%- else -%}{%- assign i = forloop.index0 -%}<td role="cell" data-label="{{ tb.columns[i] | markdownify | strip_html | strip }}">{{ html }}</td>
+        {%- endif -%}
+        {%- endfor -%}
+      </tr>
+{%- endfor %}
+    </tbody>
+  </table>
+</div>

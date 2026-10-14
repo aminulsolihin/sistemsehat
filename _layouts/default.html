@@ -1,0 +1,171 @@
+{%- comment -%}
+  The page shell: head, header, breadcrumb, guide tabs, footer. Every page uses it.
+  Links are relative (root = path to the language's home, aroot = path to the site root),
+  so the site works at any address and when the built files are opened from a folder.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data[lang].ui -%}
+{%- assign path = page.url -%}
+{%- assign tail = path | slice: -1, 1 -%}
+{%- if tail == "/" -%}{%- assign path = path | append: "index.html" -%}{%- endif -%}
+{%- assign rel = path | remove_first: "/" -%}
+{%- if lang == "id" -%}{%- assign rel = rel | remove_first: "id/" -%}{%- endif -%}
+{%- assign depth = rel | split: "/" | size | minus: 1 -%}
+{%- capture root -%}{%- for i in (1..depth) -%}../{%- endfor -%}{%- endcapture -%}
+{%- assign aroot = root -%}
+{%- if lang == "id" -%}{%- assign aroot = root | append: "../" -%}{%- endif -%}
+{%- if page.noindex -%}{%- assign rel = "index.html" -%}{%- endif -%}
+{%- assign public = site.url | append: site.baseurl | append: "/" -%}
+{%- if page.absolute -%}{%- assign root = public -%}{%- assign aroot = public -%}{%- endif -%}
+{%- assign v = site.time | date: "%s" -%}
+{%- assign guides = site.pages | where: "lang", lang | where: "layout", "guide" | sort: "order" -%}
+{%- assign is_guide = false -%}{%- if page.layout == "guide" -%}{%- assign is_guide = true -%}{%- endif -%}
+{%- assign public_path = rel -%}
+{%- if public_path == "index.html" -%}{%- assign public_path = "" -%}{%- endif -%}
+{%- capture url_en -%}{{ public }}{{ public_path }}{%- endcapture -%}
+{%- capture url_id -%}{{ public }}id/{{ public_path }}{%- endcapture -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{{ site.inline_script_hash }}'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description | strip }}">
+{%- if page.noindex %}
+  <meta name="robots" content="noindex">
+{%- elsif page.crumb == nil %}
+  <link rel="canonical" href="{% if lang == 'id' %}{{ url_id }}{% else %}{{ url_en }}{% endif %}">
+  <link rel="alternate" hreflang="en" href="{{ url_en }}">
+  <link rel="alternate" hreflang="id" href="{{ url_id }}">
+  <link rel="alternate" hreflang="x-default" href="{{ url_en }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SistemSehat">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description | strip }}">
+  <meta property="og:url" content="{% if lang == 'id' %}{{ url_id }}{% else %}{{ url_en }}{% endif %}">
+  <meta property="og:image" content="{{ public }}assets/og-{{ lang }}.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ t.og_alt }}">
+  <meta property="og:locale" content="{% if lang == 'id' %}id_ID{% else %}en_US{% endif %}">
+  <meta property="og:locale:alternate" content="{% if lang == 'id' %}en_US{% else %}id_ID{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+{%- endif %}
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="{{ aroot }}assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ aroot }}assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="{{ aroot }}assets/style.css?v={{ v }}">
+  <script>{{ site.inline_script }}</script>
+{%- if rel == "search.html" %}
+  <script src="{{ aroot }}assets/search-index{% if lang == 'id' %}-id{% endif %}.js?v={{ v }}" defer></script>
+{%- endif %}
+{%- unless page.layout == "glossary" or page.noindex %}
+  <script src="{{ aroot }}assets/terms-{{ lang }}.js?v={{ v }}" defer></script>
+{%- endunless %}
+  <script src="{{ aroot }}assets/site.js?v={{ v }}" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">{{ t.skip }}</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="wordmark" href="{{ root }}index.html">SistemSehat</a>
+      <a class="search-link" href="{{ root }}search.html" aria-label="{{ t.search }}">{% include icon.html name="search" %}</a>
+      <nav class="lang-switch" aria-label="{{ t.lang_label }}">
+        {%- if lang == "en" -%}
+        <span class="lang-current" lang="en" aria-current="true"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></span><a href="{{ aroot }}id/{{ rel }}" lang="id" hreflang="id" title="Bahasa Indonesia"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></a>
+        {%- else -%}
+        <a href="{{ aroot }}{{ rel }}" lang="en" hreflang="en" title="English"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></a><span class="lang-current" lang="id" aria-current="true"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></span>
+        {%- endif -%}
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" hidden><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">{{ t.menu }}</span></button>
+      <div class="site-menu" id="site-menu">
+        <nav aria-label="{{ t.nav_label }}">
+          <ul class="main-nav">
+{%- for item in t.nav %}
+            <li><a href="{{ root }}{{ item.url }}"
+              {%- if page.crumb and item.url == "dossiers.html" %} aria-current="true"
+              {%- elsif item.url == rel and page.crumb == nil %} aria-current="page"
+              {%- elsif item.url == "guides.html" and is_guide %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+{%- endfor %}
+          </ul>
+        </nav>
+        <form class="search" action="{{ root }}search.html" method="get" role="search" aria-label="{{ t.search_label }}">
+          <label class="visually-hidden" for="header-search">{{ t.search_label }}</label>
+          <input id="header-search" type="search" name="q" placeholder="{{ t.search_placeholder }}" aria-keyshortcuts="/">
+          <button type="submit" aria-label="{{ t.search }}">{% include icon.html name="search" %}</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+{%- unless rel == "index.html" or page.noindex %}
+    <div class="wrap">
+      <nav class="crumbs" aria-label="{{ t.crumbs_label }}">
+        <ol><li><a href="{{ root }}index.html">{{ t.home }}</a></li>
+          {%- if page.crumb -%}
+          <li><a href="{{ root }}dossiers.html">{{ t.labels["dossiers.html"] }}</a></li><li aria-current="page">{{ page.crumb }}</li>
+          {%- elsif is_guide -%}
+          <li><a href="{{ root }}guides.html">{{ t.labels["guides.html"] }}</a></li><li aria-current="page">{{ page.label }}</li>
+          {%- else -%}
+          <li aria-current="page">{{ t.labels[rel] }}</li>
+          {%- endif -%}
+        </ol>
+      </nav>
+    </div>
+{%- endunless %}
+{%- if is_guide %}
+    <div class="wrap">
+      <nav class="guide-tabs" aria-label="{{ t.tabs_label }}">
+        <ul>
+{%- for g in guides %}
+          <li><a href="{{ root }}{{ g.name | replace: '.md', '.html' }}"{% if g.url == page.url %} aria-current="page"{% endif %}><span class="g-no">{{ g.number }}</span> {{ g.label }}</a></li>
+{%- endfor %}
+        </ul>
+      </nav>
+    </div>
+{%- endif %}
+{% if lang == "en" %}{{ content | replace: "<em>", '<em lang="id">' }}{% else %}{{ content }}{% endif %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <p class="wordmark">SistemSehat</p>
+        <p>{{ t.footer_about }}</p>
+      </div>
+      <nav aria-label="{{ t.f_guides_label }}">
+        <h2>{{ t.labels["guides.html"] }}</h2>
+        <ul>
+{%- for g in guides %}
+          <li><a href="{{ root }}{{ g.name | replace: '.md', '.html' }}">{{ g.question }}</a></li>
+{%- endfor %}
+        </ul>
+      </nav>
+      <nav aria-label="{{ t.f_tools }}">
+        <h2>{{ t.f_tools }}</h2>
+        <ul>
+          <li><a href="{{ root }}checklist.html">{{ t.labels["checklist.html"] }}</a></li>
+          <li><a href="{{ root }}glossary.html">{{ t.labels["glossary.html"] }}</a></li>
+          <li><a href="{{ root }}library.html">{{ t.labels["library.html"] }}</a></li>
+          <li><a href="{{ root }}search.html">{{ t.labels["search.html"] }}</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="{{ t.f_about_label }}">
+        <h2>{{ t.f_about }}</h2>
+        <ul>
+          <li><a href="{{ root }}about.html">{{ t.f_about_site }}</a></li>
+          <li><a href="{{ root }}about.html#how">{{ t.f_independent }}</a></li>
+          <li><a href="{{ root }}dossiers.html">{{ t.f_dossiers }}</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap footer-legal">
+      <p>{{ t.legal }}</p>
+      <p>&copy; {{ site.time | date: "%Y" }} SistemSehat</p>
+    </div>
+  </footer>
+</body>
+</html>

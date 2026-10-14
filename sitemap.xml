@@ -1,0 +1,21 @@
+---
+layout: null
+---
+{%- assign public = site.url | append: site.baseurl | append: "/" -%}
+{%- assign pages = site.pages | where: "lang", "en" | sort: "name" -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for prefix in (1..2) %}
+{%- for p in pages %}
+{%- unless p.noindex %}
+{%- assign path = p.url | remove_first: "/" %}
+{%- if path == "index.html" %}{% assign path = "" %}{% endif %}
+  <url>
+    <loc>{{ public }}{% if forloop.parentloop.index == 2 %}id/{% endif %}{{ path }}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ public }}{{ path }}"/>
+    <xhtml:link rel="alternate" hreflang="id" href="{{ public }}id/{{ path }}"/>
+  </url>
+{%- endunless %}
+{%- endfor %}
+{%- endfor %}
+</urlset>

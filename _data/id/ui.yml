@@ -1,0 +1,82 @@
+# Words used by the page templates (Indonesian).
+# {n}, {total}, {date} and {label} are filled in by the templates.
+
+reviewed: 11 Oktober 2026
+
+nav:
+  - url: guides.html
+    label: Panduan
+  - url: dossiers.html
+    label: Kajian alat
+  - url: checklist.html
+    label: Daftar periksa
+  - url: glossary.html
+    label: Glosarium
+  - url: library.html
+    label: Sumber rujukan
+  - url: about.html
+    label: Tentang
+
+labels:
+  guides.html: Panduan
+  dossiers.html: Kajian alat
+  checklist.html: Daftar periksa
+  glossary.html: Glosarium
+  library.html: Sumber rujukan
+  about.html: Tentang
+  search.html: Pencarian
+
+skip: Langsung ke konten utama
+nav_label: Menu utama
+crumbs_label: Jejak halaman
+home: Beranda
+guides_label: Panduan
+tabs_label: Rangkaian panduan
+f_guides_label: Semua panduan
+og_alt: >-
+  SistemSehat: Minta alat yang tepat. Bayar harga yang wajar. Jalankan tender yang berhasil.
+search_label: Cari di situs ini
+search_placeholder: Cari prinsip dan istilah
+search: Cari
+menu: Menu
+lang_label: Bahasa
+footer_about: >-
+  Inisiatif independen dan nonkomersial. Tidak terkait dengan atau didukung oleh lembaga
+  pemerintah, pemberi pinjaman, atau produsen mana pun.
+f_tools: Alat bantu
+f_about: Tentang
+f_about_label: Tentang situs ini
+f_about_site: Tentang SistemSehat
+f_independent: Cara menjaga independensi
+f_dossiers: Kajian alat
+legal: >-
+  Panduan di sini bersifat umum dan tidak menggantikan aturan pengadaan yang berlaku di instansi
+  Anda.
+test: Tanyakan
+example: Contoh
+check_count: '{n} dari {total} dicentang'
+check_note: Centang disimpan di peramban ini saja.
+check_clear: Hapus semua centang
+last_reviewed: Terakhir ditinjau {date}
+n_rules: '{n} prinsip'
+reading_time: Sekitar {n} menit membaca
+checklist_for_guide: Daftar periksa panduan ini
+key_points: '{n} prinsip dalam panduan ini'
+related: Terkait
+rel_checklist: '{n} pertanyaan dari panduan ini, untuk dicentang atau dicetak'
+rel_glossary: Penjelasan istilah dan singkatan yang dipakai di sini
+rel_library: Dokumen publik di balik panduan
+rel_dossiers: Ketiga pertanyaan dijawab untuk satu alat
+prev_guide: Panduan sebelumnya
+next_guide: Panduan berikutnya
+finished: Sudah selesai membaca panduan?
+open_checklist: Buka daftar periksa
+pager_label: Panduan lain
+guide_more: Panduan {label_lower}
+k_guide: Panduan
+k_rule: Prinsip {label_lower}
+k_page: Halaman
+library_headers:
+  - Sumber
+  - Penerbit
+  - Gunakan untuk

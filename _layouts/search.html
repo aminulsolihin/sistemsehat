@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- assign ph_n = "{n}" -%}
+{%- comment -%} The search page. The search itself runs in the browser (assets/site.js) over assets/search-index*.js. {%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" -%}
+{%- assign total = 0 -%}
+{%- for g in guides -%}{%- assign total = total | plus: g.rules.size -%}{%- endfor -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | replace: ph_n, total }}</p>
+      </header>
+
+      <form class="search search-large" action="search.html" method="get" role="search" aria-label="{{ page.form_label }}">
+        <label for="page-search">{{ page.field_label }}</label>
+        <div class="search-row">
+          <input id="page-search" type="search" name="q">
+          <button type="submit">{{ t.search }}</button>
+        </div>
+      </form>
+
+      <p id="search-status" class="reviewed" aria-live="polite"></p>
+      <ol id="results" class="results"></ol>
+
+      <noscript>
+        <p>{{ page.noscript | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+      </noscript>
+
+      <div id="search-help" class="prose">
+        <h2>{{ page.try_heading }}</h2>
+        <ul class="chips">
+{%- for word in page.try %}
+          <li><a href="search.html?q={{ word | uri_escape }}">{{ word }}</a></li>
+{%- endfor %}
+        </ul>
+      </div>
+    </div>

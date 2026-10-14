@@ -1,8 +1,9 @@
-"""Checks the built site in docs/. Run after building:
+"""Checks the built site. GitHub runs it after every build (see .github/workflows); to run it yourself:
 
-    python3 src/build.py && python3 tools/check.py
+    bundle exec jekyll build && python3 tools/check.py          # checks _site/
+    python3 tools/check.py path/to/built/site
 
-Exits with an error if anything is broken, so it can run on every push (see .github/workflows).
+Exits with an error if anything is broken, and then the site is not published.
 Python 3.9 or newer, standard library only.
 """
 import base64
@@ -13,7 +14,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 
-DOCS = Path(__file__).resolve().parent.parent / "docs"
+DOCS = Path(__file__).resolve().parent.parent / "_site"
 MAX_TITLE, MAX_DESC = 70, 160
 
 
@@ -63,8 +64,11 @@ class Page(HTMLParser):
 
 
 def main():
+    global DOCS
+    if len(sys.argv) > 1:
+        DOCS = Path(sys.argv[1]).resolve()
     if not DOCS.exists():
-        sys.exit("docs/ does not exist. Run: python3 src/build.py")
+        sys.exit(f"{DOCS} does not exist. Build the site first: bundle exec jekyll build")
     problems = []
     pages = {p: Page() for p in sorted(DOCS.rglob("*.html"))}
     for path, parsed in pages.items():

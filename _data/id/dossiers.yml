@@ -1,0 +1,15 @@
+# Dossiers in preparation: shown on the home page and on the dossiers page.
+# status: in-preparation, or a link to the published dossier, e.g. "[Read it](dossiers/infant-warmer.html)".
+
+columns:
+  - Bidang
+  - Kajian
+  - Status
+rows:
+  - area: Perawatan bayi baru lahir
+    dossiers: Satu alat
+    status: in-preparation
+  - area: Laboratorium layanan primer
+    dossiers: Dua analyzer
+    status: in-preparation
+in_preparation: Sedang disusun

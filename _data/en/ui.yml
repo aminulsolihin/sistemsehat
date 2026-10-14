@@ -1,0 +1,81 @@
+# Words used by the page templates (English).
+# {n}, {total}, {date} and {label} are filled in by the templates.
+
+reviewed: 11 October 2026
+
+nav:
+  - url: guides.html
+    label: Guides
+  - url: dossiers.html
+    label: Dossiers
+  - url: checklist.html
+    label: Checklist
+  - url: glossary.html
+    label: Glossary
+  - url: library.html
+    label: Sources
+  - url: about.html
+    label: About
+
+labels:
+  guides.html: Guides
+  dossiers.html: Dossiers
+  checklist.html: Checklist
+  glossary.html: Glossary
+  library.html: Sources
+  about.html: About
+  search.html: Search
+
+skip: Skip to main content
+nav_label: Main
+crumbs_label: Breadcrumb
+home: Home
+guides_label: Guides
+tabs_label: Guides in this series
+f_guides_label: All guides
+og_alt: 'SistemSehat: Ask for the right device. Pay a fair price. Run a tender that works.'
+search_label: Search this site
+search_placeholder: Search rules and terms
+search: Search
+menu: Menu
+lang_label: Language
+footer_about: >-
+  An independent, non-commercial initiative. Not linked to or endorsed by any government body,
+  lender or manufacturer.
+f_tools: Tools
+f_about: About
+f_about_label: About this site
+f_about_site: About SistemSehat
+f_independent: How it stays independent
+f_dossiers: Device dossiers
+legal: >-
+  The guidance here is general. It does not replace the procurement rules that apply to your
+  organisation.
+test: Ask yourself
+example: Example
+check_count: '{n} of {total} ticked'
+check_note: Ticks are kept in this browser only.
+check_clear: Clear all ticks
+last_reviewed: Last reviewed {date}
+n_rules: '{n} rules'
+reading_time: About {n} min to read
+checklist_for_guide: Checklist for this guide
+key_points: The {n} rules in this guide
+related: Related
+rel_checklist: The {n} questions from this guide, to tick or print
+rel_glossary: Terms and abbreviations used here, explained
+rel_library: The public documents behind the guides
+rel_dossiers: All three questions answered for one device
+prev_guide: Previous guide
+next_guide: Next guide
+finished: Finished the guides?
+open_checklist: Open the checklist
+pager_label: More guides
+guide_more: '{label} guide'
+k_guide: Guide
+k_rule: Rule in {label}
+k_page: Page
+library_headers:
+  - Source
+  - Published by
+  - Use it for

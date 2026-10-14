@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- assign ph_date = "{date}" -%}
+{%- assign ph_n = "{n}" -%}
+{%- comment -%}
+  A guide: heading and summary, the list of rules, the rules themselves (from the "rules" list in the
+  page's front matter), then the page's own text (tables, sources), related links and the pager.
+{%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" | sort: "order" -%}
+{%- assign key = page.number | downcase -%}
+{%- assign n = page.rules | size -%}
+{%- capture rules_html -%}
+{%- for r in page.rules %}
+{% include rule.html rule=r %}
+{%- endfor -%}
+{%- endcapture -%}
+{%- capture guide_html %}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.question }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        <ul class="meta">
+          <li>{{ t.last_reviewed | replace: ph_date, t.reviewed }}</li>
+          <li>{{ t.n_rules | replace: ph_n, n }}</li>
+          <li>READING-TIME</li>
+          <li><a href="checklist.html#guide-{{ key }}">{{ t.checklist_for_guide }}</a></li>
+        </ul>
+      </header>
+
+      <aside class="keypoints" aria-labelledby="keypoints-title">
+        <h2 id="keypoints-title">{{ t.key_points | replace: ph_n, n }}</h2>
+        <ol>
+{%- for r in page.rules %}
+          <li><a href="#rule-{{ r.number | downcase | replace: '.', '-' }}"><span class="rule-no">{{ r.number }}</span> {{ r.heading | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></li>
+{%- endfor %}
+        </ol>
+      </aside>
+      <div class="clauses">
+{{ rules_html }}
+      </div>
+
+      <div class="guide-extra">
+{{ content }}
+      </div>
+
+      <section class="related" aria-labelledby="related-title">
+        <h2 id="related-title">{{ t.related }}</h2>
+        <ul class="link-list">
+          <li><a href="checklist.html#guide-{{ key }}">{{ t.checklist_for_guide }}</a><span>{{ t.rel_checklist | replace: ph_n, n }}</span></li>
+          <li><a href="glossary.html">{{ t.labels["glossary.html"] }}</a><span>{{ t.rel_glossary }}</span></li>
+          <li><a href="library.html">{{ t.labels["library.html"] }}</a><span>{{ t.rel_library }}</span></li>
+          <li><a href="dossiers.html">{{ t.f_dossiers }}</a><span>{{ t.rel_dossiers }}</span></li>
+        </ul>
+      </section>
+{%- for g in guides -%}
+  {%- if g.url == page.url -%}{%- assign here = forloop.index0 -%}{%- endif -%}
+{%- endfor -%}
+{%- assign last = guides | size | minus: 1 %}
+      <nav class="pager" aria-label="{{ t.pager_label }}">
+{%- if here > 0 %}{% assign before = here | minus: 1 %}{% assign g = guides[before] %}
+        <a class="pager-prev" href="{{ g.name | replace: '.md', '.html' }}"><span>{{ t.prev_guide }}</span><strong><span class="g-no">{{ g.number }}</span> {{ g.question }}</strong></a>
+{%- endif %}
+{%- if here < last %}{% assign after = here | plus: 1 %}{% assign g = guides[after] %}
+        <a class="pager-next" href="{{ g.name | replace: '.md', '.html' }}"><span>{{ t.next_guide }}</span><strong><span class="g-no">{{ g.number }}</span> {{ g.question }}</strong></a>
+{%- else %}
+        <a class="pager-next" href="checklist.html"><span>{{ t.finished }}</span><strong>{{ t.open_checklist }}</strong></a>
+{%- endif %}
+      </nav>
+    </div>
+{%- endcapture -%}
+{%- comment -%} Reading time: every word on the page, at 200 words a minute in English and 180 in Indonesian. {%- endcomment -%}
+{%- assign words = guide_html | strip_html | replace: "-", " " | replace: "'", " " | replace: "’", " " | number_of_words -%}
+{%- if page.lang == "id" -%}{%- assign wpm = 180.0 -%}{%- else -%}{%- assign wpm = 200.0 -%}{%- endif -%}
+{%- assign minutes = words | divided_by: wpm | round | at_least: 1 -%}
+{%- assign reading = t.reading_time | replace: ph_n, minutes -%}
+{{ guide_html | replace: "READING-TIME", reading }}

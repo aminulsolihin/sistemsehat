@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- assign ph_date = "{date}" -%}
+{%- comment -%} The Sources page (library.html), from _data/LANGUAGE/sources.yml. {%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign h = t.library_headers -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        <p class="reviewed">{{ page.note | replace: ph_date, t.reviewed }}</p>
+      </header>
+
+      <div class="prose library">
+{%- for group in site.data[page.lang].sources %}
+        <h2>{{ group.group }}</h2>
+        <div class="table-wrap">
+          <table role="table">
+            <thead role="rowgroup">
+              <tr role="row">{% for c in h %}<th scope="col" role="columnheader">{{ c }}</th>{% endfor %}</tr>
+            </thead>
+            <tbody role="rowgroup">
+{%- for s in group.items %}
+              <tr role="row"><th scope="row" role="rowheader"><a href="{{ s.url }}">{{ s.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></th><td role="cell" data-label="{{ h[1] }}">{{ s.publisher | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td><td role="cell" data-label="{{ h[2] }}">{{ s.use | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td></tr>
+{%- endfor %}
+            </tbody>
+          </table>
+        </div>
+{%- endfor %}
+      </div>
+    </div>

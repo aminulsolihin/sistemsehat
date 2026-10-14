@@ -1,0 +1,13 @@
+{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- assign ph_label = "{label}" -%}
+{%- assign ph_label_lower = "{label_lower}" -%}
+{%- assign card = include.guide -%}
+{%- assign card_t = site.data[card.lang].ui -%}
+{%- assign card_h = include.heading | default: "h3" -%}
+{%- assign card_lower = card.label | downcase -%}
+          <li class="card">
+            <div class="card-top"><span class="badge">{{ card.number }}</span>{% include icon.html name=card.icon %}</div>
+            <{{ card_h }}><a href="{{ card.name | replace: '.md', '.html' }}">{{ card.question }}</a></{{ card_h }}>
+            <p>{{ card.summary }}</p>
+            <p class="card-more">{{ card_t.guide_more | replace: ph_label_lower, card_lower | replace: ph_label, card.label }}</p>
+          </li>

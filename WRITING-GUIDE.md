@@ -1,6 +1,6 @@
 # SistemSehat writing guide
 
-How to write for SistemSehat, in English and in Bahasa Indonesia. Read it before you add or change a page. The content report (`python3 tools/content_report.py`) checks the parts of this guide that a program can check.
+How to write for SistemSehat, in English and in Bahasa Indonesia. Read it before you add or change a page. GitHub checks the parts of this guide that a program can check every time you publish (see README.md).
 
 ## 1. Who we write for
 
@@ -36,13 +36,16 @@ Every rule in a guide has the same five parts. The build and the checks rely on 
 | Example | One concrete case | One or two sentences. Use the devices we know: an infant warmer, a laboratory analyzer, a puskesmas, a district hospital. Mark made-up figures "(Illustrative figures.)". |
 | Ask yourself | One question to check your own work | A single question the reader can answer with yes/no, a name, a number or a document. It appears again on the checklist. |
 
-In `src/content_en.py` and `src/content_id.py`, a rule looks like this:
+In each guide file (for example `pricing.md` and `id/pricing.md`), a rule looks like this:
 
-```python
-clause("2.2", "Count the cost over the device's whole life",
-       ["The purchase price is only part of the cost. ..."],          # explanation
-       "What will this device cost each year once it is in use?",     # Ask yourself
-       "A puskesmas that runs 20 tests a day ..."),                   # Example
+```yaml
+  - number: "2.2"
+    heading: Count the cost over the device's whole life
+    explanation: >-
+      The purchase price is only part of the cost. ...
+    example: >-
+      A puskesmas that runs 20 tests a day ...
+    ask: What will this device cost each year once it is in use?
 ```
 
 ## 5. Words we use
@@ -73,8 +76,8 @@ Spelling in English is British ("authorisation", "organisation"), except "analyz
 ## 6. Abbreviations and terms
 
 - **Every abbreviation must be in the glossary**, in both languages, with the same id. The content report lists any that are missing.
-- **You do not need to link terms by hand.** The build links the first use of each glossary term on every page to its definition, with a dotted underline and a tooltip. To make this work, add the patterns that find the term (for example `r"\bHPS\b"`) to the glossary entry.
-- **Indonesian words on English pages** go in `<em>`: `<em>izin edar</em>`. The build marks them as Indonesian so screen readers pronounce them correctly.
+- **You do not need to link terms by hand.** The first use of each glossary term on every page links to its definition, with a dotted underline and a tooltip. To make this work, list the words that mark the term under `find:` in the glossary entry (for example `HPS`, or `reagent` and `reagents`).
+- **Indonesian words on English pages** go in single asterisks: `*izin edar*`. The site marks them as Indonesian so screen readers pronounce them correctly.
 - **English words on Indonesian pages** that have no common Indonesian equivalent get `<em lang="en">`, as in `<em lang="en">health technology assessment</em>`. Device names used in Indonesian catalogues (infant warmer, analyzer) are written normally.
 
 ## 7. Numbers, money and dates
@@ -91,7 +94,7 @@ Indonesian follows EYD edisi V and KBBI.
 ## 8. Facts and sources
 
 - Every figure and every requirement comes from a public document, and the page cites it.
-- Regulations change. Name the regulation and its year, give the date you checked it, and update "Last reviewed" (`REVIEWED` at the top of each content file) when you check again.
+- Regulations change. Name the regulation and its year, give the date you checked it, and update "Last reviewed" (`reviewed:` in `_data/en/ui.yml` and `_data/id/ui.yml`) when you check again.
 - Examples are illustrative unless a source is cited. Say so.
 - Never write about a tender that is still being evaluated, and never rate a brand.
 
@@ -107,8 +110,7 @@ Indonesian follows EYD edisi V and KBBI.
 
 ## 11. Before you publish
 
-1. `python3 src/build.py`
-2. `python3 tools/check.py`: links, anchors, both languages, titles.
-3. `python3 tools/content_report.py`: long sentences, words to replace, abbreviations, rules without an example.
-4. Read the changed page aloud, in both languages. If you stumble, rewrite.
-5. For a new or changed rule, ask someone who does that job (a PPK, a clinician, a technician) to read it.
+1. Make the change in both languages.
+2. After you commit, open the **Actions** tab. The check covers links, anchors, both languages and titles, and fails on a rule without an example or an abbreviation missing from the glossary. Open the finished run to see the content report: long sentences and words to replace.
+3. Open the changed page on the live site and read it aloud, in both languages. If you stumble, rewrite.
+4. For a new or changed rule, ask someone who does that job (a PPK, a clinician, a technician) to read it.

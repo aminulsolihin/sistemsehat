@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{%- comment -%} A page of text written in Markdown, such as About and Dossiers. {%- endcomment -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+{%- if page.lead %}
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+{%- endif %}
+{%- if page.note %}
+        <p class="reviewed">{{ page.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+{%- endif %}
+      </header>
+
+      <div class="prose">
+{{ content }}
+      </div>
+    </div>

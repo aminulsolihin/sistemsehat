@@ -1,0 +1,26 @@
+---
+title: Page not found | SistemSehat
+description: The page you asked for is not on SistemSehat.
+lang: en
+layout: default
+noindex: true
+absolute: true
+---
+{%- assign home = site.url | append: site.baseurl | append: "/" -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>Page not found</h1>
+        <p class="lead">The page may have moved, or the address may have a typo.</p>
+        <p class="lead" lang="id">Halaman tidak ditemukan. Mungkin halaman sudah dipindahkan, atau ada salah ketik pada alamatnya.</p>
+      </header>
+      <div class="prose">
+        <ul class="link-list">
+          <li><a href="{{ home }}index.html">Home</a><span>Start from the job in front of you</span></li>
+          <li lang="id"><a href="{{ home }}id/index.html">Beranda</a><span>Mulai dari pekerjaan yang sedang Anda hadapi</span></li>
+          <li><a href="{{ home }}guides.html">Guides</a><span>Five guides and their rules</span></li>
+          <li lang="id"><a href="{{ home }}id/guides.html">Panduan</a><span>Lima panduan beserta prinsipnya</span></li>
+          <li><a href="{{ home }}search.html">Search</a><span>Find a rule or a term</span></li>
+          <li lang="id"><a href="{{ home }}id/search.html">Pencarian</a><span>Cari prinsip atau istilah</span></li>
+        </ul>
+      </div>
+    </div>

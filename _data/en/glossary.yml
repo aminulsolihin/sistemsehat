@@ -1,0 +1,408 @@
+# One entry per term. Keep the id the same in both languages: links and the language switch use it.
+# find: the words that mark the term in the guides. The first one on each page becomes a link here.
+#   Write them as they appear. All lowercase matches any capitals; with capitals it must match exactly.
+# italic: true for a term in another language (shown in italics).
+# The page sorts the terms; their order here does not matter.
+
+- id: acceptance-test
+  term: Acceptance test
+  definition: >-
+    The check at delivery that the device works and meets the contract, before the buyer accepts
+    it. In Indonesian: *uji terima*.
+  find:
+    - acceptance testing
+    - acceptance tests
+    - acceptance test
+
+- id: adverse-event
+  term: Adverse event
+  definition: >-
+    An incident in which a device harms, or could harm, a patient or a user. In Indonesian:
+    *kejadian tidak diinginkan* (KTD).
+  find:
+    - adverse events
+    - adverse event
+
+- id: akd-and-akl
+  term: AKD and AKL
+  definition: >-
+    The letters at the start of an Indonesian marketing authorisation number. AKD means the
+    device is made in Indonesia; AKL means it is imported.
+  find:
+    - AKD
+    - AKL
+
+- id: alkes
+  term: Alkes
+  italic: true
+  definition: Short for *alat kesehatan*, the Indonesian term for medical devices.
+  find:
+    - Alkes
+
+- id: amendment
+  term: Amendment
+  definition: >-
+    A formal change to a bidding document, sent to every bidder before the deadline. In
+    Indonesian: *adendum*.
+  find:
+    - amendments
+    - amendment
+
+- id: asean
+  term: ASEAN
+  definition: >-
+    Association of Southeast Asian Nations. Its Medical Device Directive sets the A to D risk
+    classes that Indonesia follows.
+  find:
+    - ASEAN
+
+- id: bidder
+  term: Bidder
+  definition: 'A company that submits a bid in a tender. In Indonesian: *peserta*.'
+  find:
+    - bidders
+    - bidder
+
+- id: calibration
+  term: Calibration
+  definition: >-
+    Checking a device's measurements against a known reference, and adjusting it if needed.
+  find:
+    - calibrate
+    - calibrated
+    - calibration
+
+- id: cdakb
+  term: CDAKB
+  definition: >-
+    *Cara Distribusi Alat Kesehatan yang Baik*: good distribution practice for medical devices,
+    which distributors in Indonesia must follow.
+  find:
+    - CDAKB
+
+- id: commissioning
+  term: Commissioning
+  definition: >-
+    Setting up a newly installed device and testing that it works before it is used. In
+    Indonesian: *uji fungsi*.
+  find:
+    - commissioning
+
+- id: consumables
+  term: Consumables
+  definition: >-
+    Items a device uses up, such as reagents, sensors, filters or paper. In Indonesian: *bahan
+    habis pakai*.
+  find:
+    - consumables
+
+- id: cpakb
+  term: CPAKB
+  definition: >-
+    *Cara Pembuatan Alat Kesehatan yang Baik*: good manufacturing practice for medical devices,
+    certified for manufacturers in Indonesia.
+  find:
+    - CPAKB
+
+- id: e-watch-alkes
+  term: e-Watch Alkes
+  definition: >-
+    Indonesia's national monitoring system for medical devices, run by the Ministry of Health.
+    Problems with devices are reported here.
+  find:
+    - e-Watch Alkes
+
+- id: ecri
+  term: ECRI
+  definition: >-
+    An independent nonprofit organisation in the United States that tests medical devices and
+    reports on their safety.
+  find:
+    - ECRI
+
+- id: emdn
+  term: EMDN
+  definition: >-
+    European Medical Device Nomenclature: a system for naming types of device, used mostly in
+    European countries.
+  find:
+    - EMDN
+
+- id: gmdn
+  term: GMDN
+  definition: >-
+    Global Medical Device Nomenclature: a system for naming types of device, used by regulators
+    in many countries.
+  find:
+    - GMDN
+
+- id: hps
+  term: HPS
+  definition: >-
+    *Harga perkiraan sendiri*: the cost estimate a government buyer prepares before a tender. It
+    is used to judge the prices offered.
+  find:
+    - HPS
+
+- id: hta
+  term: HTA
+  definition: >-
+    Health technology assessment: a structured review of what a technology achieves and what it
+    costs. It is used to decide whether a health system should pay for it.
+  find:
+    - HTA
+    - health technology assessment
+
+- id: iec
+  term: IEC
+  definition: >-
+    International Electrotechnical Commission. It publishes safety standards for electrical
+    medical equipment, such as IEC 60601-1.
+  find:
+    - IEC
+
+- id: inaproc-katalog-elektronik
+  term: INAPROC Katalog Elektronik
+  definition: Indonesia's national electronic catalogue for government purchasing, run by LKPP.
+  find:
+    - INAPROC Katalog Elektronik
+
+- id: info-alkes
+  term: Info Alkes
+  definition: >-
+    The Ministry of Health's public database of registered medical devices, manufacturers and
+    distributors.
+  find:
+    - Info Alkes
+
+- id: ipsrs
+  term: IPSRS
+  definition: >-
+    *Instalasi Pemeliharaan Sarana Rumah Sakit*: the hospital unit that maintains equipment and
+    buildings.
+  find:
+    - IPSRS
+
+- id: iso
+  term: ISO
+  definition: >-
+    International Organization for Standardization. It publishes standards such as ISO 13485 on
+    quality management for device manufacturers.
+  find:
+    - ISO
+
+- id: ivd
+  term: IVD
+  definition: >-
+    In vitro diagnostic device: a device that tests samples taken from the body, such as blood
+    or urine.
+  find:
+    - IVD
+    - in vitro diagnostic
+
+- id: izin-edar
+  term: Izin edar
+  italic: true
+  definition: >-
+    Marketing authorisation. A medical device needs one from the Ministry of Health before it
+    can be sold in Indonesia.
+  find:
+    - izin edar
+    - marketing authorisation
+
+- id: jisdor
+  term: JISDOR
+  definition: >-
+    Jakarta Interbank Spot Dollar Rate: the daily reference rate for the rupiah against the US
+    dollar, published by Bank Indonesia.
+  find:
+    - JISDOR
+
+- id: jkn
+  term: JKN
+  definition: >-
+    *Jaminan Kesehatan Nasional*: Indonesia's national health insurance, run by BPJS Kesehatan.
+  find:
+    - JKN
+
+- id: lkpp
+  term: LKPP
+  definition: >-
+    *Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah*: Indonesia's government procurement
+    policy agency.
+  find:
+    - LKPP
+
+- id: lot
+  term: Lot
+  definition: >-
+    A part of a tender that is bid for and awarded separately, often one type of device or one
+    region. In Indonesian: *paket*.
+  find:
+    - lots
+    - lot
+
+- id: model-specification
+  term: Model specification
+  definition: >-
+    A specification for a type of device that names no brand. It is a starting point that buyers
+    adapt to their own needs.
+  find:
+    - model specifications
+    - model specification
+
+- id: particular-standard
+  term: Particular standard
+  definition: >-
+    A standard in the IEC 60601-2 series with extra requirements for one type of medical
+    electrical equipment.
+  find:
+    - particular standards
+    - particular standard
+
+- id: pokja-pemilihan
+  term: Pokja Pemilihan
+  definition: >-
+    The selection working group that runs a government tender. It prepares the bidding document,
+    answers bidders' questions and evaluates the bids.
+  find:
+    - Pokja Pemilihan
+    - Pokja
+
+- id: poned
+  term: PONED
+  definition: >-
+    *Pelayanan Obstetri Neonatal Emergensi Dasar*: basic emergency care for mothers and
+    newborns, offered by designated puskesmas.
+  find:
+    - PONED
+
+- id: ppk
+  term: PPK
+  definition: >-
+    *Pejabat Pembuat Komitmen*: the official who sets the technical specification and the cost
+    estimate (HPS), and signs and manages the contract.
+  find:
+    - PPK
+
+- id: pre-bid-meeting
+  term: Pre-bid meeting
+  definition: >-
+    A meeting where the buyer explains the tender and answers questions from possible bidders.
+    In Indonesian: *pemberian penjelasan*.
+  find:
+    - pre-bid meetings
+    - pre-bid meeting
+
+- id: puskesmas
+  term: Puskesmas
+  italic: true
+  definition: >-
+    *Pusat kesehatan masyarakat*: the community health centre that provides primary care in
+    Indonesia.
+  find:
+    - puskesmas
+
+- id: rated-criteria
+  term: Scoring on quality and price
+  definition: >-
+    An evaluation method that gives points for the quality of a bid as well as its price. In
+    Indonesian: *sistem nilai*.
+  find:
+    - scored on quality
+
+- id: reagent
+  term: Reagent
+  definition: >-
+    A chemical that a laboratory analyzer uses to carry out a test. Reagents are bought again
+    and again.
+  find:
+    - reagents
+    - reagent
+
+- id: reference-price
+  term: Reference price
+  definition: >-
+    A price range for a device, built from cited sources, each with what it includes. It is used
+    to judge the prices offered.
+  find:
+    - reference prices
+    - reference price
+
+- id: risk-class
+  term: Risk class
+  definition: One of four classes, A to D, that group medical devices from low to high risk.
+  find:
+    - risk classes
+    - risk class
+
+- id: supplier
+  term: Supplier
+  definition: >-
+    A company that sells and delivers goods. In Indonesian government procurement: *penyedia*.
+  find:
+    - suppliers
+    - supplier
+
+- id: test-report
+  term: Test report
+  definition: >-
+    A document from a testing laboratory showing that a device was tested against a standard,
+    and the results.
+  find:
+    - test reports
+    - test report
+
+- id: tkdn
+  term: TKDN
+  definition: >-
+    *Tingkat Komponen Dalam Negeri*: the certified share of local content in a product, as a
+    percentage.
+  find:
+    - TKDN
+
+- id: total-cost-of-ownership
+  term: Total cost of ownership
+  definition: >-
+    Everything a device costs over its working life: purchase, delivery, installation,
+    consumables, maintenance, training and disposal.
+  find:
+    - total cost of ownership
+
+- id: umdns
+  term: UMDNS
+  definition: >-
+    Universal Medical Device Nomenclature System: a system for naming types of device,
+    maintained by ECRI.
+  find:
+    - UMDNS
+
+- id: unfpa
+  term: UNFPA
+  definition: >-
+    United Nations Population Fund, the United Nations agency for sexual and reproductive
+    health.
+  find:
+    - UNFPA
+
+- id: unicef
+  term: UNICEF
+  definition: >-
+    United Nations Children's Fund. It buys medical equipment for many countries and publishes
+    specifications and prices.
+  find:
+    - UNICEF
+
+- id: ups
+  term: UPS
+  definition: >-
+    Uninterruptible power supply: a battery unit that keeps a device running during a power cut.
+  find:
+    - UPS
+
+- id: who
+  term: WHO
+  definition: World Health Organization, the United Nations agency for health.
+  find:
+    - WHO
+    - World Health Organization

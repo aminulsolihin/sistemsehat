@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- assign ph_date = "{date}" -%}
+{%- assign ph_n = "{n}" -%}
+{%- assign ph_total = "{total}" -%}
+{%- comment -%} The checklist: every "Ask yourself" question, built from the rules in the guides. {%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" | sort: "order" -%}
+{%- assign total = 0 -%}
+{%- for g in guides -%}{%- assign total = total | plus: g.rules.size -%}{%- endfor -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        <p class="reviewed">{{ page.note | replace: ph_n, total | replace: ph_date, t.reviewed }}</p>
+      </header>
+
+      <div class="checklist">
+        <div class="check-progress" id="check-progress">
+          <p><strong id="check-count">{{ t.check_count | replace: ph_n, 0 | replace: ph_total, total }}</strong><small id="check-note">{{ t.check_note }}</small></p>
+          <button type="button" class="button button-quiet button-small" id="check-clear" disabled>{{ t.check_clear }}</button>
+        </div>
+{%- for g in guides %}
+{%- assign href = g.name | replace: '.md', '.html' %}
+        <section class="check-group" id="guide-{{ g.number | downcase }}">
+          <h2><span class="g-no">{{ g.number }}</span> <a href="{{ href }}">{{ g.question }}</a></h2>
+          <ul class="checks">
+{%- for r in g.rules %}
+{%- assign id = r.number | downcase | replace: '.', '-' %}
+            <li><input type="checkbox" id="c-{{ id }}"><label for="c-{{ id }}"><span class="check-no">{{ r.number }}</span> {{ r.ask | markdownify | remove: "<p>" | remove: "</p>" | strip }}</label><a class="rule-link" href="{{ href }}#rule-{{ id }}">{{ r.heading | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></li>
+{%- endfor %}
+          </ul>
+        </section>
+{%- endfor %}
+      </div>
+    </div>

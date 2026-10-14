@@ -1,0 +1,79 @@
+# The Sources page (library.html), one group per heading. Every item is also found by the site search.
+
+- group: Specifications and lists of devices
+  items:
+    - title: Technical specification template and user guide
+      url: https://www.who.int/publications/m/item/user-guide-who-technical-specification-for-medical-devices
+      publisher: World Health Organization
+      use: >-
+        A template of fifty fields in thirteen sections. Every dossier here uses this structure.
+    - title: MeDevIS
+      url: https://medevis.who-healthtechnologies.org/
+      publisher: World Health Organization
+      use: >-
+        More than 2,300 types of device, which you can browse by level of care, health care unit
+        and type.
+    - title: UNICEF Supply Catalogue
+      url: https://supply.unicef.org/
+      publisher: UNICEF
+      use: >-
+        Full specifications, written for places with limited resources, with indicative prices.
+    - title: Technical specifications for special neonatal care units
+      url: https://www.nhsrcindia.org/sites/default/files/2021-05/Technical%20Specifications%20of%20Medical%20Devices%20for%20Special%20Neonatal%20Care%20Unit.pdf
+      publisher: National Health Systems Resource Centre, India
+      use: >-
+        An example of a national set of model specifications, written with clinicians, engineers
+        and manufacturers.
+    - title: Interagency list of priority medical devices
+      url: https://www.who.int/publications/i/item/9789241565028
+      publisher: WHO, UNFPA and UNICEF
+      use: >-
+        Which devices belong at which level of care, for the health of mothers, newborns and
+        children.
+
+- group: Prices
+  items:
+    - title: Procurement tools and reference prices
+      url: https://www.theglobalfund.org/en/sourcing-management/procurement-tools
+      publisher: The Global Fund
+      use: >-
+        Reference prices and delivery times by product category, and indicative costs for
+        freight, insurance and quality checks.
+    - title: INAPROC Katalog Elektronik
+      url: https://katalog.inaproc.id/
+      publisher: LKPP, Indonesia
+      use: Offers from domestic suppliers in the national e-catalogue.
+
+- group: Process and practice
+  items:
+    - title: Open contracting for health
+      url: https://www.open-contracting.org/what-is-open-contracting/health/
+      publisher: Open Contracting Partnership
+      use: Guides and country examples on publishing and using health procurement data.
+    - title: Implementation Toolkit for Small and Sick Newborn Care
+      url: https://www.newborntoolkit.org/
+      publisher: NEST360 and UNICEF
+      use: Practical guidance arranged by task, including a section on equipment and supplies.
+
+- group: Evidence and safety
+  items:
+    - title: ECRI
+      url: https://home.ecri.org/
+      publisher: ECRI, an independent nonprofit
+      use: >-
+        Device evaluations and a yearly list of health technology hazards. Evaluations are for
+        members only.
+    - title: PubMed
+      url: https://pubmed.ncbi.nlm.nih.gov/
+      publisher: US National Library of Medicine
+      use: Peer-reviewed studies of devices and the technology behind them.
+    - title: Info Alkes
+      url: https://infoalkes.kemkes.go.id/
+      publisher: Ministry of Health, Indonesia
+      use: >-
+        Confirming that a device has a marketing authorisation in Indonesia, and who supplies
+        it.
+    - title: e-Watch Alkes
+      url: https://e-watch-alkes.kemkes.go.id/
+      publisher: Ministry of Health, Indonesia
+      use: The national monitoring system for medical devices.

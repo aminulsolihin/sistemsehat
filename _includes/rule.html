@@ -1,0 +1,10 @@
+{%- assign rule = include.rule -%}
+{%- assign rule_t = site.data[page.lang].ui -%}
+        <section class="rule" id="rule-{{ rule.number | downcase | replace: '.', '-' }}">
+          <h2><span class="rule-no">{{ rule.number }}</span> {{ rule.heading | markdownify | remove: "<p>" | remove: "</p>" | strip }}</h2>
+          {{ rule.explanation | markdownify | strip }}
+{%- if rule.example %}
+          <p class="example"><strong>{{ rule_t.example }}</strong> <span>{{ rule.example | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></p>
+{%- endif %}
+          <p class="test"><strong>{{ rule_t.test }}</strong> <span>{{ rule.ask | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></p>
+        </section>

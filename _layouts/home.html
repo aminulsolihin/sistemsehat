@@ -1,0 +1,144 @@
+---
+layout: default
+---
+{%- comment -%} The home page. All its words are in the front matter of index.html (and id/index.html). {%- endcomment -%}
+{%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" | sort: "order" -%}
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>
+{%- for line in page.hero.lines %}
+            <span>{{ line }}</span>
+{%- endfor %}
+          </h1>
+          <p class="hero-lead">{{ page.hero.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          <form class="search search-large" action="search.html" method="get" role="search" aria-label="{{ page.hero.search_label }}">
+            <label for="hero-search">{{ page.hero.search_label }}</label>
+            <div class="search-row">
+              <input id="hero-search" type="search" name="q" placeholder="{{ page.hero.search_placeholder }}">
+              <button type="submit">{{ page.hero.search_button }}</button>
+            </div>
+          </form>
+          <p class="hero-actions">
+            <a class="button" href="guides.html">{{ page.hero.browse }}</a>
+            <a class="button button-quiet" href="checklist.html">{{ page.hero.checklist }}</a>
+          </p>
+        </div>
+
+        <aside class="plate" aria-label="{{ page.glance.label }}">
+          <p class="plate-name">SistemSehat</p>
+          <dl>
+{%- for item in page.glance.items %}
+            <div><dt>{{ item.label }}</dt><dd>{{ item.text }}</dd></div>
+{%- endfor %}
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{{ page.howto.heading }}</h2>
+        </div>
+        <ol class="howto">
+{%- for step in page.howto.steps %}
+          <li>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          </li>
+{%- endfor %}
+        </ol>
+
+        <div class="section-head section-head-sub">
+          <h2>{{ page.tasks.heading }}</h2>
+        </div>
+        <ul class="tasks">
+{%- for item in page.tasks.items %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="band band-tint">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{{ page.questions.heading }}</h2>
+          <a class="all-link" href="guides.html">{{ page.questions.all }}</a>
+        </div>
+        <p class="band-lead">{{ page.questions.lead }}</p>
+        <ul class="cards cards-3">
+{%- for g in guides limit: 3 %}
+{% include guide-card.html guide=g %}
+{%- endfor %}
+        </ul>
+
+        <div class="section-head section-head-sub">
+          <h2>{{ page.support.heading }}</h2>
+        </div>
+        <p class="band-lead">{{ page.support.lead }}</p>
+        <ul class="cards cards-2">
+{%- for g in guides offset: 3 %}
+{% include guide-card.html guide=g %}
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{{ page.tools.heading }}</h2>
+        </div>
+        <ul class="cards cards-3">
+{%- for item in page.tools.items %}
+          <li class="card">
+            <div class="card-top">{% include icon.html name=item.icon %}</div>
+            <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+            <p>{{ item.text }}</p>
+          </li>
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="band band-tint">
+      <div class="wrap two-col">
+        <div>
+          <div class="section-head">
+            <h2>{{ page.dossiers.heading }}</h2>
+            <a class="all-link" href="dossiers.html">{{ page.dossiers.all }}</a>
+          </div>
+          <p>{{ page.dossiers.text }}</p>
+{% include dossier-status.html %}
+        </div>
+        <div>
+          <div class="section-head">
+            <h2>{{ page.updates.heading }}</h2>
+          </div>
+          <ul class="updates">
+{%- for item in page.updates.items %}
+            <li><span class="update-meta">{{ item.date }}<span class="update-type">{{ item.type }}</span></span><a href="{{ item.url }}"{% if item.hreflang %} hreflang="{{ item.hreflang }}"{% endif %}>{{ item.text }}</a></li>
+{%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{{ page.independence.heading }}</h2>
+          <a class="all-link" href="about.html#how">{{ page.independence.all }}</a>
+        </div>
+        <ul class="rules">
+{%- for item in page.independence.items %}
+          <li>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </li>
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
