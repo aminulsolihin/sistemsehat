@@ -6,6 +6,8 @@ reviewed: 11 October 2026
 nav:
   - url: guides.html
     label: Guides
+  - url: articles.html
+    label: Articles
   - url: dossiers.html
     label: Dossiers
   - url: checklist.html
@@ -18,6 +20,7 @@ nav:
     label: About
 
 labels:
+  articles.html: Articles
   guides.html: Guides
   dossiers.html: Dossiers
   checklist.html: Checklist
@@ -79,3 +82,23 @@ library_headers:
   - Source
   - Published by
   - Use it for
+
+# Articles
+k_article: Article
+months:
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
+by: By
+all_articles: All articles
+prev_article: Newer article
+next_article: Older article

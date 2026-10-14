@@ -1,0 +1,3 @@
+{%- comment -%} A date written out in the page's language: 14 October 2026, 14 Oktober 2026. {%- endcomment -%}
+{%- assign date_m = include.date | date: "%-m" | minus: 1 -%}
+<time datetime="{{ include.date | date: '%Y-%m-%d' }}">{{ include.date | date: "%-d" }} {{ site.data[include.lang].ui.months[date_m] }} {{ include.date | date: "%Y" }}</time>

@@ -1,0 +1,6 @@
+{%- comment -%} "About 4 min to read" for a piece of HTML: 200 words a minute in English, 180 in Indonesian. {%- endcomment -%}
+{%- assign rt_words = include.html | strip_html | replace: "-", " " | replace: "'", " " | replace: "’", " " | number_of_words -%}
+{%- if include.lang == "id" -%}{%- assign rt_wpm = 180.0 -%}{%- else -%}{%- assign rt_wpm = 200.0 -%}{%- endif -%}
+{%- assign rt_min = rt_words | divided_by: rt_wpm | round | at_least: 1 -%}
+{%- assign rt_ph = "{n}" -%}
+{{- site.data[include.lang].ui.reading_time | replace: rt_ph, rt_min -}}

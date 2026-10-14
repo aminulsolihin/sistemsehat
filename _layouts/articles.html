@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{%- comment -%} The list of articles in this language, newest first. {%- endcomment -%}
+{%- assign articles = site.posts | where: "lang", page.lang -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+      </header>
+
+      <div class="prose">
+{%- if articles.size == 0 %}
+        <p>{{ page.empty }}</p>
+{%- else %}
+        <ul class="updates article-list">
+{%- for a in articles %}
+          <li>
+            <span class="update-meta">{% include date.html date=a.date lang=page.lang %}<span class="update-type">{% include reading-time.html html=a.content lang=page.lang %}</span></span>
+            <a href="articles/{{ a.url | split: '/' | last }}">{{ a.title }}</a>
+{%- if a.description %}
+            <p>{{ a.description }}</p>
+{%- endif %}
+          </li>
+{%- endfor %}
+        </ul>
+{%- endif %}
+      </div>
+    </div>

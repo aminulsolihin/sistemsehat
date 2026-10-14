@@ -14,6 +14,7 @@ English pages are at the top of the repository, Indonesian pages in `id/` with t
 | --- | --- |
 | A rule in a guide (heading, explanation, example, question) | `specification.md`, `pricing.md`, `process.md`, `regulation.md`, `technology.md`, and the same files in `id/`. The rules are in the `rules:` list at the top. |
 | A table or the text under the rules of a guide | The same file: tables are in `tables:` at the top, the text is below the second `---` line. |
+| An article (the blog) | `_posts/` (English) and `id/_posts/` (Indonesian). See "Write an article" below. |
 | The About or Dossiers page | `about.md`, `dossiers.md` (and `id/`) |
 | The home page | `index.html` and `id/index.html`. All the words are in the top section. |
 | A glossary term | `_data/en/glossary.yml` and `_data/id/glossary.yml` |
@@ -57,6 +58,28 @@ rules:
 - To add a rule, copy a whole block (from `- number:` to `ask:`), change it, and give it the next number. To add a guide, copy a guide file and change `order`, `number` and the rest.
 
 From these lists the site builds the "rules in this guide" box, the checklist, the search index and the rule counts. Nothing else needs updating.
+
+## Write an article
+
+Articles are short pieces on one question, listed newest first on the Articles page.
+
+1. Copy `drafts/article-template.md`.
+2. Save it in `_posts/` with a name in this form: `YEAR-MONTH-DAY-short-name.md`, for example `_posts/2026-11-02-reading-a-test-report.md`. On github.com: **Add file**, **Create new file**, and type `_posts/2026-11-02-reading-a-test-report.md` as the name.
+3. Fill in the top section:
+
+   ```yaml
+   ---
+   title: How to read a test report
+   description: One or two sentences. Shown under the title, in the list of articles and in link previews.
+   author: Aminul Solihin
+   ---
+   ```
+
+   Keep the title to 56 characters or fewer and the description to 160 or fewer; the check fails otherwise.
+4. Write the article below the second `---` in Markdown: a blank line between paragraphs, `## ` for a heading, `[text](address)` for a link, `*word*` for italics. To link to a guide, put `../` in front: `[the pricing guide](../pricing.html#rule-2-2)`.
+5. For the Indonesian version, save a file with **the same name** in `id/_posts/`. The EN | ID switch then moves between the two. An article can also be in one language only; the switch then opens the other language's list of articles.
+
+The date in the file name is the publication date shown on the page. The site adds the reading time, the search entry, the sitemap entry, and links to glossary terms. A file dated in the future is skipped. It appears with the first build after that date, which happens on your next commit (or click **Run workflow** in the Actions tab).
 
 ## Things the site does for you
 

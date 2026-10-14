@@ -32,3 +32,21 @@ exclude:
   - node_modules
   - src
   - docs
+
+# Articles (the blog). An article is a file in _posts/ (English) or id/_posts/ (Indonesian),
+# named YEAR-MONTH-DAY-short-name.md. Give the two languages the same short name.
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: article
+      lang: en
+      permalink: /articles/:title.html
+  - scope:
+      path: "id/_posts"
+      type: posts
+    values:
+      layout: article
+      lang: id
+      permalink: /id/articles/:title.html

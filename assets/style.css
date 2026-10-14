@@ -1034,6 +1034,30 @@ ol {
   margin: -0.6rem 0;
 }
 
+/* Article list: the home page's update list, with a summary under each title */
+
+.prose .article-list {
+  max-width: var(--measure);
+  padding-left: 0;
+}
+
+.article-list a {
+  font-size: 1.2rem;
+}
+
+.article-list p {
+  margin: 0.35rem 0 0;
+  color: var(--ink-soft);
+}
+
+.article-body {
+  max-width: var(--measure);
+}
+
+.article-body h2 {
+  scroll-margin-top: 5rem;
+}
+
 /* ---------- Status indicator ---------- */
 
 .status {

@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- comment -%}
+  One article. The file is in _posts/ (English) or id/_posts/ (Indonesian); see README.md, "Write an article".
+{%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign articles = site.posts | where: "lang", page.lang -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.title }}</h1>
+{%- if page.description %}
+        <p class="lead">{{ page.description }}</p>
+{%- endif %}
+        <ul class="meta">
+          <li>{% include date.html date=page.date lang=page.lang %}</li>
+{%- if page.author %}
+          <li>{{ t.by }} {{ page.author }}</li>
+{%- endif %}
+          <li>{% include reading-time.html html=content lang=page.lang %}</li>
+        </ul>
+      </header>
+
+      <article class="prose article-body">
+{{ content }}
+      </article>
+{%- for a in articles -%}
+  {%- if a.url == page.url -%}{%- assign here = forloop.index0 -%}{%- endif -%}
+{%- endfor -%}
+{%- assign last = articles | size | minus: 1 %}
+      <nav class="pager" aria-label="{{ t.labels['articles.html'] }}">
+{%- if here > 0 %}{% assign i = here | minus: 1 %}{% assign a = articles[i] %}
+        <a class="pager-prev" href="{{ a.url | split: '/' | last }}"><span>{{ t.prev_article }}</span><strong>{{ a.title }}</strong></a>
+{%- endif %}
+{%- if here < last %}{% assign i = here | plus: 1 %}{% assign a = articles[i] %}
+        <a class="pager-next" href="{{ a.url | split: '/' | last }}"><span>{{ t.next_article }}</span><strong>{{ a.title }}</strong></a>
+{%- else %}
+        <a class="pager-next" href="../articles.html"><span>{{ t.labels['articles.html'] }}</span><strong>{{ t.all_articles }}</strong></a>
+{%- endif %}
+      </nav>
+    </div>

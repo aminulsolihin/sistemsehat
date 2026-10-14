@@ -1,0 +1,53 @@
+# Builds the site with Jekyll, checks it, and publishes it on GitHub Pages.
+# Runs on every push to main. Settings > Pages > Build and deployment > Source must be "GitHub Actions".
+# If the check finds a broken link or a missing translation, the site is not published;
+# the message in the Actions tab says what to fix. The live site stays as it was until then.
+name: Build, check and publish the site
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Check links, translations and pages
+        run: python3 tools/check.py _site
+      - name: Check the writing (every rule has an example, every abbreviation is in the glossary)
+        run: python3 tools/content_report.py _site --strict
+      - name: Upload artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

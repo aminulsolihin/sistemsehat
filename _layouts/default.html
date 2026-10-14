@@ -20,6 +20,14 @@
 {%- assign v = site.time | date: "%s" -%}
 {%- assign guides = site.pages | where: "lang", lang | where: "layout", "guide" | sort: "order" -%}
 {%- assign is_guide = false -%}{%- if page.layout == "guide" -%}{%- assign is_guide = true -%}{%- endif -%}
+{%- assign is_article = false -%}{%- if page.layout == "article" -%}{%- assign is_article = true -%}{%- endif -%}
+{%- comment -%} The other language's version. An article may exist in one language only; then the switch opens the other language's article list. {%- endcomment -%}
+{%- assign switch_rel = rel -%}{%- assign has_twin = true -%}
+{%- if is_article -%}
+  {%- if lang == "id" -%}{%- assign other = "en" -%}{%- else -%}{%- assign other = "id" -%}{%- endif -%}
+  {%- assign twin = site.posts | where: "lang", other | where: "slug", page.slug | first -%}
+  {%- unless twin -%}{%- assign switch_rel = "articles.html" -%}{%- assign has_twin = false -%}{%- endunless -%}
+{%- endif -%}
 {%- assign public_path = rel -%}
 {%- if public_path == "index.html" -%}{%- assign public_path = "" -%}{%- endif -%}
 {%- capture url_en -%}{{ public }}{{ public_path }}{%- endcapture -%}
@@ -30,18 +38,20 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{{ site.inline_script_hash }}'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; object-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }}{% if is_article %} | SistemSehat{% endif %}</title>
   <meta name="description" content="{{ page.description | strip }}">
 {%- if page.noindex %}
   <meta name="robots" content="noindex">
 {%- elsif page.crumb == nil %}
   <link rel="canonical" href="{% if lang == 'id' %}{{ url_id }}{% else %}{{ url_en }}{% endif %}">
+{%- if has_twin %}
   <link rel="alternate" hreflang="en" href="{{ url_en }}">
   <link rel="alternate" hreflang="id" href="{{ url_id }}">
   <link rel="alternate" hreflang="x-default" href="{{ url_en }}">
+{%- endif %}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SistemSehat">
-  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:title" content="{{ page.title }}{% if is_article %} | SistemSehat{% endif %}">
   <meta property="og:description" content="{{ page.description | strip }}">
   <meta property="og:url" content="{% if lang == 'id' %}{{ url_id }}{% else %}{{ url_en }}{% endif %}">
   <meta property="og:image" content="{{ public }}assets/og-{{ lang }}.png">
@@ -49,7 +59,9 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{{ t.og_alt }}">
   <meta property="og:locale" content="{% if lang == 'id' %}id_ID{% else %}en_US{% endif %}">
+{%- if has_twin %}
   <meta property="og:locale:alternate" content="{% if lang == 'id' %}en_US{% else %}id_ID{% endif %}">
+{%- endif %}
   <meta name="twitter:card" content="summary_large_image">
 {%- endif %}
   <meta name="theme-color" content="#ffffff">
@@ -74,9 +86,9 @@
       <a class="search-link" href="{{ root }}search.html" aria-label="{{ t.search }}">{% include icon.html name="search" %}</a>
       <nav class="lang-switch" aria-label="{{ t.lang_label }}">
         {%- if lang == "en" -%}
-        <span class="lang-current" lang="en" aria-current="true"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></span><a href="{{ aroot }}id/{{ rel }}" lang="id" hreflang="id" title="Bahasa Indonesia"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></a>
+        <span class="lang-current" lang="en" aria-current="true"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></span><a href="{{ aroot }}id/{{ switch_rel }}" lang="id" hreflang="id" title="Bahasa Indonesia"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></a>
         {%- else -%}
-        <a href="{{ aroot }}{{ rel }}" lang="en" hreflang="en" title="English"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></a><span class="lang-current" lang="id" aria-current="true"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></span>
+        <a href="{{ aroot }}{{ switch_rel }}" lang="en" hreflang="en" title="English"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></a><span class="lang-current" lang="id" aria-current="true"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></span>
         {%- endif -%}
       </nav>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" hidden><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">{{ t.menu }}</span></button>
@@ -87,7 +99,8 @@
             <li><a href="{{ root }}{{ item.url }}"
               {%- if page.crumb and item.url == "dossiers.html" %} aria-current="true"
               {%- elsif item.url == rel and page.crumb == nil %} aria-current="page"
-              {%- elsif item.url == "guides.html" and is_guide %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+              {%- elsif item.url == "guides.html" and is_guide %} aria-current="page"
+              {%- elsif item.url == "articles.html" and is_article %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
 {%- endfor %}
           </ul>
         </nav>
@@ -107,6 +120,8 @@
         <ol><li><a href="{{ root }}index.html">{{ t.home }}</a></li>
           {%- if page.crumb -%}
           <li><a href="{{ root }}dossiers.html">{{ t.labels["dossiers.html"] }}</a></li><li aria-current="page">{{ page.crumb }}</li>
+          {%- elsif is_article -%}
+          <li><a href="{{ root }}articles.html">{{ t.labels["articles.html"] }}</a></li><li aria-current="page">{{ page.title }}</li>
           {%- elsif is_guide -%}
           <li><a href="{{ root }}guides.html">{{ t.labels["guides.html"] }}</a></li><li aria-current="page">{{ page.label }}</li>
           {%- else -%}
@@ -159,6 +174,7 @@
           <li><a href="{{ root }}about.html">{{ t.f_about_site }}</a></li>
           <li><a href="{{ root }}about.html#how">{{ t.f_independent }}</a></li>
           <li><a href="{{ root }}dossiers.html">{{ t.f_dossiers }}</a></li>
+          <li><a href="{{ root }}articles.html">{{ t.labels["articles.html"] }}</a></li>
         </ul>
       </nav>
     </div>

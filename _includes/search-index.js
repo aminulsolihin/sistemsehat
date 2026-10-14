@@ -30,6 +30,10 @@ window.SISTEMSEHAT_INDEX = [
  {"t": {{ s.title | markdownify | strip_html | strip | jsonify }}, "x": {{ text | normalize_whitespace | jsonify }}, "u": "library.html", "k": {{ t.labels["library.html"] | jsonify }}},
 {%- endfor %}
 {%- endfor %}
+{%- assign articles = site.posts | where: "lang", lang %}
+{%- for a in articles %}
+ {"t": {{ a.title | jsonify }}, "x": {{ a.description | append: " " | append: a.content | strip_html | normalize_whitespace | jsonify }}, "u": "articles/{{ a.url | split: '/' | last }}", "k": {{ t.k_article | jsonify }}},
+{%- endfor %}
 {%- assign extra = site.pages | where: "lang", lang | sort: "name" %}
 {%- for p in extra %}{% if p.search %}
  {"t": {{ p.search.title | jsonify }}, "x": {{ p.search.text | jsonify }}, "u": {{ p.name | replace: '.md', '.html' | jsonify }}, "k": {{ t.k_page | jsonify }}},

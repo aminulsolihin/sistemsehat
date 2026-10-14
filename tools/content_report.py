@@ -95,14 +95,15 @@ def main():
         print(f"\n=== {'English' if lang == 'en' else 'Indonesian'}")
         print(f"  {'page':14} {'sentences':>9} {'words/sentence':>15} {'over ' + str(LONG):>8}" + ("  grade" if lang == "en" else ""))
         all_s, longs, avoid_hits, no_example, unknown = [], [], [], [], {}
-        for name in PAGES:
+        articles = sorted(p.relative_to(base).with_suffix("").as_posix() for p in (base / "articles").glob("*.html"))
+        for name in PAGES + articles:
             texts, raw = blocks(base / f"{name}.html")
             s = sentences(texts)
             all_s += s
             lens = [len(x.split()) for x in s] or [0]
             over = [x for x in s if len(x.split()) > LONG]
             longs += [(len(x.split()), name, x) for x in over]
-            print(f"  {name:14} {len(s):9} {sum(lens) / max(1, len(s)):15.1f} {len(over):8}" + (f"  {grade(s):5.1f}" if lang == "en" else ""))
+            print(f"  {name.split("/")[-1][:14]:14} {len(s):9} {sum(lens) / max(1, len(s)):15.1f} {len(over):8}" + (f"  {grade(s):5.1f}" if lang == "en" else ""))
             for rule in re.findall(r'<section class="rule" id="([^"]+)">(.*?)</section>', raw, re.S):
                 if 'class="example"' not in rule[1]:
                     no_example.append(f"{name}#{rule[0]}")
