@@ -12,8 +12,8 @@ nav:
     label: Peraturan
   - url: articles.html
     label: Artikel
-  - url: toolkit.html
-    label: Alat bantu
+  #- url: toolkit.html
+  #  label: Alat bantu
   - url: about.html
     label: Tentang
 
