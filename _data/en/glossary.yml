@@ -574,3 +574,38 @@
     launched in 2022.
   find:
     - BGSi
+
+# Terms added with Guide C (Stanford Biodesign)
+
+- id: need-statement
+  term: Need statement
+  definition: >-
+    A one-sentence description of a clinical need: a way to address a problem, in a population, that
+    achieves a measurable outcome. It names no solution.
+  find:
+    - need statements
+    - need statement
+
+- id: need-criteria
+  term: Need criteria
+  definition: >-
+    What any solution to a need must do, and what would be good to have, based on observations,
+    interviews and research.
+  find:
+    - need criteria
+
+- id: biodesign
+  term: Biodesign
+  definition: >-
+    A method for medical technology innovation developed at Stanford University, in three phases:
+    identify a need, invent a solution, and implement it.
+  find:
+    - Biodesign
+
+- id: hackathon
+  term: Hackathon
+  definition: >-
+    A short event, often a weekend, where mixed teams work on a problem and build first solutions.
+  find:
+    - hackathons
+    - hackathon

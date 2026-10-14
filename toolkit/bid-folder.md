@@ -6,7 +6,7 @@ layout: page
 parent: toolkit.html
 crumb: "Bid document folder"
 heading: "Bid document folder"
-lead: "The documents government buyers check in a medical device bid. Sellers can use it to prepare ([rule D.5](../to-market.html#rule-d-5)); buyers can use it to check ([Guide A](../regulation.html))."
+lead: "The documents government buyers check in a medical device bid. Sellers can use it to prepare ([rule E.5](../to-market.html#rule-e-5)); buyers can use it to check ([Guide A](../regulation.html))."
 note: "Print this page, or copy the table into your own document."
 search:
   title: "Bid document folder"

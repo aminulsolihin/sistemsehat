@@ -543,3 +543,38 @@
     diluncurkan pada 2022.
   find:
     - BGSi
+
+# Istilah yang ditambahkan bersama Panduan C (Stanford Biodesign)
+
+- id: need-statement
+  term: Pernyataan kebutuhan
+  definition: >-
+    Satu kalimat yang menggambarkan kebutuhan klinis: cara mengatasi suatu masalah, pada suatu
+    populasi, yang mencapai hasil terukur. Tidak menyebut solusi. Dalam bahasa Inggris: *need
+    statement*.
+  find:
+    - pernyataan kebutuhan
+
+- id: need-criteria
+  term: Kriteria kebutuhan
+  definition: >-
+    Apa yang wajib dipenuhi setiap solusi atas suatu kebutuhan, dan apa yang sebaiknya ada,
+    berdasarkan pengamatan, wawancara, dan riset.
+  find:
+    - kriteria kebutuhan
+
+- id: biodesign
+  term: Biodesign
+  definition: >-
+    Metode inovasi teknologi kesehatan yang dikembangkan di Stanford University, dalam tiga tahap:
+    menemukan kebutuhan, menciptakan solusi, dan menerapkannya.
+  find:
+    - Biodesign
+
+- id: hackathon
+  term: Hackathon
+  definition: >-
+    Acara singkat, sering selama akhir pekan, tempat tim campuran menggarap suatu masalah dan membuat
+    solusi pertama.
+  find:
+    - hackathon

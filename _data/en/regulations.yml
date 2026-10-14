@@ -10,7 +10,7 @@
   covers: >-
     The main health law. Among much else, it requires a marketing authorisation for medical devices.
   status: In force. Its implementing regulation is Government Regulation 28 of 2024.
-  guides: '[A](regulation.html), [D](to-market.html)'
+  guides: '[A](regulation.html), [E](to-market.html)'
 
 - id: business-licensing
   area: make
@@ -23,7 +23,7 @@
     In force since October 2025. Regulation 11 of 2025 replaced Minister of Health Regulation 14
     of 2021.
   changed: true
-  guides: '[D](to-market.html)'
+  guides: '[E](to-market.html)'
 
 - id: marketing-authorisation
   area: make
@@ -33,7 +33,7 @@
     Marketing authorisation (*izin edar*) for medical devices and in vitro diagnostic devices: risk
     classes, documents, and validity of five years.
   status: In force, as amended by Minister of Health Regulation 26 of 2018.
-  guides: '[A](regulation.html), [D](to-market.html)'
+  guides: '[A](regulation.html), [E](to-market.html)'
 
 - id: clinical-investigation
   area: make
@@ -43,7 +43,7 @@
     Good clinical investigation practice for medical devices: ethics approval, and the Ministry's
     approval for studies before registration.
   status: In force.
-  guides: '[D](to-market.html)'
+  guides: '[E](to-market.html)'
 
 - id: distribution
   area: make
@@ -73,7 +73,7 @@
   status: >-
     In force since September 2025. It replaced Minister of Industry Regulation 16 of 2011.
   changed: true
-  guides: '[A](regulation.html), [D](to-market.html)'
+  guides: '[A](regulation.html), [E](to-market.html)'
 
 - id: calibration
   area: use
@@ -93,7 +93,7 @@
     Medical records: every health facility must keep electronic records, connected to the national
     platform (SATUSEHAT).
   status: In force. The deadline for electronic records was 31 December 2023.
-  guides: '[E](open-source.html)'
+  guides: '[F](open-source.html)'
 
 - id: data-protection
   area: use
@@ -101,7 +101,7 @@
   url: https://peraturan.bpk.go.id/Details/229798
   covers: Personal data, including health data, which the law treats as sensitive.
   status: In force. Its two-year transition period ended in October 2024.
-  guides: '[E](open-source.html)'
+  guides: '[F](open-source.html)'
 
 - id: telemedicine
   area: use

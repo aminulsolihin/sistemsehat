@@ -2,7 +2,7 @@
 
 Independent guidance on medical technology in Indonesia, in English and Indonesian. The site has two halves of equal weight:
 
-- **Build**, for people who develop medical technology: guides C (Design), D (Route to market) and E (Open source), and the Innovation page.
+- **Build**, for people who develop medical technology: guides C (Need and idea, based on Stanford Biodesign), D (Design), E (Route to market) and F (Open source), and the Innovation page.
 - **Buy**, for people who purchase it: guides 1 (Specification), 2 (Pricing), 3 (Process), A (Regulation) and B (Technology), and the device dossiers.
 
 Shared by both: Regulations (the rules in force), Articles, and the Toolkit (templates, checklist, glossary, sources).
@@ -19,7 +19,7 @@ English pages are at the top of the repository, Indonesian pages in `id/` with t
 
 | To change | Edit |
 | --- | --- |
-| A rule in a guide (heading, explanation, example, question) | Buy: `specification.md`, `pricing.md`, `process.md`, `regulation.md`, `technology.md`. Build: `design.md`, `to-market.md`, `open-source.md`. The same files in `id/`. The rules are in the `rules:` list at the top. |
+| A rule in a guide (heading, explanation, example, question) | Buy: `specification.md`, `pricing.md`, `process.md`, `regulation.md`, `technology.md`. Build: `identify.md`, `design.md`, `to-market.md`, `open-source.md`. The same files in `id/`. The rules are in the `rules:` list at the top. |
 | A table or the text under the rules of a guide | The same file: tables are in `tables:` at the top, the text is below the second `---` line. |
 | The Regulations page (rules, status, which guide explains them) | `_data/en/regulations.yml` and `_data/id/regulations.yml`; the checked date is in `regulations.html` and `id/regulations.html` |
 | A template in the Toolkit | `toolkit/*.md` and `id/toolkit/*.md`; the list of templates is in `toolkit.html` and `id/toolkit.html` |
@@ -99,7 +99,7 @@ The date in the file name is the publication date shown on the page. The site ad
 Copy a guide file in the same half and change the top section. Three lines place it on the site:
 
 - `pillar: build` or `pillar: buy` puts it in that half: on the home page, the Guides page, the tabs at the top of each guide, and the previous/next links.
-- `order:` sets its place in the lists (Buy guides are 1 to 5, Build guides 6 to 8).
+- `order:` sets its place in the lists (Buy guides are 1 to 5, Build guides 6 to 9).
 - `number:` is the letter or number shown on its card and in its rule numbers, for example `"F"` with rules `"F.1"`, `"F.2"`.
 
 A guide checked more recently than the others can carry its own date: `reviewed: 14 October 2026`.

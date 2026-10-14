@@ -6,8 +6,8 @@ lang: en
 layout: guide
 pillar: build
 reviewed: 14 October 2026
-order: 8
-number: "E"
+order: 9
+number: "F"
 label: Open source
 question: How do we use and share open-source technology?
 summary: >-
@@ -20,7 +20,7 @@ lead: >-
   responsible for it.
 
 rules:
-  - number: "E.1"
+  - number: "F.1"
     heading: Read the licence before you use anything
     explanation: >-
       The licence says what you may do with a design or with code. Permissive licences, such as MIT
@@ -31,18 +31,18 @@ rules:
       does not count a licence with that restriction as open source.
     ask: What does the licence require if you change the design and then distribute it?
 
-  - number: "E.2"
+  - number: "F.2"
     heading: An open design is not an approved device
     explanation: >-
       Regulators approve a device made by a responsible manufacturer, not a design file. Whoever
       makes and supplies a device in Indonesia needs a marketing authorisation (*izin edar*), as for
-      any other device. Being free or open changes none of the steps in [Guide D](to-market.html).
+      any other device. Being free or open changes none of the steps in [Guide E](to-market.html).
     example: >-
       The OpenFlexure project states that its microscope is not certified as a medical device. It
       also notes that certification is issued to a manufacturer, not to a design.
     ask: Who will be the manufacturer of record for the device you build from this design?
 
-  - number: "E.3"
+  - number: "F.3"
     heading: Check the evidence, not the enthusiasm
     explanation: >-
       Open projects are often well known before they are well tested. A 2020 review of open-source
@@ -54,7 +54,7 @@ rules:
       standards, not only videos of it working.
     ask: Who tested this design, against which standard, and where are the results?
 
-  - number: "E.4"
+  - number: "F.4"
     heading: Check that the project is alive
     explanation: >-
       Hardware and software need fixes long after their first release. Look at when the last version
@@ -65,7 +65,7 @@ rules:
       release, and whether security fixes were published in the past year.
     ask: If a serious fault were found tomorrow, who would fix it, and how would you hear about it?
 
-  - number: "E.5"
+  - number: "F.5"
     heading: Check that you can build it from the documents
     explanation: >-
       A design is only open in practice if someone else can make it. Look for the design files, the
@@ -76,7 +76,7 @@ rules:
       Indonesia.
     ask: Could a technician on your team build, calibrate and repair one unit using only the published documents?
 
-  - number: "E.6"
+  - number: "F.6"
     heading: Protect patient data
     explanation: >-
       Software that stores patient data must meet the Personal Data Protection Law (Law 27 of 2022),
@@ -88,7 +88,7 @@ rules:
       logs every access, and can exchange data with SATUSEHAT.
     ask: Who can see patient data in this system, and can you show a record of who did?
 
-  - number: "E.7"
+  - number: "F.7"
     heading: Choose a licence when you share your own work
     explanation: >-
       If you publish a design, choose its licence deliberately. For hardware, CERN-OHL version 2 has

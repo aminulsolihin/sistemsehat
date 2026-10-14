@@ -6,8 +6,8 @@ lang: en
 layout: guide
 pillar: build
 reviewed: 14 October 2026
-order: 7
-number: "D"
+order: 8
+number: "E"
 label: Route to market
 question: How do we get a device to market?
 summary: >-
@@ -20,7 +20,7 @@ lead: >-
   one takes time.
 
 rules:
-  - number: "D.1"
+  - number: "E.1"
     heading: Decide who will be the manufacturer
     explanation: >-
       A marketing authorisation (*izin edar*) is issued to a company, not to a design or an inventor.
@@ -32,7 +32,7 @@ rules:
       design to a local manufacturer that already holds a CPAKB certificate.
     ask: Which company will hold the marketing authorisation, and does it already make medical devices?
 
-  - number: "D.2"
+  - number: "E.2"
     heading: Find the risk class early
     explanation: >-
       Indonesia groups devices into four classes, from A (low risk) to D (high risk), following the
@@ -44,7 +44,7 @@ rules:
       for your type of device.
     ask: Which class is your device, and which document did you use to decide?
 
-  - number: "D.3"
+  - number: "E.3"
     heading: Test against standards in an accredited laboratory
     explanation: >-
       Buyers and regulators ask for test reports, not claims. Test electrical devices against IEC
@@ -55,7 +55,7 @@ rules:
       IEC 60601-2-21. Quote the report number in every bid.
     ask: Is the unit you tested the same model you will sell?
 
-  - number: "D.4"
+  - number: "E.4"
     heading: Plan the clinical evidence
     explanation: >-
       Higher-risk and new devices may need a clinical investigation before registration. Minister of
@@ -66,7 +66,7 @@ rules:
       committee and to the Directorate General of Pharmaceuticals and Medical Devices.
     ask: What evidence will show that your device is safe and does what you claim, and who must approve the study?
 
-  - number: "D.5"
+  - number: "E.5"
     heading: Prepare the documents buyers will check
     explanation: >-
       Government buyers check the marketing authorisation, the quality certificate, the test reports,
@@ -78,7 +78,7 @@ rules:
       certificate and a letter naming your distributors. Check the expiry date of each.
     ask: If a tender opened tomorrow, which document would you still be missing?
 
-  - number: "D.6"
+  - number: "E.6"
     heading: Plan service before the first sale
     explanation: >-
       A hospital needs installation, training, spare parts and repairs for years after delivery.
@@ -89,7 +89,7 @@ rules:
       each province where you sell.
     ask: Who will repair your device in a district hospital far from your workshop?
 
-  - number: "D.7"
+  - number: "E.7"
     heading: Decide how to protect or share the design
     explanation: >-
       You can patent the design, keep parts of it confidential, or publish it under an open licence.
@@ -97,7 +97,7 @@ rules:
       first paper, conference or exhibition.
     example: >-
       A team that wants others to copy and improve its design publishes it under an open hardware
-      licence ([Guide E](open-source.html)). A team that needs investors usually files a patent with
+      licence ([Guide F](open-source.html)). A team that needs investors usually files a patent with
       DJKI first.
     ask: Have you decided whether to patent or to publish, before anything is made public?
 
@@ -143,3 +143,4 @@ The rules on this page were checked on 14 October 2026. Confirm the current text
 - [Minister of Health Regulation 63 of 2017](https://farmalkes.kemkes.go.id/en/unduh/permenkes-63-2017/) on good clinical investigation practice for medical devices.
 - [Classification of medical devices by risk](https://regalkes.kemkes.go.id/informasi_alkes/TataCaraKlasifikasi1.pdf), Ministry of Health.
 - [Directorate General of Intellectual Property](https://www.dgip.go.id/), for patents in Indonesia.
+- Paul Yock, Stefanos Zenios, Josh Makower and others, *Biodesign: The Process of Innovating Medical Technologies*, 2nd edition, Cambridge University Press, 2015. See chapters 5.1 (intellectual property strategy), 5.3 (clinical strategy), 5.4 (regulatory strategy), 5.6 (reimbursement strategy) and 5.8 (sales and distribution). They describe the United States and other markets; use this guide for the Indonesian rules.

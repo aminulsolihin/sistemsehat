@@ -13,7 +13,7 @@ from pathlib import Path
 
 DOCS = Path(__file__).resolve().parent.parent / "_site"
 # names everyone in the audience knows, and edition codes such as AMD1 in "IEC 60601-1:2005+AMD1:2012"
-ALLOWED = {"EN", "ID", "US", "PLN", "NEST360", "BPJS", "COVID", "MIT", "BSD"}  # MIT and BSD: licence names
+ALLOWED = {"EN", "ID", "US", "PLN", "NEST360", "BPJS", "COVID", "MIT", "BSD", "BMJ"}  # MIT and BSD: licence names
 PAGES = ["index", "guides", "specification", "pricing", "process", "regulation", "technology",
          "checklist", "glossary", "library", "dossiers", "about", "search"]
 LONG = 25  # words; sentences longer than this are listed

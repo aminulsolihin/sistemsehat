@@ -6,7 +6,7 @@ layout: page
 parent: toolkit.html
 crumb: "Risk table"
 heading: "Risk table"
-lead: "Each hazard, the harm it could cause, and how you control it. Goes with [rule C.4](../design.html#rule-c-4). ISO 14971 describes the full process."
+lead: "Each hazard, the harm it could cause, and how you control it. Goes with [rule D.2](../design.html#rule-d-2). ISO 14971 describes the full process."
 note: "Print this page, or copy the table into your own document."
 search:
   title: "Risk table"
@@ -30,7 +30,7 @@ tables:
 1. List every way the device could harm a patient or a user: heat, electricity, wrong readings, use errors.
 2. Rate how likely and how severe each harm is.
 3. Choose the control in this order: change the design, add a protection, then warn the user.
-4. For each control, name the test that shows it works ([rule C.7](../design.html#rule-c-7)).
+4. For each control, name the test that shows it works ([rule D.5](../design.html#rule-d-5)).
 {: .steps}
 
 ## An example row

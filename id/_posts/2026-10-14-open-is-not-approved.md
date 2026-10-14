@@ -21,4 +21,4 @@ Jika Anda membuat alat dari desain terbuka dan memasoknya ke rumah sakit, Anda m
 
 Jadi anggaplah desain terbuka sebagai titik awal, bukan garis akhir. Periksa lisensinya, laporan ujinya, dan dokumennya sebelum Anda membangun di atasnya.
 
-[Panduan E](../open-source.html) memuat tujuh prinsip untuk memakai dan membagikan teknologi sumber terbuka. [Panduan D](../to-market.html) membahas jalur ke pasar.
+[Panduan F](../open-source.html) memuat tujuh prinsip untuk memakai dan membagikan teknologi sumber terbuka. [Panduan E](../to-market.html) membahas jalur ke pasar.

@@ -10,7 +10,7 @@
   covers: >-
     Undang-undang utama bidang kesehatan. Di antaranya mewajibkan izin edar untuk alat kesehatan.
   status: Berlaku. Peraturan pelaksananya adalah Peraturan Pemerintah Nomor 28 Tahun 2024.
-  guides: '[A](regulation.html), [D](to-market.html)'
+  guides: '[A](regulation.html), [E](to-market.html)'
 
 - id: business-licensing
   area: make
@@ -23,7 +23,7 @@
     Berlaku sejak Oktober 2025. Peraturan Nomor 11 Tahun 2025 menggantikan Peraturan Menteri
     Kesehatan Nomor 14 Tahun 2021.
   changed: true
-  guides: '[D](to-market.html)'
+  guides: '[E](to-market.html)'
 
 - id: marketing-authorisation
   area: make
@@ -33,7 +33,7 @@
     Izin edar alat kesehatan dan alat kesehatan diagnostik in vitro: kelas risiko, dokumen, dan masa
     berlaku lima tahun.
   status: Berlaku, sebagaimana diubah dengan Peraturan Menteri Kesehatan Nomor 26 Tahun 2018.
-  guides: '[A](regulation.html), [D](to-market.html)'
+  guides: '[A](regulation.html), [E](to-market.html)'
 
 - id: clinical-investigation
   area: make
@@ -43,7 +43,7 @@
     Cara uji klinik alat kesehatan yang baik: persetujuan etik, dan persetujuan Kementerian untuk uji
     sebelum pendaftaran.
   status: Berlaku.
-  guides: '[D](to-market.html)'
+  guides: '[E](to-market.html)'
 
 - id: distribution
   area: make
@@ -74,7 +74,7 @@
   status: >-
     Berlaku sejak September 2025. Menggantikan Peraturan Menteri Perindustrian Nomor 16 Tahun 2011.
   changed: true
-  guides: '[A](regulation.html), [D](to-market.html)'
+  guides: '[A](regulation.html), [E](to-market.html)'
 
 - id: calibration
   area: use
@@ -94,7 +94,7 @@
     Rekam medis: setiap fasilitas kesehatan wajib menyelenggarakan rekam medis elektronik yang
     terhubung dengan platform nasional (SATUSEHAT).
   status: Berlaku. Batas waktu rekam medis elektronik adalah 31 Desember 2023.
-  guides: '[E](open-source.html)'
+  guides: '[F](open-source.html)'
 
 - id: data-protection
   area: use
@@ -102,7 +102,7 @@
   url: https://peraturan.bpk.go.id/Details/229798
   covers: Data pribadi, termasuk data kesehatan, yang digolongkan sebagai data pribadi sensitif.
   status: Berlaku. Masa transisi dua tahunnya berakhir pada Oktober 2024.
-  guides: '[E](open-source.html)'
+  guides: '[F](open-source.html)'
 
 - id: telemedicine
   area: use

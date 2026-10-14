@@ -83,10 +83,18 @@
       use: Sistem pemantauan nasional alat kesehatan.
 - group: Inovasi dan sumber terbuka
   items:
-    - title: The biodesign process
-      url: https://biodesign.stanford.edu/about-us/process.html
-      publisher: Stanford Byers Center for Biodesign
-      use: Metode inovasi medis dalam tiga tahap, dimulai dari kebutuhan yang diamati di tempat layanan.
+    - title: Biodesign Guide
+      url: https://biodesignguide.stanford.edu/
+      publisher: Stanford Mussallem Center for Biodesign
+      use: Toolkit untuk menemukan kebutuhan dan menciptakan solusi, dengan video. Pendaftaran gratis.
+    - title: 'Biodesign: The Process of Innovating Medical Technologies, 2nd edition'
+      url: https://biodesign.stanford.edu/
+      publisher: Yock, Zenios, Makower, dan kawan-kawan, Cambridge University Press (2015)
+      use: Metode lengkapnya, dari menemukan kebutuhan sampai rencana bisnis, dengan studi kasus global. Buku berbayar.
+    - title: MIT Hacking Medicine
+      url: https://hackingmedicine.mit.edu/
+      publisher: Massachusetts Institute of Technology
+      use: Hackathon kesehatan yang dimulai dari masalah, dan riset tentang hasil hackathon.
     - title: Target product profiles
       url: https://www.who.int/observatories/global-observatory-on-health-research-and-development/analyses-and-syntheses/target-product-profile/who-target-product-profiles
       publisher: Organisasi Kesehatan Dunia (WHO)

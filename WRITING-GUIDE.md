@@ -9,7 +9,7 @@ How to write for SistemSehat, in English and in Bahasa Indonesia. Read it before
 - **Technical and maintenance staff**, and **planners** who prepare budgets.
 - **Innovators, researchers and engineers** who develop medical technology, including students and hospital technology teams. They know their technology well, but often not regulation, procurement, or what buyers will check.
 
-Write each half so that the other half can follow it. A buyer should understand the Build guides, and an engineer the Buy guides. Where the two meet, link them: Guide D links to Guide A, Guide C to rule 1.5.
+Write each half so that the other half can follow it. A buyer should understand the Build guides, and an engineer the Buy guides. Where the two meet, link them: Guide E links to Guide A, Guide D to rule 1.5.
 
 Most readers of the English pages are Indonesian and read English as a second language. Many read on a phone, between other tasks. So we write to be understood on the first reading, by someone in a hurry.
 

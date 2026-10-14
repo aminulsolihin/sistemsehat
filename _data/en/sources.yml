@@ -79,10 +79,18 @@
       use: The national monitoring system for medical devices.
 - group: Innovation and open source
   items:
-    - title: The biodesign process
-      url: https://biodesign.stanford.edu/about-us/process.html
-      publisher: Stanford Byers Center for Biodesign
-      use: A method for medical innovation in three phases, starting from needs observed in care.
+    - title: Biodesign Guide
+      url: https://biodesignguide.stanford.edu/
+      publisher: Stanford Mussallem Center for Biodesign
+      use: Toolkits for finding needs and inventing solutions, with videos. Free registration.
+    - title: 'Biodesign: The Process of Innovating Medical Technologies, 2nd edition'
+      url: https://biodesign.stanford.edu/
+      publisher: Yock, Zenios, Makower and others, Cambridge University Press (2015)
+      use: The full method, from finding needs to business planning, with global case studies. A book for sale.
+    - title: MIT Hacking Medicine
+      url: https://hackingmedicine.mit.edu/
+      publisher: Massachusetts Institute of Technology
+      use: Health hackathons that start from problems, and research on what hackathons achieve.
     - title: Target product profiles
       url: https://www.who.int/observatories/global-observatory-on-health-research-and-development/analyses-and-syntheses/target-product-profile/who-target-product-profiles
       publisher: World Health Organization

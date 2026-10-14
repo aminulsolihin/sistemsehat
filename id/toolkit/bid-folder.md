@@ -6,7 +6,7 @@ layout: page
 parent: toolkit.html
 crumb: "Map dokumen penawaran"
 heading: "Map dokumen penawaran"
-lead: "Dokumen yang diperiksa pembeli pemerintah dalam penawaran alat kesehatan. Penjual dapat memakainya untuk bersiap ([prinsip D.5](../to-market.html#rule-d-5)); pembeli dapat memakainya untuk memeriksa ([Panduan A](../regulation.html))."
+lead: "Dokumen yang diperiksa pembeli pemerintah dalam penawaran alat kesehatan. Penjual dapat memakainya untuk bersiap ([prinsip E.5](../to-market.html#rule-e-5)); pembeli dapat memakainya untuk memeriksa ([Panduan A](../regulation.html))."
 note: "Cetak halaman ini, atau salin tabelnya ke dokumen Anda sendiri."
 search:
   title: "Map dokumen penawaran"

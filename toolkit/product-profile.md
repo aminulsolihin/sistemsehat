@@ -6,7 +6,7 @@ layout: page
 parent: toolkit.html
 crumb: "Target product profile"
 heading: "Target product profile"
-lead: "What a new device must achieve, written before you design it. Goes with [rule C.2](../design.html#rule-c-2)."
+lead: "What a new device must achieve, written before you design it. Goes with [rule C.4](../identify.html#rule-c-4)."
 note: "Print this page, or copy the table into your own document."
 search:
   title: "Target product profile"
@@ -33,7 +33,7 @@ tables:
 
 ## How to use it
 
-1. Write the clinical need first, without naming a technology ([rule C.1](../design.html#rule-c-1)).
+1. Write the clinical need first, without naming a technology ([rule C.2](../identify.html#rule-c-2)).
 2. For each line, write the lowest value that would still be useful, then the value you would prefer.
 3. Agree each line with a clinician who will use the device, and with someone who buys equipment.
 4. Keep the profile with your design file. Change it only deliberately, and record why.

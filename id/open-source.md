@@ -6,8 +6,8 @@ lang: id
 layout: guide
 pillar: build
 reviewed: 14 Oktober 2026
-order: 8
-number: "E"
+order: 9
+number: "F"
 label: Sumber terbuka
 question: Bagaimana memakai dan membagikan teknologi sumber terbuka?
 summary: >-
@@ -20,7 +20,7 @@ lead: >-
   sama seperti alat lain: bukti, mutu, dan pihak yang bertanggung jawab.
 
 rules:
-  - number: "E.1"
+  - number: "F.1"
     heading: Baca lisensinya sebelum memakai apa pun
     explanation: >-
       Lisensi menentukan apa yang boleh Anda lakukan dengan sebuah desain atau kode. Lisensi
@@ -32,18 +32,18 @@ rules:
       tidak menganggap lisensi dengan larangan seperti itu sebagai sumber terbuka.
     ask: Apa yang diwajibkan lisensinya jika Anda mengubah desain lalu menyebarkannya?
 
-  - number: "E.2"
+  - number: "F.2"
     heading: Desain terbuka bukan alat yang berizin
     explanation: >-
       Regulator menyetujui alat yang dibuat produsen yang bertanggung jawab, bukan berkas desain.
       Siapa pun yang memproduksi dan memasok alat di Indonesia memerlukan izin edar, sama seperti alat
-      lain. Gratis atau terbuka tidak mengubah satu pun langkah di [Panduan D](to-market.html).
+      lain. Gratis atau terbuka tidak mengubah satu pun langkah di [Panduan E](to-market.html).
     example: >-
       Proyek OpenFlexure menyatakan bahwa mikroskopnya belum tersertifikasi sebagai alat kesehatan.
       Proyek itu juga mencatat bahwa sertifikat diberikan kepada produsen, bukan kepada desain.
     ask: Siapa yang akan tercatat sebagai produsen alat yang Anda buat dari desain ini?
 
-  - number: "E.3"
+  - number: "F.3"
     heading: Periksa buktinya, bukan antusiasmenya
     explanation: >-
       Proyek terbuka sering sudah terkenal sebelum teruji dengan baik. Menurut tinjauan tahun 2020 atas
@@ -55,7 +55,7 @@ rules:
       bukan hanya video yang menunjukkan alat itu bekerja.
     ask: Siapa yang menguji desain ini, terhadap standar apa, dan di mana hasilnya?
 
-  - number: "E.4"
+  - number: "F.4"
     heading: Periksa apakah proyeknya masih hidup
     explanation: >-
       Perangkat keras dan lunak perlu diperbaiki lama setelah rilis pertamanya. Lihat kapan versi
@@ -66,7 +66,7 @@ rules:
       terakhirnya, dan apakah ada perbaikan keamanan yang diterbitkan dalam setahun terakhir.
     ask: Jika besok ditemukan kerusakan serius, siapa yang akan memperbaikinya, dan bagaimana Anda akan mengetahuinya?
 
-  - number: "E.5"
+  - number: "F.5"
     heading: Pastikan alatnya bisa dibuat dari dokumennya
     explanation: >-
       Sebuah desain baru benar-benar terbuka jika orang lain dapat membuatnya. Cari berkas desain,
@@ -77,7 +77,7 @@ rules:
       Indonesia.
     ask: Dapatkah teknisi di tim Anda membuat, mengalibrasi, dan memperbaiki satu unit hanya dari dokumen yang diterbitkan?
 
-  - number: "E.6"
+  - number: "F.6"
     heading: Lindungi data pasien
     explanation: >-
       Perangkat lunak yang menyimpan data pasien wajib memenuhi Undang-Undang Nomor 27 Tahun 2022
@@ -91,7 +91,7 @@ rules:
       data dengan SATUSEHAT.
     ask: Siapa yang dapat melihat data pasien di sistem ini, dan dapatkah Anda menunjukkan catatan siapa yang melihatnya?
 
-  - number: "E.7"
+  - number: "F.7"
     heading: Pilih lisensi saat membagikan karya sendiri
     explanation: >-
       Jika Anda menerbitkan sebuah desain, pilih lisensinya dengan sengaja. Untuk perangkat keras,

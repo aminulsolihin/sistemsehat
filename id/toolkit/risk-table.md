@@ -6,7 +6,7 @@ layout: page
 parent: toolkit.html
 crumb: "Tabel risiko"
 heading: "Tabel risiko"
-lead: "Setiap bahaya, cedera yang dapat ditimbulkannya, dan cara Anda mengendalikannya. Menyertai [prinsip C.4](../design.html#rule-c-4). ISO 14971 menjelaskan proses lengkapnya."
+lead: "Setiap bahaya, cedera yang dapat ditimbulkannya, dan cara Anda mengendalikannya. Menyertai [prinsip D.2](../design.html#rule-d-2). ISO 14971 menjelaskan proses lengkapnya."
 note: "Cetak halaman ini, atau salin tabelnya ke dokumen Anda sendiri."
 search:
   title: "Tabel risiko"
@@ -30,7 +30,7 @@ tables:
 1. Daftar semua cara alat dapat mencederai pasien atau pengguna: panas, listrik, hasil ukur yang salah, kesalahan penggunaan.
 2. Nilai seberapa mungkin dan seberapa parah setiap cedera.
 3. Pilih pengendalian dengan urutan ini: ubah desain, tambahkan pelindung, lalu beri peringatan.
-4. Untuk setiap pengendalian, sebutkan uji yang membuktikan bahwa pengendalian itu bekerja ([prinsip C.7](../design.html#rule-c-7)).
+4. Untuk setiap pengendalian, sebutkan uji yang membuktikan bahwa pengendalian itu bekerja ([prinsip D.5](../design.html#rule-d-5)).
 {: .steps}
 
 ## Contoh satu baris

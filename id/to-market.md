@@ -6,8 +6,8 @@ lang: id
 layout: guide
 pillar: build
 reviewed: 14 Oktober 2026
-order: 7
-number: "D"
+order: 8
+number: "E"
 label: Jalur ke pasar
 question: Bagaimana membawa alat ke pasar?
 summary: >-
@@ -20,7 +20,7 @@ lead: >-
   langkah-langkah ini sejak awal, karena setiap langkah butuh waktu.
 
 rules:
-  - number: "D.1"
+  - number: "E.1"
     heading: Tentukan siapa yang menjadi produsen
     explanation: >-
       Izin edar diberikan kepada perusahaan, bukan kepada desain atau penemunya. Perusahaan itu
@@ -32,7 +32,7 @@ rules:
       melisensikan desainnya kepada produsen lokal yang sudah memiliki sertifikat CPAKB.
     ask: Perusahaan mana yang akan memegang izin edar, dan apakah perusahaan itu sudah memproduksi alat kesehatan?
 
-  - number: "D.2"
+  - number: "E.2"
     heading: Tentukan kelas risiko sejak awal
     explanation: >-
       Indonesia mengelompokkan alat ke dalam empat kelas, dari A (risiko rendah) sampai D (risiko
@@ -45,7 +45,7 @@ rules:
       Kementerian Kesehatan untuk jenis alat Anda.
     ask: Kelas berapa alat Anda, dan dokumen apa yang Anda pakai untuk menentukannya?
 
-  - number: "D.3"
+  - number: "E.3"
     heading: Uji terhadap standar di laboratorium terakreditasi
     explanation: >-
       Pembeli dan regulator meminta laporan uji, bukan klaim. Uji alat listrik terhadap IEC 60601-1
@@ -56,7 +56,7 @@ rules:
       60601-2-21. Cantumkan nomor laporan uji di setiap penawaran.
     ask: Apakah unit yang diuji sama dengan model yang akan Anda jual?
 
-  - number: "D.4"
+  - number: "E.4"
     heading: Rencanakan bukti klinisnya
     explanation: >-
       Alat berisiko tinggi dan alat baru mungkin memerlukan uji klinik sebelum didaftarkan. Peraturan
@@ -68,7 +68,7 @@ rules:
       dan ke Direktorat Jenderal Farmasi dan Alat Kesehatan.
     ask: Bukti apa yang akan menunjukkan bahwa alat Anda aman dan bekerja sesuai klaim, dan siapa yang harus menyetujui ujinya?
 
-  - number: "D.5"
+  - number: "E.5"
     heading: Siapkan dokumen yang akan diperiksa pembeli
     explanation: >-
       Pembeli pemerintah memeriksa izin edar, sertifikat mutu, laporan uji, sertifikat TKDN, dan surat
@@ -80,7 +80,7 @@ rules:
       dan surat yang menyebut distributor Anda. Periksa tanggal kedaluwarsa masing-masing.
     ask: Jika tender dibuka besok, dokumen mana yang masih belum Anda miliki?
 
-  - number: "D.6"
+  - number: "E.6"
     heading: Rencanakan layanan purnajual sebelum penjualan pertama
     explanation: >-
       Rumah sakit memerlukan pemasangan, pelatihan, suku cadang, dan perbaikan selama bertahun-tahun
@@ -92,7 +92,7 @@ rules:
       setiap provinsi tempat Anda menjual.
     ask: Siapa yang akan memperbaiki alat Anda di rumah sakit kabupaten yang jauh dari bengkel Anda?
 
-  - number: "D.7"
+  - number: "E.7"
     heading: Putuskan cara melindungi atau membagikan desain
     explanation: >-
       Anda dapat mematenkan desain, merahasiakan sebagiannya, atau menerbitkannya dengan lisensi
@@ -100,7 +100,7 @@ rules:
       makalah, konferensi, atau pameran pertama Anda.
     example: >-
       Tim yang ingin desainnya ditiru dan diperbaiki orang lain menerbitkannya dengan lisensi
-      perangkat keras terbuka ([Panduan E](open-source.html)). Tim yang memerlukan investor biasanya
+      perangkat keras terbuka ([Panduan F](open-source.html)). Tim yang memerlukan investor biasanya
       mengajukan paten ke DJKI lebih dulu.
     ask: Sudahkah Anda memutuskan akan mematenkan atau menerbitkan, sebelum apa pun diumumkan?
 
@@ -146,3 +146,4 @@ Aturan di halaman ini diperiksa pada 14 Oktober 2026. Pastikan teks yang berlaku
 - [Peraturan Menteri Kesehatan Nomor 63 Tahun 2017](https://farmalkes.kemkes.go.id/en/unduh/permenkes-63-2017/) tentang cara uji klinik alat kesehatan yang baik.
 - [Tata cara klasifikasi alat kesehatan berdasarkan risiko](https://regalkes.kemkes.go.id/informasi_alkes/TataCaraKlasifikasi1.pdf), Kementerian Kesehatan.
 - [Direktorat Jenderal Kekayaan Intelektual](https://www.dgip.go.id/), untuk paten di Indonesia.
+- Paul Yock, Stefanos Zenios, Josh Makower, dan kawan-kawan, *Biodesign: The Process of Innovating Medical Technologies*, edisi ke-2, Cambridge University Press, 2015. Lihat bab 5.1 (intellectual property strategy), 5.3 (clinical strategy), 5.4 (regulatory strategy), 5.6 (reimbursement strategy), dan 5.8 (sales and distribution). Bab-bab ini membahas Amerika Serikat dan pasar lain; pakai panduan ini untuk aturan di Indonesia.

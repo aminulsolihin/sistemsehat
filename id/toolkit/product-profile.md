@@ -6,7 +6,7 @@ layout: page
 parent: toolkit.html
 crumb: "Profil produk target"
 heading: "Profil produk target"
-lead: "Apa yang harus dicapai alat baru, ditulis sebelum Anda merancangnya. Menyertai [prinsip C.2](../design.html#rule-c-2)."
+lead: "Apa yang harus dicapai alat baru, ditulis sebelum Anda merancangnya. Menyertai [prinsip C.4](../identify.html#rule-c-4)."
 note: "Cetak halaman ini, atau salin tabelnya ke dokumen Anda sendiri."
 search:
   title: "Profil produk target"
@@ -33,7 +33,7 @@ tables:
 
 ## Cara memakainya
 
-1. Tulis kebutuhan klinisnya lebih dulu, tanpa menyebut teknologi ([prinsip C.1](../design.html#rule-c-1)).
+1. Tulis kebutuhan klinisnya lebih dulu, tanpa menyebut teknologi ([prinsip C.2](../identify.html#rule-c-2)).
 2. Untuk setiap baris, tulis nilai terendah yang masih berguna, lalu nilai yang Anda harapkan.
 3. Sepakati setiap baris dengan klinisi yang akan memakai alat, dan dengan orang yang membeli alat.
 4. Simpan profil ini bersama berkas desain. Ubah hanya dengan sengaja, dan catat alasannya.

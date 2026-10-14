@@ -1,49 +1,26 @@
 ---
 title: How do we design the right device? Design guide | SistemSehat
 description: >-
-  Seven rules, with examples, for designing a medical device from a clinical need: the product profile, the setting, risk, usability and software.
+  Seven rules, with examples, for turning a concept into a safe, usable medical device: setting, risk, usability, software, testing and manufacture.
 lang: en
 layout: guide
 pillar: build
 reviewed: 14 October 2026
-order: 6
-number: "C"
+order: 7
+number: "D"
 label: Design
 question: How do we design the right device?
 summary: >-
-  Many devices fail because they solve the wrong problem, or ignore the place where they will be
-  used. Seven rules for designing a device from a clinical need.
-icon: bulb
+  A good idea still fails if the device is unsafe, hard to use or impossible to make. Seven rules
+  for turning a chosen concept into a device.
+icon: pencil
 lead: >-
-  A device succeeds when it solves a real problem, works where it will be used, and can be shown to
-  be safe. These rules apply whether you work in a university, a hospital or a company.
+  Once you have a need and a concept ([Guide C](identify.html)), make the device safe, usable and
+  buildable, and prove it. These rules apply whether you work in a university,
+  a hospital or a company.
 
 rules:
-  - number: "C.1"
-    heading: Start from a need you have seen
-    explanation: >-
-      Watch the work before you invent anything. Spend time where care is given, and write down the
-      problems you see, not solutions. A good need statement names the problem, the patients and the
-      change you want, and no technology.
-    example: >-
-      Weak: "A cheaper incubator." Better: "A way to keep low-birth-weight babies warm during
-      transfer from a puskesmas to the district hospital."
-    ask: Can you state the need without naming any technology?
-
-  - number: "C.2"
-    heading: Write down what the device must achieve
-    explanation: >-
-      A target product profile lists what the finished product must do: its intended use, users,
-      setting, performance and price. WHO gives two values for each line: the minimum that is
-      acceptable, and the result you would prefer. Agree the profile with clinicians and buyers
-      before you start designing.
-    example: >-
-      For a transport warmer, the minimum is to keep the baby's skin temperature in the safe range
-      for a two-hour journey. The preferred result is four hours on its battery. (Illustrative
-      figures.)
-    ask: For each line of your profile, what is the minimum acceptable value, and who agreed it?
-
-  - number: "C.3"
+  - number: "D.1"
     heading: Design for the place where it will be used
     explanation: >-
       Find out the power supply, heat, humidity and dust where the device will work, and who will
@@ -55,7 +32,7 @@ rules:
       district technician can buy and replace.
     ask: Would your device still work in the least-equipped facility you want to serve?
 
-  - number: "C.4"
+  - number: "D.2"
     heading: Manage risk from the first sketch
     explanation: >-
       List what could harm a patient or user, how likely it is, and how severe. Then design the risk
@@ -66,18 +43,19 @@ rules:
       separate cut-out that switches off at a set temperature. Warning: an alarm and a label.
     ask: For each hazard you listed, which design change, protection or warning controls it?
 
-  - number: "C.5"
-    heading: Test with real users, early and often
+  - number: "D.3"
+    heading: Test usability with the people who will use it
     explanation: >-
       Many problems with devices are use errors: the design leads a tired or busy user into a
-      mistake. IEC 62366-1 describes how to find and remove them. Let nurses, midwives or technicians
-      try a prototype in realistic conditions, and watch without helping.
+      mistake. IEC 62366-1 describes how to find and remove them, ending with a test of the final
+      design. Let nurses, midwives or technicians use it in realistic conditions, and watch without
+      helping.
     example: >-
       Ask three midwives to set the temperature with gloved hands, in a dim room, without the manual.
       Note every hesitation and every wrong press.
     ask: Which use errors did you see in testing, and what did you change because of them?
 
-  - number: "C.6"
+  - number: "D.4"
     heading: Treat software as part of the device
     explanation: >-
       Software that controls a device, or that supports a diagnosis or treatment decision, is
@@ -88,39 +66,62 @@ rules:
       when it runs on an ordinary phone.
     ask: Which of your software's functions could harm a patient if they gave a wrong result?
 
-  - number: "C.7"
+  - number: "D.5"
     heading: Record design decisions as you go
     explanation: >-
       Keep a design file: the requirements, how each one was checked, and why each decision was
       made. ISO 13485 calls this design and development control. Rebuilding the file later is slow,
-      and registering the device ([Guide D](to-market.html)) depends on it.
+      and registering the device ([Guide E](to-market.html)) depends on it.
     example: >-
       For each requirement, keep one line: the requirement, the test method, the result, the date,
       and who checked it.
     ask: Could someone outside your team trace each requirement to a test result?
+
+  - number: "D.6"
+    heading: Verify the design, then validate the device
+    explanation: >-
+      Verification shows that you built the device right: every requirement is met, by test.
+      Validation shows that you built the right device: it meets the need, with real users, in
+      realistic conditions. You need both before you apply for registration.
+    example: >-
+      Verification: a bench test shows the heater holds the set temperature within its tolerance.
+      Validation: midwives use the warmer in simulated transfers with a newborn manikin, and judge
+      whether it meets the need.
+    ask: Which test shows each requirement is met, and which shows that the device meets the need?
+
+  - number: "D.7"
+    heading: Design for manufacture and supply
+    explanation: >-
+      A prototype that one engineer can build is not yet a product. Choose parts and processes you
+      can source reliably, in the volume and at the cost your need criteria allow. Plan who will make
+      it, and under which quality system.
+    example: >-
+      Replace a hand-machined heater housing with a moulded one, and confirm two suppliers for each
+      critical part, preferably in Indonesia.
+    ask: Can the device be made at the volume and cost you need, from parts you can buy reliably?
 
 tables:
   stages:
     columns:
       - Stage
       - What you should have
-      - Standards and tools that help
+      - Where to look
     rows:
-      - - Find the need
-        - A need statement, agreed with the people who give care
-        - The biodesign process (identify, invent, implement)
-      - - Define the product
-        - A target product profile with minimum and preferred values
-        - WHO target product profiles
-      - - Design and prototype
-        - Requirements, a risk file and a design file
-        - ISO 14971, ISO 13485
-      - - Test
-        - Bench, usability and safety test reports
-        - IEC 60601-1, IEC 62366-1, IEC 62304
-      - - Prepare for market
-        - The evidence and documents for registration
-        - '[Guide D](to-market.html)'
+      - - Find and choose the need
+        - A need statement and need criteria, agreed with the people who give care
+        - '[Guide C](identify.html), rules C.1 to C.4'
+      - - Choose and prototype a concept
+        - Concepts screened against the criteria, and prototypes that answered your questions
+        - '[Guide C](identify.html), rules C.5 to C.7'
+      - - Design
+        - Requirements, a risk file, usability results and a design file
+        - Rules D.1 to D.5; ISO 14971, IEC 62366-1, IEC 62304, ISO 13485
+      - - Verify and validate
+        - Bench, safety and usability test reports, and evidence that the device meets the need
+        - Rule D.6; IEC 60601-1 and the particular standard
+      - - Prepare to make and sell it
+        - A manufacturer with a quality system, suppliers, and the documents for registration
+        - Rule D.7; [Guide E](to-market.html)
 ---
 
 ## From idea to device
@@ -133,10 +134,9 @@ What to have at each stage. Each stage builds on the one before, and gaps found 
 
 These are the public documents behind this guide. The standards themselves are sold by ISO and IEC; their summary pages are free.
 
-- Stanford Byers Center for Biodesign, [the biodesign process](https://biodesign.stanford.edu/about-us/process.html): identify, invent, implement.
-- World Health Organization, [target product profiles](https://www.who.int/observatories/global-observatory-on-health-research-and-development/analyses-and-syntheses/target-product-profile/who-target-product-profiles): minimum and preferred characteristics.
-- World Health Organization, [compendium of innovative health technologies for low-resource settings, 2024](https://www.who.int/publications/i/item/9789240095212).
+- Paul Yock, Stefanos Zenios, Josh Makower and others, *Biodesign: The Process of Innovating Medical Technologies*, 2nd edition, Cambridge University Press, 2015. See chapters 4.5 (concept exploration and testing), 5.2 (R&D strategy) and 5.5 (quality management).
 - [ISO 14971:2019](https://www.iso.org/standard/72704.html), application of risk management to medical devices.
 - [IEC 62366-1:2015](https://www.iso.org/standard/63179.html), application of usability engineering to medical devices.
 - [IEC 62304:2006](https://www.iso.org/standard/38421.html), medical device software life cycle processes.
 - [ISO 13485:2016](https://www.iso.org/standard/59752.html), quality management systems for medical devices.
+- World Health Organization, [compendium of innovative health technologies for low-resource settings, 2024](https://www.who.int/publications/i/item/9789240095212).

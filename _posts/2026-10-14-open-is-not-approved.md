@@ -21,4 +21,4 @@ If you build a device from an open design and supply it to a hospital, you becom
 
 So treat an open design as a head start, not a finish line. Check its licence, its test reports and its documents before you build on it.
 
-[Guide E](../open-source.html) has seven rules for using and sharing open-source technology. [Guide D](../to-market.html) covers the route to market.
+[Guide F](../open-source.html) has seven rules for using and sharing open-source technology. [Guide E](../to-market.html) covers the route to market.
