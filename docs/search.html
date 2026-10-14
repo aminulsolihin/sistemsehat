@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search | SistemSehat</title>
+  <meta name="description" content="Search the SistemSehat rules, glossary and sources.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/style.css?v=c4f553be57">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/search-index.js?v=702a0208a5" defer></script>
+  <script src="assets/site.js?v=74b0b34f1e" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="wordmark" href="index.html">SistemSehat</a>
+      <a class="search-link" href="search.html" aria-label="Search"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></a>
+      <nav class="lang-switch" aria-label="Language"><span class="lang-current" lang="en" aria-current="true"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></span><a href="id/search.html" lang="id" hreflang="id" title="Bahasa Indonesia"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></a></nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" hidden><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+      <div class="site-menu" id="site-menu">
+        <nav aria-label="Main">
+          <ul class="main-nav">
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="dossiers.html">Dossiers</a></li>
+            <li><a href="checklist.html">Checklist</a></li>
+            <li><a href="glossary.html">Glossary</a></li>
+            <li><a href="library.html">Sources</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <form class="search" action="search.html" method="get" role="search" aria-label="Search this site">
+          <label class="visually-hidden" for="header-search">Search this site</label>
+          <input id="header-search" type="search" name="q" placeholder="Search rules and terms" aria-keyshortcuts="/">
+          <button type="submit" aria-label="Search"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol><li><a href="index.html">Home</a></li><li aria-current="page">Search</li></ol>
+      </nav>
+    </div>
+    <div class="wrap">
+      <header class="page-head">
+        <h1>Search</h1>
+        <p class="lead">Search the 35 rules, the glossary and the sources.</p>
+      </header>
+
+      <form class="search search-large" action="search.html" method="get" role="search" aria-label="New search">
+        <label for="page-search">Search for</label>
+        <div class="search-row">
+          <input id="page-search" type="search" name="q">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <p id="search-status" class="reviewed" aria-live="polite"></p>
+      <ol id="results" class="results"></ol>
+
+      <noscript>
+        <p>Search needs JavaScript. Without it, browse the <a href="guides.html">guides</a>, the <a href="checklist.html">checklist</a> or the <a href="glossary.html">glossary</a>.</p>
+      </noscript>
+
+      <div id="search-help" class="prose">
+        <h2>Try searching for</h2>
+        <ul class="chips">
+          <li><a href="search.html?q=calibration">calibration</a></li>
+          <li><a href="search.html?q=warranty">warranty</a></li>
+          <li><a href="search.html?q=lot">lot</a></li>
+          <li><a href="search.html?q=TKDN">TKDN</a></li>
+          <li><a href="search.html?q=standard">standard</a></li>
+          <li><a href="search.html?q=reagents">reagents</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <p class="wordmark">SistemSehat</p>
+        <p>An independent, non-commercial initiative. Not linked to or endorsed by any government body, lender or manufacturer.</p>
+      </div>
+      <nav aria-label="All guides">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="specification.html">What should we ask for?</a></li>
+          <li><a href="pricing.html">What should it cost?</a></li>
+          <li><a href="process.html">How do we buy it without a failed tender?</a></li>
+          <li><a href="regulation.html">What must a device comply with?</a></li>
+          <li><a href="technology.html">How do we judge the technology?</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Tools">
+        <h2>Tools</h2>
+        <ul>
+          <li><a href="checklist.html">Checklist</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="library.html">Sources</a></li>
+          <li><a href="search.html">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About this site">
+        <h2>About</h2>
+        <ul>
+          <li><a href="about.html">About SistemSehat</a></li>
+          <li><a href="about.html#how">How it stays independent</a></li>
+          <li><a href="dossiers.html">Device dossiers</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap footer-legal">
+      <p>The guidance here is general. It does not replace the procurement rules that apply to your organisation.</p>
+      <p>&copy; 2026 SistemSehat</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apa yang harus kita minta? Panduan spesifikasi | SistemSehat</title>
+  <meta name="description" content="Tujuh prinsip dengan contoh untuk menulis spesifikasi alat kesehatan yang dapat dipenuhi beberapa produsen.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/style.css?v=c4f553be57">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="../assets/site.js?v=74b0b34f1e" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Langsung ke konten utama</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="wordmark" href="index.html">SistemSehat</a>
+      <a class="search-link" href="search.html" aria-label="Cari"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></a>
+      <nav class="lang-switch" aria-label="Bahasa"><a href="../specification.html" lang="en" hreflang="en" title="English"><span aria-hidden="true">EN</span><span class="visually-hidden">English</span></a><span class="lang-current" lang="id" aria-current="true"><span aria-hidden="true">ID</span><span class="visually-hidden">Bahasa Indonesia</span></span></nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" hidden><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+      <div class="site-menu" id="site-menu">
+        <nav aria-label="Menu utama">
+          <ul class="main-nav">
+            <li><a href="guides.html" aria-current="page">Panduan</a></li>
+            <li><a href="dossiers.html">Kajian alat</a></li>
+            <li><a href="checklist.html">Daftar periksa</a></li>
+            <li><a href="glossary.html">Glosarium</a></li>
+            <li><a href="library.html">Sumber rujukan</a></li>
+            <li><a href="about.html">Tentang</a></li>
+          </ul>
+        </nav>
+        <form class="search" action="search.html" method="get" role="search" aria-label="Cari di situs ini">
+          <label class="visually-hidden" for="header-search">Cari di situs ini</label>
+          <input id="header-search" type="search" name="q" placeholder="Cari prinsip dan istilah" aria-keyshortcuts="/">
+          <button type="submit" aria-label="Cari"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Jejak halaman">
+        <ol><li><a href="index.html">Beranda</a></li><li><a href="guides.html">Panduan</a></li><li aria-current="page">Spesifikasi</li></ol>
+      </nav>
+    </div>
+    <div class="wrap">
+      <nav class="guide-tabs" aria-label="Rangkaian panduan">
+        <ul>
+          <li><a href="specification.html" aria-current="page"><span class="g-no">1</span> Spesifikasi</a></li>
+          <li><a href="pricing.html"><span class="g-no">2</span> Harga</a></li>
+          <li><a href="process.html"><span class="g-no">3</span> Proses</a></li>
+          <li><a href="regulation.html"><span class="g-no">A</span> Regulasi</a></li>
+          <li><a href="technology.html"><span class="g-no">B</span> Teknologi</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap">
+      <header class="page-head">
+        <h1>Apa yang harus kita minta?</h1>
+        <p class="lead">Spesifikasi menentukan alat apa yang tiba di fasilitas. Spesifikasi yang baik membuat beberapa produsen dapat bersaing memasok alat yang memenuhi kebutuhan klinis. Spesifikasi yang buruk meloloskan alat yang tidak berfungsi, atau hanya menyisakan satu <a class="term" href="glossary.html#supplier" title="Pelaku usaha yang menjual dan mengirim barang dalam pengadaan pemerintah.">penyedia</a> yang bisa ikut.</p>
+        <ul class="meta">
+          <li>Terakhir ditinjau 11 Oktober 2026</li>
+          <li>7 prinsip</li>
+          <li>Sekitar 6 menit membaca</li>
+          <li><a href="checklist.html#guide-1">Daftar periksa panduan ini</a></li>
+        </ul>
+      </header>
+
+      <aside class="keypoints" aria-labelledby="keypoints-title">
+        <h2 id="keypoints-title">7 prinsip dalam panduan ini</h2>
+        <ol>
+          <li><a href="#rule-1-1"><span class="rule-no">1.1</span> Mulai dari kebutuhan klinis</a></li>
+          <li><a href="#rule-1-2"><span class="rule-no">1.2</span> Jelaskan apa yang harus dilakukan alat, bukan mereknya</a></li>
+          <li><a href="#rule-1-3"><span class="rule-no">1.3</span> Pisahkan yang wajib dari yang sebaiknya ada</a></li>
+          <li><a href="#rule-1-4"><span class="rule-no">1.4</span> Sebutkan standar yang tepat</a></li>
+          <li><a href="#rule-1-5"><span class="rule-no">1.5</span> Pilih alat yang cocok dengan tempat pemakaiannya</a></li>
+          <li><a href="#rule-1-6"><span class="rule-no">1.6</span> Rinci semua yang harus menyertai alat</a></li>
+          <li><a href="#rule-1-7"><span class="rule-no">1.7</span> Pastikan setiap persyaratan bisa diperiksa</a></li>
+        </ol>
+      </aside>
+
+      <div class="clauses">
+        <section class="rule" id="rule-1-1">
+          <h2><span class="rule-no">1.1</span> Mulai dari kebutuhan klinis</h2>
+          <p>Sebelum menuliskan fitur apa pun, tuliskan dulu apa yang harus dilakukan alat itu, untuk pasien siapa, dan di fasilitas jenis apa. Alat untuk bangsal rumah sakit kabupaten dan alat untuk poskesdes bisa bernama sama, tetapi spesifikasinya bisa sangat berbeda.</p>
+          <p class="example"><strong>Contoh</strong> <span>Untuk infant warmer: &ldquo;Menjaga bayi baru lahir tetap hangat selama resusitasi dan beberapa jam pertama setelah lahir, di ruang bersalin <a class="term" href="glossary.html#puskesmas" title="Pusat kesehatan masyarakat: fasilitas yang memberikan pelayanan kesehatan primer.">puskesmas</a> <a class="term" href="glossary.html#poned" title="Pelayanan Obstetri Neonatal Emergensi Dasar: layanan gawat darurat dasar untuk ibu dan bayi baru lahir, di puskesmas yang ditunjuk.">PONED</a>.&rdquo;</span></p>
+          <p class="test"><strong>Tanyakan</strong> <span>Dapatkah klinisi yang akan memakai alat ini menjelaskan, dalam satu kalimat, mengapa setiap persyaratan diperlukan?</span></p>
+        </section>
+        <section class="rule" id="rule-1-2">
+          <h2><span class="rule-no">1.2</span> Jelaskan apa yang harus dilakukan alat, bukan mereknya</h2>
+          <p>Sebutkan rentang, akurasi, kapasitas, atau keluaran yang Anda perlukan. Jangan menyebut merek atau tipe. Jangan menyalin detail desain yang hanya dipakai satu produsen. Persyaratan yang disalin dari satu brosur biasanya hanya cocok untuk satu produk.</p>
+          <p class="example"><strong>Contoh</strong> <span>Tulis &ldquo;daya pemanas dikendalikan otomatis oleh sensor suhu kulit, dengan mode manual&rdquo;, bukan nama tipe infant warmer yang pernah Anda pakai.</span></p>
+          <p class="test"><strong>Tanyakan</strong> <span>Apakah lebih dari satu produsen dapat memenuhi persyaratan ini sebagaimana tertulis?</span></p>
+        </section>
+        <section class="rule" id="rule-1-3">
+          <h2><span class="rule-no">1.3</span> Pisahkan yang wajib dari yang sebaiknya ada</h2>
+          <p>Persyaratan wajib adalah sesuatu yang tanpanya alat menjadi tidak aman atau tidak berguna, karena penawaran yang tidak memenuhinya akan digugurkan. Selebihnya adalah hal yang sebaiknya ada. Jika metode evaluasi memungkinkan, beri nilai tambah untuk hal yang sebaiknya ada, alih-alih menggugurkan penawaran yang tidak memilikinya.</p>
+          <p class="example"><strong>Contoh</strong> <span>Untuk infant warmer, alarm saat suhu keluar dari batas adalah wajib. Timbangan bayi bawaan adalah sebaiknya ada.</span></p>
+          <p class="test"><strong>Tanyakan</strong> <span>Jika sebuah penawaran tidak memenuhi baris ini, apakah Anda benar-benar ingin menggugurkannya?</span></p>
+        </section>
+        <section class="rule" id="rule-1-4">
+          <h2><span class="rule-no">1.4</span> Sebutkan standar yang tepat</h2>
+          <p>Peralatan listrik medis wajib memenuhi standar keselamatan umum <a class="term" href="glossary.html#iec" title="International Electrotechnical Commission. Lembaga ini menerbitkan standar keselamatan untuk peralatan listrik medis, seperti IEC 60601-1.">IEC</a> 60601-1. Banyak jenis alat juga punya <a class="term" href="glossary.html#particular-standard" title="Standar dalam seri IEC 60601-2 yang memuat persyaratan tambahan untuk satu jenis peralatan listrik medis.">standar khusus</a> sendiri. Misalnya, IEC 60601-2-21 mengatur infant radiant warmer. Sebutkan standar yang berlaku dan mintalah bukti, seperti <a class="term" href="glossary.html#test-report" title="Dokumen dari laboratorium penguji yang menunjukkan bahwa alat telah diuji terhadap suatu standar, beserta hasilnya.">laporan uji</a>, bukan sekadar pernyataan bahwa alat memenuhi standar.</p>
+          <p class="example"><strong>Contoh</strong> <span>Lemah: &ldquo;Memenuhi standar internasional.&rdquo; Kuat: &ldquo;Memenuhi IEC 60601-1 dan IEC 60601-2-21. Lampirkan laporan uji.&rdquo;</span></p>
+          <p class="test"><strong>Tanyakan</strong> <span>Apakah setiap standar yang Anda sebutkan memang berlaku untuk jenis alat ini?</span></p>
+        </section>
+        <section class="rule" id="rule-1-5">
+          <h2><span class="rule-no">1.5</span> Pilih alat yang cocok dengan tempat pemakaiannya</h2>
+          <p>Alat harus tetap berfungsi di tempat ia dipakai. Perhatikan pasokan listrik dan iklimnya: panas, kelembapan, dan debu. Perhatikan juga perjalanan ke fasilitas terpencil, kemampuan petugas yang akan memakainya, dan siapa yang akan merawatnya.</p>
+          <p class="example"><strong>Contoh</strong> <span>Analyzer laboratorium untuk puskesmas yang sering mati listrik mungkin memerlukan <a class="term" href="glossary.html#ups" title="Uninterruptible power supply: unit baterai yang menjaga alat tetap menyala saat listrik padam.">UPS</a>, dan <a class="term" href="glossary.html#reagent" title="Bahan kimia yang dipakai analyzer laboratorium untuk menjalankan tes. Reagen dibeli berulang kali.">reagen</a> yang bisa disimpan tanpa lemari pendingin.</span></p>
+          <p class="test"><strong>Tanyakan</strong> <span>Apakah alat ini tetap berfungsi di fasilitas yang sumber dayanya paling terbatas dalam daftar pengiriman?</span></p>
+        </section>
+        <section class="rule" id="rule-1-6">
+          <h2><span class="rule-no">1.6</span> Rinci semua yang harus menyertai alat</h2>
+          <p>Alat belum siap dipakai tanpa aksesorinya, persediaan awal <a class="term" href="glossary.html#consumables" title="Barang yang dihabiskan alat saat dipakai, seperti reagen, sensor, filter, atau kertas.">bahan habis pakai</a>, dan buku petunjuk yang bisa dibaca penggunanya. Masukkan semuanya, ditambah pelatihan, masa garansi, suku cadang, dan seberapa cepat penyedia harus datang saat alat rusak.</p>
+          <p class="example"><strong>Contoh</strong> <span>Untuk analyzer laboratorium: reagen awal, bahan kontrol dan kalibrator, kertas printer, serta pelatihan untuk petugas laboratorium.</span></p>
+          <p class="test"><strong>Tanyakan</strong> <span>Pada hari alat tiba, apakah semua yang dibutuhkan untuk melayani pasien pertama sudah ada?</span></p>
+        </section>
+        <section class="rule" id="rule-1-7">
+          <h2><span class="rule-no">1.7</span> Pastikan setiap persyaratan bisa diperiksa</h2>
+          <p>Untuk setiap persyaratan, sebutkan bukti yang harus diserahkan <a class="term" href="glossary.html#bidder" title="Pelaku usaha yang mengajukan penawaran dalam tender.">peserta</a>, dan cara Anda memeriksanya saat alat diserahterimakan. Persyaratan yang tidak bisa diperiksa tidak bisa ditegakkan.</p>
+          <p class="example"><strong>Contoh</strong> <span>Persyaratan: pengendalian suhu dalam rentang yang Anda tetapkan. Bukti dalam penawaran: laporan uji. Pemeriksaan saat serah terima: ukur dengan termometer terkalibrasi saat <a class="term" href="glossary.html#acceptance-test" title="Pemeriksaan saat alat diserahkan, untuk memastikan alat berfungsi dan sesuai kontrak sebelum pembeli menerimanya.">uji terima</a>.</span></p>
+          <p class="test"><strong>Tanyakan</strong> <span>Untuk setiap baris: dokumen apa yang membuktikannya, dan pemeriksaan apa yang memastikannya saat serah terima?</span></p>
+        </section>
+      </div>
+
+      <h2 class="section-title">Menulis ulang persyaratan</h2>
+      <p class="section-lead">Empat baris yang sering muncul dalam spesifikasi, dan cara menulis masing-masing dengan lebih baik. Contoh-contohnya bersifat ilustratif.</p>
+        <div class="table-wrap">
+          <table role="table">
+            <thead role="rowgroup">
+              <tr role="row"><th scope="col" role="columnheader">Yang sering tertulis</th><th scope="col" role="columnheader">Masalahnya</th><th scope="col" role="columnheader">Lebih baik</th></tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr role="row"><th scope="row" role="rowheader">&ldquo;Merek X atau setara&rdquo;</th><td role="cell" data-label="Masalahnya">Menyebut produk, dan tidak menjelaskan arti &ldquo;setara&rdquo;.</td><td role="cell" data-label="Lebih baik">Sebutkan apa yang harus dicapai alat, beserta rentang dan akurasi yang diperlukan.</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">&ldquo;Layar berkualitas tinggi&rdquo;</th><td role="cell" data-label="Masalahnya">Tidak bisa diperiksa, jadi tidak bisa ditegakkan.</td><td role="cell" data-label="Lebih baik">&ldquo;Layar menampilkan nilai yang diatur dan nilai yang terukur, terbaca dari jarak satu meter.&rdquo;</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">&ldquo;Wajib layar sentuh&rdquo;</th><td role="cell" data-label="Masalahnya">Pilihan desain, bukan kebutuhan klinis.</td><td role="cell" data-label="Lebih baik">&ldquo;Kontrol dapat dipakai dengan tangan bersarung dan dibersihkan dengan disinfektan standar.&rdquo;</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">&ldquo;Memenuhi standar internasional&rdquo;</th><td role="cell" data-label="Masalahnya">Tidak menyebut standar yang mana, atau bukti apa yang diperlukan.</td><td role="cell" data-label="Lebih baik">&ldquo;Memenuhi IEC 60601-1 dan standar khusus untuk jenis alat ini. Laporan uji dilampirkan.&rdquo;</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      <h2 class="section-title">Spesifikasi lengkap, bagian demi bagian</h2>
+      <p class="section-lead"><a class="term" href="glossary.html#who" title="Organisasi Kesehatan Dunia, badan Perserikatan Bangsa-Bangsa untuk kesehatan.">Organisasi Kesehatan Dunia</a> (WHO) menerbitkan <a href="https://www.who.int/publications/m/item/user-guide-who-technical-specification-for-medical-devices">templat spesifikasi teknis</a> berisi lima puluh isian dalam tiga belas bagian. Jika Anda memakai bagian yang sama setiap kali, tidak ada yang terlewat, dan dua spesifikasi dapat dibandingkan baris demi baris.</p>
+        <div class="table-wrap">
+          <table role="table">
+            <thead role="rowgroup">
+              <tr role="row"><th scope="col" role="columnheader">Bagian</th><th scope="col" role="columnheader">Yang ditulis</th></tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr role="row"><th scope="row" role="rowheader">Nama, kategori, dan kode</th><td role="cell" data-label="Yang ditulis">Nama generik dan kode dari sistem penamaan yang diakui, seperti <a class="term" href="glossary.html#gmdn" title="Global Medical Device Nomenclature: sistem penamaan jenis alat kesehatan yang dipakai otoritas regulasi di banyak negara.">GMDN</a>, agar setiap peserta memahami alat yang sama</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Tujuan penggunaan</th><td role="cell" data-label="Yang ditulis">Tujuan klinis, tingkat layanan, dan unit tempat alat akan dipakai</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Karakteristik teknis</th><td role="cell" data-label="Yang ditulis">Apa yang harus dicapai alat, apa yang ditampilkannya, dan pengaturan yang dapat diubah pengguna</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Karakteristik fisik</th><td role="cell" data-label="Yang ditulis">Komponen, mobilitas, dan bahan</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Kebutuhan utilitas</th><td role="cell" data-label="Yang ditulis">Pasokan listrik, air, atau gas yang dibutuhkan alat</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Aksesori, bahan habis pakai, dan suku cadang</th><td role="cell" data-label="Yang ditulis">Apa yang harus datang bersama alat, dan apa yang akan dihabiskannya</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Kemasan</th><td role="cell" data-label="Yang ditulis">Sterilitas saat tiba, masa simpan, pengangkutan, penyimpanan, dan pelabelan</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Persyaratan lingkungan</th><td role="cell" data-label="Yang ditulis">Kondisi yang harus ditahan alat di tempat ia bekerja</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Pelatihan, pemasangan, dan penggunaan</th><td role="cell" data-label="Yang ditulis">Persiapan lokasi, pengesahan saat <a class="term" href="glossary.html#commissioning" title="Pengujian alat yang baru dipasang untuk memastikan alat berfungsi sebelum dipakai.">uji fungsi</a>, dan pelatihan pengguna</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Garansi dan pemeliharaan</th><td role="cell" data-label="Yang ditulis">Masa garansi, jenis kontrak layanan, suku cadang setelah garansi, dan pembaruan</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Dokumentasi</th><td role="cell" data-label="Yang ditulis">Buku petunjuk dan dokumen lain yang harus diserahkan</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Penghapusan</th><td role="cell" data-label="Yang ditulis">Perkiraan umur pakai alat</td></tr>
+              <tr role="row"><th scope="row" role="rowheader">Keselamatan dan standar</th><td role="cell" data-label="Yang ditulis"><a class="term" href="glossary.html#risk-class" title="Salah satu dari empat kelas, A sampai D, yang mengelompokkan alat kesehatan dari risiko rendah sampai tinggi.">Kelas risiko</a>, <a class="term" href="glossary.html#izin-edar" title="Izin dari Kementerian Kesehatan yang wajib dimiliki alat kesehatan sebelum boleh dijual di Indonesia.">izin edar</a>, dan standar yang berlaku</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      <section class="related" aria-labelledby="related-title">
+        <h2 id="related-title">Terkait</h2>
+        <ul class="link-list">
+          <li><a href="checklist.html#guide-1">Daftar periksa panduan ini</a><span>7 pertanyaan dari panduan ini, untuk dicentang atau dicetak</span></li>
+          <li><a href="glossary.html">Glosarium</a><span>Penjelasan istilah dan singkatan yang dipakai di sini</span></li>
+          <li><a href="library.html">Sumber rujukan</a><span>Dokumen publik di balik panduan</span></li>
+          <li><a href="dossiers.html">Kajian alat</a><span>Ketiga pertanyaan dijawab untuk satu alat</span></li>
+        </ul>
+      </section>
+
+      <nav class="pager" aria-label="Panduan lain">
+        <a class="pager-next" href="pricing.html"><span>Panduan berikutnya</span><strong><span class="g-no">2</span> Berapa harga yang wajar?</strong></a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <p class="wordmark">SistemSehat</p>
+        <p>Inisiatif independen dan nonkomersial. Tidak terkait dengan atau didukung oleh lembaga pemerintah, pemberi pinjaman, atau produsen mana pun.</p>
+      </div>
+      <nav aria-label="Semua panduan">
+        <h2>Panduan</h2>
+        <ul>
+          <li><a href="specification.html">Apa yang harus kita minta?</a></li>
+          <li><a href="pricing.html">Berapa harga yang wajar?</a></li>
+          <li><a href="process.html">Bagaimana membelinya tanpa tender gagal?</a></li>
+          <li><a href="regulation.html">Apa yang wajib dipenuhi sebuah alat?</a></li>
+          <li><a href="technology.html">Bagaimana menilai teknologinya?</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Alat bantu">
+        <h2>Alat bantu</h2>
+        <ul>
+          <li><a href="checklist.html">Daftar periksa</a></li>
+          <li><a href="glossary.html">Glosarium</a></li>
+          <li><a href="library.html">Sumber rujukan</a></li>
+          <li><a href="search.html">Pencarian</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Tentang situs ini">
+        <h2>Tentang</h2>
+        <ul>
+          <li><a href="about.html">Tentang SistemSehat</a></li>
+          <li><a href="about.html#how">Cara menjaga independensi</a></li>
+          <li><a href="dossiers.html">Kajian alat</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap footer-legal">
+      <p>Panduan di sini bersifat umum dan tidak menggantikan aturan pengadaan yang berlaku di instansi Anda.</p>
+      <p>&copy; 2026 SistemSehat</p>
+    </div>
+  </footer>
+</body>
+</html>
