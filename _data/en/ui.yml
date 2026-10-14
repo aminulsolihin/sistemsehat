@@ -12,8 +12,8 @@ nav:
     label: Regulations
   - url: articles.html
     label: Articles
-  - url: toolkit.html
-    label: Toolkit
+  #- url: toolkit.html
+  #  label: Toolkit
   - url: about.html
     label: About
 
