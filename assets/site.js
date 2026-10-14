@@ -62,7 +62,7 @@
       acceptNode: function (node) {
         if (!/\S/.test(node.nodeValue)) { return NodeFilter.FILTER_REJECT; }
         for (var el = node.parentNode; el && el !== main; el = el.parentNode) {
-          if (SKIP.test(el.nodeName) || (el.classList && (el.classList.contains("crumbs") || el.classList.contains("guide-tabs")))) {
+          if (SKIP.test(el.nodeName) || (el.classList && (el.classList.contains("crumbs") || el.classList.contains("guide-tabs") || el.classList.contains("card-more")))) {
             return NodeFilter.FILTER_REJECT;
           }
         }
@@ -104,6 +104,29 @@
         node.parentNode.replaceChild(frag, node);
       }
     });
+  })();
+
+  /* ---- Article list: the topic buttons show one topic at a time (?topic=open-source) ---- */
+  (function topicFilter() {
+    var list = document.getElementById("article-list");
+    var chips = Array.prototype.slice.call(document.querySelectorAll(".topic-filter a[data-topic]"));
+    if (!list || !chips.length) { return; }
+    var items = Array.prototype.slice.call(list.children);
+    function show(topic, push) {
+      if (!chips.some(function (c) { return c.getAttribute("data-topic") === topic; })) { topic = ""; }
+      items.forEach(function (li) { li.hidden = topic !== "" && li.getAttribute("data-topic") !== topic; });
+      chips.forEach(function (c) {
+        if (c.getAttribute("data-topic") === topic) { c.setAttribute("aria-current", "true"); } else { c.removeAttribute("aria-current"); }
+      });
+      if (push && window.history && history.replaceState) {
+        history.replaceState(null, "", topic ? "?topic=" + encodeURIComponent(topic) : location.pathname);
+      }
+    }
+    chips.forEach(function (c) {
+      c.addEventListener("click", function (e) { e.preventDefault(); show(c.getAttribute("data-topic"), true); });
+    });
+    var m = /[?&]topic=([^&#]+)/.exec(location.search);
+    show(m ? decodeURIComponent(m[1]) : "", false);
   })();
 
   /* ---- Language switch: the other-language link always points at the same spot ---- */

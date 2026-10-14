@@ -135,7 +135,8 @@
     <div class="wrap">
       <nav class="guide-tabs" aria-label="{{ t.tabs_label }}">
         <ul>
-{%- for g in guides %}
+{%- assign tab_guides = guides | where: "pillar", page.pillar %}
+{%- for g in tab_guides %}
           <li><a href="{{ root }}{{ g.name | replace: '.md', '.html' }}"{% if g.url == page.url %} aria-current="page"{% endif %}><span class="g-no">{{ g.number }}</span> {{ g.label }}</a></li>
 {%- endfor %}
         </ul>
@@ -155,7 +156,7 @@
         <h2>{{ t.labels["guides.html"] }}</h2>
         <ul>
 {%- for g in guides %}
-          <li><a href="{{ root }}{{ g.name | replace: '.md', '.html' }}">{{ g.question }}</a></li>
+          <li><a href="{{ root }}{{ g.name | replace: '.md', '.html' }}"><span class="g-no">{{ g.number }}</span> {{ g.label }}</a></li>
 {%- endfor %}
         </ul>
       </nav>
@@ -163,6 +164,7 @@
         <h2>{{ t.f_tools }}</h2>
         <ul>
           <li><a href="{{ root }}checklist.html">{{ t.labels["checklist.html"] }}</a></li>
+          <li><a href="{{ root }}projects.html">{{ t.labels["projects.html"] }}</a></li>
           <li><a href="{{ root }}glossary.html">{{ t.labels["glossary.html"] }}</a></li>
           <li><a href="{{ root }}library.html">{{ t.labels["library.html"] }}</a></li>
           <li><a href="{{ root }}search.html">{{ t.labels["search.html"] }}</a></li>

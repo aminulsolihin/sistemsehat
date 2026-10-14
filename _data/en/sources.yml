@@ -77,3 +77,29 @@
       url: https://e-watch-alkes.kemkes.go.id/
       publisher: Ministry of Health, Indonesia
       use: The national monitoring system for medical devices.
+- group: Innovation and open source
+  items:
+    - title: The biodesign process
+      url: https://biodesign.stanford.edu/about-us/process.html
+      publisher: Stanford Byers Center for Biodesign
+      use: A method for medical innovation in three phases, starting from needs observed in care.
+    - title: Target product profiles
+      url: https://www.who.int/observatories/global-observatory-on-health-research-and-development/analyses-and-syntheses/target-product-profile/who-target-product-profiles
+      publisher: World Health Organization
+      use: How to state what a product must achieve, with minimum and preferred values.
+    - title: Compendium of innovative health technologies for low-resource settings, 2024
+      url: https://www.who.int/publications/i/item/9789240095212
+      publisher: World Health Organization
+      use: Examples of new technologies assessed for places with limited resources.
+    - title: CERN Open Hardware Licence version 2
+      url: https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-2
+      publisher: CERN
+      use: The licence texts and user guides for sharing hardware designs.
+    - title: Approved open source licences
+      url: https://opensource.org/licenses
+      publisher: Open Source Initiative
+      use: Checking whether a software licence counts as open source.
+    - title: A review of open source ventilators for COVID-19 and future pandemics
+      url: https://f1000research.com/articles/9-218/v2
+      publisher: Joshua M. Pearce, F1000Research (2020)
+      use: What open medical hardware needs before it can be used on patients.

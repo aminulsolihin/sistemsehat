@@ -20,6 +20,11 @@ kramdown:
   auto_ids: false          # anchors are set by hand, so they stay the same in both languages
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
+# GitHub Pages turns some links into absolute addresses; keep them relative so the site also works
+# from a folder and the checks can follow every link.
+relative_links:
+  enabled: false
+
 # Files in the repository that are not part of the website.
 exclude:
   - README.md

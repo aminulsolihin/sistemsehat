@@ -2,6 +2,7 @@
 title: Tender gagal itu tiga masalah yang berbeda
 description: Penawaran terlalu sedikit, tidak ada penawaran yang memenuhi syarat, dan harga di atas HPS punya penyebab berbeda. Kenali yang mana sebelum tender ulang.
 author: Aminul Solihin
+topic: procurement
 ---
 
 Saat tender gagal, langkah tercepat adalah mengumumkannya lagi. Biasanya hasilnya sama, karena tidak ada yang berubah di dokumen pemilihan.

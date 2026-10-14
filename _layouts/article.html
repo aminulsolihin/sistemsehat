@@ -6,6 +6,7 @@ layout: default
 {%- endcomment -%}
 {%- assign t = site.data[page.lang].ui -%}
 {%- assign articles = site.posts | where: "lang", page.lang -%}
+{%- assign topic = t.topics | where: "id", page.topic | first -%}
     <div class="wrap">
       <header class="page-head">
         <h1>{{ page.title }}</h1>
@@ -14,6 +15,9 @@ layout: default
 {%- endif %}
         <ul class="meta">
           <li>{% include date.html date=page.date lang=page.lang %}</li>
+{%- if topic %}
+          <li><a href="../articles.html?topic={{ topic.id }}">{{ topic.label }}</a></li>
+{%- endif %}
 {%- if page.author %}
           <li>{{ t.by }} {{ page.author }}</li>
 {%- endif %}

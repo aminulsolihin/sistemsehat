@@ -13,7 +13,7 @@ from pathlib import Path
 
 DOCS = Path(__file__).resolve().parent.parent / "_site"
 # names everyone in the audience knows, and edition codes such as AMD1 in "IEC 60601-1:2005+AMD1:2012"
-ALLOWED = {"EN", "ID", "US", "PLN", "NEST360", "BPJS"}
+ALLOWED = {"EN", "ID", "US", "PLN", "NEST360", "BPJS", "COVID", "MIT", "BSD"}  # MIT and BSD: licence names
 PAGES = ["index", "guides", "specification", "pricing", "process", "regulation", "technology",
          "checklist", "glossary", "library", "dossiers", "about", "search"]
 LONG = 25  # words; sentences longer than this are listed
@@ -44,6 +44,8 @@ def blocks(path):
     h = re.sub(r"<(script|style|svg|noscript)[^>]*>.*?</\1>", " ", h, flags=re.S)
     h = re.sub(r"<nav[^>]*>.*?</nav>", " ", h, flags=re.S)
     h = re.sub(r"<strong>(Example|Contoh|Ask yourself|Tanyakan)</strong>", " ", h)  # labels are not prose
+    h = re.sub(r'<span class="update-meta">.*?</span></span>', " ", h, flags=re.S)  # dates and topic labels in lists
+    h = re.sub(r'(<li[^>]*>\s*(?:<span[^>]*>.*?</span>\s*)?<a [^>]*>[^<]*</a>)', r"\1. ", h, flags=re.S)  # a list title ends a sentence
     out = []
     for tag, inner in re.findall(r"<(p|li|td|dd)[^>]*>(.*?)</\1>", h, re.S):
         t = html.unescape(re.sub(r"<[^>]+>", " ", inner))
@@ -95,8 +97,11 @@ def main():
         print(f"\n=== {'English' if lang == 'en' else 'Indonesian'}")
         print(f"  {'page':14} {'sentences':>9} {'words/sentence':>15} {'over ' + str(LONG):>8}" + ("  grade" if lang == "en" else ""))
         all_s, longs, avoid_hits, no_example, unknown = [], [], [], [], {}
-        articles = sorted(p.relative_to(base).with_suffix("").as_posix() for p in (base / "articles").glob("*.html"))
-        for name in PAGES + articles:
+        # the main pages in a fixed order, then any other page (new guides, open projects, articles)
+        found = sorted(p.relative_to(base).with_suffix("").as_posix()
+                       for pattern in ("*.html", "articles/*.html", "dossiers/*.html") for p in base.glob(pattern))
+        extra = [n for n in found if n not in PAGES and n != "404" and not n.startswith("id/")]
+        for name in PAGES + extra:
             texts, raw = blocks(base / f"{name}.html")
             s = sentences(texts)
             all_s += s

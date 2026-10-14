@@ -2,6 +2,7 @@
 title: A failed tender is three different problems
 description: Too few bids, no bids that meet the requirements, and prices above the HPS have different causes. Find which one you have before you tender again.
 author: Aminul Solihin
+topic: procurement
 ---
 
 When a tender fails, the quickest response is to announce it again. Usually the result is the same, because nothing in the bidding document has changed.

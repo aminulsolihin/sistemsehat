@@ -382,3 +382,129 @@
   find:
     - WHO
     - Organisasi Kesehatan Dunia
+
+# Istilah yang ditambahkan bersama panduan Kembangkan (C, D, dan E)
+
+- id: clinical-investigation
+  term: Uji klinik
+  definition: >-
+    Penelitian alat pada manusia untuk menunjukkan bahwa alat aman dan bekerja sesuai tujuannya.
+  find:
+    - uji klinik
+
+- id: design-control
+  term: Pengendalian desain dan pengembangan
+  definition: >-
+    Langkah perancangan alat yang direncanakan dan dicatat: persyaratan, tinjauan, pengujian, dan
+    perubahan. Diwajibkan oleh ISO 13485.
+  find:
+    - pengendalian desain dan pengembangan
+    - berkas desain
+
+- id: tpp
+  term: TPP
+  definition: >-
+    Target product profile atau profil produk target: daftar apa yang harus dicapai sebuah produk,
+    seperti tujuan penggunaan, pengguna, tempat pemakaian, dan kinerja. Setiap baris punya nilai
+    minimum dan nilai yang diharapkan.
+  find:
+    - TPP
+    - profil produk target
+
+- id: open-source
+  term: Sumber terbuka
+  definition: >-
+    Perangkat lunak atau perangkat keras yang desainnya diterbitkan dengan lisensi yang membolehkan
+    siapa saja mempelajari, memakai, mengubah, dan membagikannya. Dalam bahasa Inggris: *open source*.
+  find:
+    - sumber terbuka
+
+- id: reciprocal-licence
+  term: Lisensi resiprokal
+  definition: >-
+    Lisensi terbuka yang mewajibkan versi yang diubah dibagikan dengan lisensi yang sama. Disebut
+    juga copyleft. Kebalikannya adalah lisensi permisif, yang membolehkan versi turunan memakai
+    lisensi apa pun.
+  find:
+    - resiprokal
+    - permisif
+
+- id: cern-ohl
+  term: CERN-OHL
+  definition: >-
+    CERN Open Hardware Licence. Versi 2 punya tiga varian: resiprokal kuat (S), resiprokal lemah (W),
+    dan permisif (P).
+  find:
+    - CERN-OHL
+
+- id: gpl
+  term: GNU GPL
+  definition: >-
+    GNU General Public License: lisensi perangkat lunak yang resiprokal kuat. Siapa pun yang
+    menyebarkan versi yang diubah wajib membagikan kode sumbernya dengan lisensi yang sama.
+  find:
+    - GNU GPL
+    - GPL
+
+- id: oss
+  term: OSS
+  definition: >-
+    Online Single Submission: sistem perizinan berusaha daring pemerintah, termasuk perizinan
+    produksi alat kesehatan.
+  find:
+    - OSS
+
+- id: djki
+  term: DJKI
+  definition: >-
+    Direktorat Jenderal Kekayaan Intelektual, yang memberikan paten di Indonesia.
+  find:
+    - DJKI
+
+- id: patent
+  term: Paten
+  definition: >-
+    Hak yang diberikan negara untuk waktu tertentu untuk melarang pihak lain membuat atau menjual
+    sebuah invensi. Di Indonesia diberikan oleh DJKI.
+  find:
+    - paten
+
+- id: dicom
+  term: DICOM
+  definition: >-
+    Digital Imaging and Communications in Medicine: format standar untuk menyimpan dan berbagi citra
+    medis.
+  find:
+    - DICOM
+
+- id: satusehat
+  term: SATUSEHAT
+  definition: >-
+    Platform nasional Kementerian Kesehatan untuk pertukaran data kesehatan. Rekam medis elektronik di
+    fasilitas kesehatan wajib terhubung dengannya.
+  find:
+    - SATUSEHAT
+
+- id: simrs
+  term: SIMRS
+  definition: >-
+    Sistem Informasi Manajemen Rumah Sakit, yang menangani pendaftaran, rekam medis, tagihan, dan
+    laporan.
+  find:
+    - SIMRS
+
+- id: use-error
+  term: Kesalahan penggunaan
+  definition: >-
+    Kekeliruan pengguna yang dimungkinkan oleh desain alat. Rekayasa kegunaan (IEC 62366-1) bertujuan
+    menemukan dan menghilangkannya.
+  find:
+    - kesalahan penggunaan
+
+- id: ethics-committee
+  term: Komisi etik penelitian kesehatan
+  definition: >-
+    Komisi yang harus menyetujui penelitian pada manusia sebelum dimulai, disingkat KEPK.
+  find:
+    - komisi etik penelitian kesehatan
+    - komisi etik penelitian

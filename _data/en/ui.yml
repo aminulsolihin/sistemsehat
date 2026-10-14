@@ -8,18 +8,19 @@ nav:
     label: Guides
   - url: articles.html
     label: Articles
+  - url: projects.html
+    label: Open projects
   - url: dossiers.html
     label: Dossiers
   - url: checklist.html
     label: Checklist
   - url: glossary.html
     label: Glossary
-  - url: library.html
-    label: Sources
   - url: about.html
     label: About
 
 labels:
+  projects.html: Open projects
   articles.html: Articles
   guides.html: Guides
   dossiers.html: Dossiers
@@ -36,7 +37,7 @@ home: Home
 guides_label: Guides
 tabs_label: Guides in this series
 f_guides_label: All guides
-og_alt: 'SistemSehat: Ask for the right device. Pay a fair price. Run a tender that works.'
+og_alt: "SistemSehat: Build the right device. Buy it the right way. Share what works."
 search_label: Search this site
 search_placeholder: Search rules and terms
 search: Search
@@ -52,8 +53,8 @@ f_about_site: About SistemSehat
 f_independent: How it stays independent
 f_dossiers: Device dossiers
 legal: >-
-  The guidance here is general. It does not replace the procurement rules that apply to your
-  organisation.
+  The guidance here is general. It does not replace the procurement and regulatory rules that apply
+  to you or your organisation.
 test: Ask yourself
 example: Example
 check_count: '{n} of {total} ticked'
@@ -102,3 +103,36 @@ by: By
 all_articles: All articles
 prev_article: Newer article
 next_article: Older article
+
+# The two halves of the site
+pillars:
+  build:
+    label: Build
+    heading: Develop medical technology
+    lead: >-
+      For innovators, researchers, engineers and hospital technology teams. From a clinical need to a
+      device that can be sold in Indonesia, and how to use and share open-source technology.
+  buy:
+    label: Buy
+    heading: Buy medical equipment
+    lead: >-
+      For procurement officials, clinicians, technical staff and planners: what to ask for, what it
+      should cost, and how to run the tender.
+
+# Topics for articles. An article's "topic:" is one of these ids.
+topics:
+  - id: innovation
+    label: Innovation
+  - id: open-source
+    label: Open source
+  - id: research
+    label: Research
+  - id: procurement
+    label: Procurement
+  - id: regulation
+    label: Regulation
+all_topics: All topics
+k_project: Open project
+f_build: Build
+f_buy: Buy
+rel_projects: Open-source hardware and software, with licence and status

@@ -1,13 +1,13 @@
 ---
 title: About | SistemSehat
-description: Who SistemSehat is for, who is behind it, and how it stays independent.
+description: Who SistemSehat is for, why it covers both developing and buying medical technology, and how it stays independent.
 lang: en
 layout: page
 heading: About SistemSehat
 lead: >-
-  SistemSehat publishes independent guidance on buying medical equipment. It covers the
-  technical specification, the price and the procurement process, with background on regulation,
-  standards and the technology itself.
+  SistemSehat publishes independent guidance on medical technology in Indonesia. It covers how to
+  develop a device and how to use and share open-source technology. It also covers how to specify,
+  price and buy equipment for public health facilities.
 search:
   title: About SistemSehat
   text: Who the site is for, who is behind it, and how it stays independent.
@@ -15,7 +15,15 @@ search:
 
 ## Who it is for
 
-People in district health offices and public hospitals in Indonesia who take part in buying medical equipment:
+Two groups of people in Indonesia, who often never meet.
+
+People who develop medical technology:
+
+- innovators and start-up teams;
+- researchers and students in engineering, medicine and health sciences;
+- hospital technology teams who adapt or build their own tools.
+
+People who buy it, in district health offices and public hospitals:
 
 - procurement officials, such as the PPK and the Pokja Pemilihan;
 - clinicians who help write specifications and check what is delivered;
@@ -24,11 +32,11 @@ People in district health offices and public hospitals in Indonesia who take par
 
 ## Why it exists
 
-These teams are asked to specify and price complex equipment, often with little independent material to help them. Suppliers know their products in detail. Buyers need guidance that is just as careful, from someone with no product to sell.
+Buyers are asked to specify and price complex equipment, often with little independent material to help them. Developers often design without knowing what buyers will check, and many good prototypes never reach a patient. Both sides need careful guidance from someone with no product to sell, and each side works better when it knows what the other needs.
 
 ## Why the name
 
-*Sistem sehat* means "healthy system" in Indonesian. A health system depends on its equipment, and buying the right device at a fair price helps keep that system healthy.
+*Sistem sehat* means "healthy system" in Indonesian. A health system depends on its equipment. Developing the right devices, and buying them at a fair price, helps keep that system healthy.
 
 ## Who is behind it
 
@@ -36,7 +44,7 @@ SistemSehat was started by Aminul Solihin, a biomedical engineer trained at Inst
 
 ## Disclosure
 
-Aminul works in public-sector procurement in Indonesia. SistemSehat is a personal initiative. It is not linked to or endorsed by his employer, any government body or any lender, and nothing on this site represents their views.
+Aminul works in public-sector procurement in Indonesia and develops medical technology. SistemSehat is a personal initiative. It is not linked to or endorsed by his employer, any government body, any lender or any company. Nothing on this site represents their views. When an article discusses a technology he has worked on, it says so.
 
 ## How it works
 {: #how}
@@ -44,7 +52,7 @@ Aminul works in public-sector procurement in Indonesia. SistemSehat is a persona
 - **Public sources only.** Every figure and requirement comes from a document anyone can download, and each one is cited.
 - **No money from sellers.** No funding, gifts or sponsored content from manufacturers or distributors.
 - **No current tenders.** Nothing is published about a tender that is still being evaluated.
-- **No brand ratings.** The guidance describes what to ask for and how to buy it, not which product to choose.
+- **No ratings or promotion.** The guidance describes how to develop, choose and buy technology, not which product to pick. Listing an open project is not a recommendation.
 - **Public corrections.** When something is wrong or outdated, it is corrected and the change is noted on the page.
 
 ## Status

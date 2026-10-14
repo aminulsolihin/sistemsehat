@@ -5,6 +5,7 @@ description: >-
   manufacturers can meet.
 lang: en
 layout: guide
+pillar: buy
 order: 1
 number: "1"
 label: Specification

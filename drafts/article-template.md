@@ -7,6 +7,8 @@
 title: TITLE IN 56 CHARACTERS OR FEWER
 description: ONE OR TWO SENTENCES, 160 CHARACTERS OR FEWER. SHOWN UNDER THE TITLE, IN THE LIST AND IN LINK PREVIEWS.
 author: YOUR NAME
+# topic: one of innovation, open-source, research, procurement, regulation (list in _data/en/ui.yml)
+topic: innovation
 ---
 
 First paragraph: the question this article answers, and the answer in one or two sentences.

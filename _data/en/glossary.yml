@@ -406,3 +406,135 @@
   find:
     - WHO
     - World Health Organization
+
+# Terms added with the Build guides (C, D and E)
+
+- id: clinical-investigation
+  term: Clinical investigation
+  definition: >-
+    A study of a device in people, to show that it is safe and performs as intended. In Indonesian:
+    *uji klinik*.
+  find:
+    - clinical investigations
+    - clinical investigation
+
+- id: design-control
+  term: Design and development control
+  definition: >-
+    The planned and recorded steps of designing a device: requirements, reviews, tests and changes.
+    ISO 13485 requires it.
+  find:
+    - design and development control
+    - design file
+
+- id: tpp
+  term: TPP
+  definition: >-
+    Target product profile: a list of what a product must achieve, such as its intended use, users,
+    setting and performance, with minimum and preferred values.
+  find:
+    - TPP
+    - target product profiles
+    - target product profile
+
+- id: open-source
+  term: Open source
+  definition: >-
+    Software or hardware whose design is published under a licence that lets anyone study, use,
+    change and share it.
+  find:
+    - open-source
+    - open source
+
+- id: reciprocal-licence
+  term: Reciprocal licence
+  definition: >-
+    An open licence that requires changed versions to be shared under the same licence. Also called
+    copyleft. The opposite is a permissive licence, which lets others use any licence for their
+    version.
+  find:
+    - reciprocal
+    - permissive
+
+- id: cern-ohl
+  term: CERN-OHL
+  definition: >-
+    CERN Open Hardware Licence. Version 2 has three variants: strongly reciprocal (S), weakly
+    reciprocal (W) and permissive (P).
+  find:
+    - CERN-OHL
+
+- id: gpl
+  term: GNU GPL
+  definition: >-
+    GNU General Public License: a strongly reciprocal licence for software. Anyone who distributes a
+    changed version must share its source code under the same licence.
+  find:
+    - GNU GPL
+    - GPL
+
+- id: oss
+  term: OSS
+  definition: >-
+    Online Single Submission: the government's online system for business licences, including
+    licences to produce medical devices.
+  find:
+    - OSS
+
+- id: djki
+  term: DJKI
+  definition: >-
+    *Direktorat Jenderal Kekayaan Intelektual*: the Directorate General of Intellectual Property,
+    which grants patents in Indonesia.
+  find:
+    - DJKI
+
+- id: patent
+  term: Patent
+  definition: >-
+    A right, granted by the state for a limited time, to stop others from making or selling an
+    invention. In Indonesia it is granted by DJKI.
+  find:
+    - patents
+    - patent
+
+- id: dicom
+  term: DICOM
+  definition: >-
+    Digital Imaging and Communications in Medicine: the standard format for storing and sharing
+    medical images.
+  find:
+    - DICOM
+
+- id: satusehat
+  term: SATUSEHAT
+  definition: >-
+    The Ministry of Health's national platform for exchanging health data. Electronic medical
+    records in health facilities must connect to it.
+  find:
+    - SATUSEHAT
+
+- id: simrs
+  term: SIMRS
+  definition: >-
+    *Sistem Informasi Manajemen Rumah Sakit*: a hospital information system, which handles
+    registration, records, billing and reports.
+  find:
+    - SIMRS
+
+- id: use-error
+  term: Use error
+  definition: >-
+    A mistake by a user that the design of a device made likely. Usability engineering (IEC 62366-1)
+    aims to find and remove them.
+  find:
+    - use errors
+    - use error
+
+- id: ethics-committee
+  term: Health research ethics committee
+  definition: >-
+    The committee that must approve a study in people before it starts. In Indonesian: *Komisi Etik
+    Penelitian Kesehatan* (KEPK).
+  find:
+    - research ethics committee

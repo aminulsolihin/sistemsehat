@@ -7,6 +7,9 @@ How to write for SistemSehat, in English and in Bahasa Indonesia. Read it before
 - **Procurement officials** in district health offices and public hospitals: the PPK, the Pokja Pemilihan, procurement officials. They know the procurement rules well, but not every device.
 - **Clinicians** who help write specifications and check what is delivered. They know the device well, but not procurement.
 - **Technical and maintenance staff**, and **planners** who prepare budgets.
+- **Innovators, researchers and engineers** who develop medical technology, including students and hospital technology teams. They know their technology well, but often not regulation, procurement, or what buyers will check.
+
+Write each half so that the other half can follow it. A buyer should understand the Build guides, and an engineer the Buy guides. Where the two meet, link them: Guide D links to Guide A, Guide C to rule 1.5.
 
 Most readers of the English pages are Indonesian and read English as a second language. Many read on a phone, between other tasks. So we write to be understood on the first reading, by someone in a hurry.
 
@@ -70,6 +73,14 @@ Use the same word for the same thing everywhere. When a reader sees two differen
 | rule (in a guide) | prinsip | kaidah, aturan (confused with *peraturan*) |
 | device | alat | product (unless you mean the commercial product) |
 | Sources (the library page) | Sumber rujukan | Library, Pustaka |
+| open source | sumber terbuka | |
+| licence (noun), license (verb) | lisensi, melisensikan | |
+| permissive / reciprocal licence | lisensi permisif / resiprokal | copyleft (only as an aside) |
+| manufacturer | produsen | maker |
+| prototype | purwarupa | |
+| clinical investigation | uji klinik | clinical trial (for devices) |
+| target product profile | profil produk target | |
+| use error | kesalahan penggunaan | user error (it blames the user) |
 
 Spelling in English is British ("authorisation", "organisation"), except "analyzer", which is the spelling used by manufacturers and in Indonesian catalogues.
 
@@ -97,6 +108,7 @@ Indonesian follows EYD edisi V and KBBI.
 - Regulations change. Name the regulation and its year, give the date you checked it, and update "Last reviewed" (`reviewed:` in `_data/en/ui.yml` and `_data/id/ui.yml`) when you check again.
 - Examples are illustrative unless a source is cited. Say so.
 - Never write about a tender that is still being evaluated, and never rate a brand.
+- For open projects and new technology, report what the project's own documents and independent evaluations say. Do not repeat claims from announcements or videos.
 
 ## 9. Links
 

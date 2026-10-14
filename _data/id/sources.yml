@@ -81,3 +81,29 @@
       url: https://e-watch-alkes.kemkes.go.id/
       publisher: Kementerian Kesehatan
       use: Sistem pemantauan nasional alat kesehatan.
+- group: Inovasi dan sumber terbuka
+  items:
+    - title: The biodesign process
+      url: https://biodesign.stanford.edu/about-us/process.html
+      publisher: Stanford Byers Center for Biodesign
+      use: Metode inovasi medis dalam tiga tahap, dimulai dari kebutuhan yang diamati di tempat layanan.
+    - title: Target product profiles
+      url: https://www.who.int/observatories/global-observatory-on-health-research-and-development/analyses-and-syntheses/target-product-profile/who-target-product-profiles
+      publisher: Organisasi Kesehatan Dunia (WHO)
+      use: Cara menyatakan apa yang harus dicapai produk, dengan nilai minimum dan nilai yang diharapkan.
+    - title: Compendium of innovative health technologies for low-resource settings, 2024
+      url: https://www.who.int/publications/i/item/9789240095212
+      publisher: Organisasi Kesehatan Dunia (WHO)
+      use: Contoh teknologi baru yang dinilai untuk tempat dengan sumber daya terbatas.
+    - title: CERN Open Hardware Licence version 2
+      url: https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-2
+      publisher: CERN
+      use: Teks lisensi dan panduan pemakaian untuk membagikan desain perangkat keras.
+    - title: Approved open source licences
+      url: https://opensource.org/licenses
+      publisher: Open Source Initiative
+      use: Memeriksa apakah sebuah lisensi perangkat lunak tergolong sumber terbuka.
+    - title: A review of open source ventilators for COVID-19 and future pandemics
+      url: https://f1000research.com/articles/9-218/v2
+      publisher: Joshua M. Pearce, F1000Research (2020)
+      use: Apa yang dibutuhkan perangkat keras medis terbuka sebelum dapat dipakai pada pasien.

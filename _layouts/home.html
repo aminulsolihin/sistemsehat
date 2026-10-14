@@ -1,8 +1,18 @@
 ---
 layout: default
 ---
-{%- comment -%} The home page. All its words are in the front matter of index.html (and id/index.html). {%- endcomment -%}
+{%- comment -%}
+  The home page. All its words are in the front matter of index.html (and id/index.html).
+  {questions} in any text is replaced by the number of "Ask yourself" questions in the guides.
+{%- endcomment -%}
+{%- assign ph_q = "{questions}" -%}
+{%- assign t = site.data[page.lang].ui -%}
 {%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" | sort: "order" -%}
+{%- assign buy = guides | where: "pillar", "buy" -%}
+{%- assign build = guides | where: "pillar", "build" -%}
+{%- assign total = 0 -%}
+{%- for g in guides -%}{%- assign total = total | plus: g.rules.size -%}{%- endfor -%}
+{%- assign articles = site.posts | where: "lang", page.lang -%}
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
@@ -21,7 +31,7 @@ layout: default
           </form>
           <p class="hero-actions">
             <a class="button" href="guides.html">{{ page.hero.browse }}</a>
-            <a class="button button-quiet" href="checklist.html">{{ page.hero.checklist }}</a>
+            <a class="button button-quiet" href="articles.html">{{ page.hero.articles }}</a>
           </p>
         </div>
 
@@ -36,7 +46,29 @@ layout: default
       </div>
     </section>
 
-    <section class="band">
+    <section class="band" aria-labelledby="paths-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="paths-title">{{ page.paths.heading }}</h2>
+        </div>
+        <ul class="paths">
+{%- for path in page.paths.items %}
+          <li class="path-{{ path.pillar }}">
+            <span class="pillar-tag{% if path.pillar == 'build' %} pillar-tag-build{% endif %}">{{ t.pillars[path.pillar].label }}</span>
+            <h3>{{ path.title }}</h3>
+            <p>{{ path.text }}</p>
+            <ul class="path-links">
+{%- for link in path.links %}
+              <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+{%- endfor %}
+            </ul>
+          </li>
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="band band-tint">
       <div class="wrap">
         <div class="section-head">
           <h2>{{ page.howto.heading }}</h2>
@@ -45,7 +77,7 @@ layout: default
 {%- for step in page.howto.steps %}
           <li>
             <h3>{{ step.title }}</h3>
-            <p>{{ step.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p>{{ step.text | replace: ph_q, total | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           </li>
 {%- endfor %}
         </ol>
@@ -61,15 +93,30 @@ layout: default
       </div>
     </section>
 
-    <section class="band band-tint">
+    <section class="band" id="build" aria-labelledby="build-title">
       <div class="wrap">
         <div class="section-head">
-          <h2>{{ page.questions.heading }}</h2>
-          <a class="all-link" href="guides.html">{{ page.questions.all }}</a>
+          <h2 id="build-title"><span class="pillar-tag pillar-tag-build">{{ t.pillars.build.label }}</span> {{ page.build.heading }}</h2>
+          <a class="all-link" href="projects.html">{{ page.build.all }}</a>
+        </div>
+        <p class="band-lead">{{ page.build.lead }}</p>
+        <ul class="cards cards-3">
+{%- for g in build %}
+{% include guide-card.html guide=g %}
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="band band-tint" id="buy" aria-labelledby="buy-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="buy-title"><span class="pillar-tag">{{ t.pillars.buy.label }}</span> {{ page.questions.heading }}</h2>
+          <a class="all-link" href="guides.html#buy">{{ page.questions.all }}</a>
         </div>
         <p class="band-lead">{{ page.questions.lead }}</p>
         <ul class="cards cards-3">
-{%- for g in guides limit: 3 %}
+{%- for g in buy limit: 3 %}
 {% include guide-card.html guide=g %}
 {%- endfor %}
         </ul>
@@ -79,10 +126,17 @@ layout: default
         </div>
         <p class="band-lead">{{ page.support.lead }}</p>
         <ul class="cards cards-2">
-{%- for g in guides offset: 3 %}
+{%- for g in buy offset: 3 %}
 {% include guide-card.html guide=g %}
 {%- endfor %}
         </ul>
+
+        <div class="section-head section-head-sub">
+          <h2>{{ page.dossiers.heading }}</h2>
+          <a class="all-link" href="dossiers.html">{{ page.dossiers.all }}</a>
+        </div>
+        <p class="band-lead">{{ page.dossiers.text }}</p>
+{% include dossier-status.html %}
       </div>
     </section>
 
@@ -91,12 +145,12 @@ layout: default
         <div class="section-head">
           <h2>{{ page.tools.heading }}</h2>
         </div>
-        <ul class="cards cards-3">
+        <ul class="cards cards-2">
 {%- for item in page.tools.items %}
           <li class="card">
             <div class="card-top">{% include icon.html name=item.icon %}</div>
             <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-            <p>{{ item.text }}</p>
+            <p>{{ item.text | replace: ph_q, total }}</p>
           </li>
 {%- endfor %}
         </ul>
@@ -107,11 +161,15 @@ layout: default
       <div class="wrap two-col">
         <div>
           <div class="section-head">
-            <h2>{{ page.dossiers.heading }}</h2>
-            <a class="all-link" href="dossiers.html">{{ page.dossiers.all }}</a>
+            <h2>{{ page.latest.heading }}</h2>
+            <a class="all-link" href="articles.html">{{ page.latest.all }}</a>
           </div>
-          <p>{{ page.dossiers.text }}</p>
-{% include dossier-status.html %}
+          <ul class="updates">
+{%- for a in articles limit: 4 %}
+{%- assign topic = t.topics | where: "id", a.topic | first %}
+            <li><span class="update-meta">{% include date.html date=a.date lang=page.lang %}{% if topic %}<span class="update-type">{{ topic.label }}</span>{% endif %}</span><a href="articles/{{ a.url | split: '/' | last }}">{{ a.title }}</a></li>
+{%- endfor %}
+          </ul>
         </div>
         <div>
           <div class="section-head">

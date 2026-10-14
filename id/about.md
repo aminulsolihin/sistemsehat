@@ -1,13 +1,13 @@
 ---
 title: Tentang | SistemSehat
-description: Untuk siapa SistemSehat, siapa di baliknya, dan cara menjaga independensinya.
+description: Untuk siapa SistemSehat, mengapa membahas pengembangan sekaligus pembelian teknologi kesehatan, dan cara menjaga independensinya.
 lang: id
 layout: page
 heading: Tentang SistemSehat
 lead: >-
-  SistemSehat menerbitkan panduan independen tentang pembelian alat kesehatan: spesifikasi
-  teknis, harga, dan proses pengadaan, dengan latar belakang tentang regulasi, standar, dan
-  teknologinya.
+  SistemSehat menerbitkan panduan independen tentang teknologi kesehatan di Indonesia. Isinya: cara
+  mengembangkan alat serta memakai dan membagikan teknologi sumber terbuka. Juga cara menyusun
+  spesifikasi, menentukan harga, dan membeli alat untuk fasilitas kesehatan pemerintah.
 search:
   title: Tentang SistemSehat
   text: Untuk siapa situs ini, siapa di baliknya, dan cara menjaga independensinya.
@@ -15,7 +15,15 @@ search:
 
 ## Untuk siapa situs ini
 
-Untuk orang-orang di dinas kesehatan dan rumah sakit pemerintah di Indonesia yang terlibat dalam pembelian alat kesehatan:
+Untuk dua kelompok orang di Indonesia yang jarang bertemu.
+
+Mereka yang mengembangkan teknologi kesehatan:
+
+- inovator dan tim rintisan;
+- peneliti dan mahasiswa teknik, kedokteran, dan ilmu kesehatan;
+- tim teknologi rumah sakit yang mengadaptasi atau membuat alatnya sendiri.
+
+Mereka yang membelinya, di dinas kesehatan dan rumah sakit pemerintah:
 
 - pejabat pengadaan, seperti PPK dan Pokja Pemilihan;
 - klinisi yang membantu menulis spesifikasi dan memeriksa barang yang datang;
@@ -24,11 +32,11 @@ Untuk orang-orang di dinas kesehatan dan rumah sakit pemerintah di Indonesia yan
 
 ## Mengapa situs ini ada
 
-Tim-tim ini diminta menyusun spesifikasi dan harga untuk peralatan yang rumit, sering kali dengan sedikit bahan rujukan independen. Penyedia mengenal produknya secara rinci. Pembeli membutuhkan panduan yang sama cermatnya, dari pihak yang tidak menjual apa pun.
+Pembeli diminta menyusun spesifikasi dan harga untuk peralatan yang rumit, sering kali dengan sedikit bahan rujukan independen. Pengembang sering merancang tanpa tahu apa yang akan diperiksa pembeli, dan banyak purwarupa yang baik tidak pernah sampai ke pasien. Kedua pihak membutuhkan panduan yang cermat dari pihak yang tidak menjual apa pun, dan keduanya bekerja lebih baik jika tahu apa yang dibutuhkan pihak lain.
 
 ## Mengapa namanya SistemSehat
 
-Sistem kesehatan bergantung pada peralatannya, dan membeli alat yang tepat dengan harga yang wajar membantu menjaga sistem itu tetap sehat.
+Sistem kesehatan bergantung pada peralatannya. Mengembangkan alat yang tepat, dan membelinya dengan harga yang wajar, membantu menjaga sistem itu tetap sehat.
 
 ## Siapa di baliknya
 
@@ -36,7 +44,7 @@ SistemSehat dimulai oleh Aminul Solihin, insinyur biomedis lulusan Institut Tekn
 
 ## Pengungkapan
 
-Aminul bekerja di bidang pengadaan sektor publik di Indonesia. SistemSehat adalah inisiatif pribadi. Situs ini tidak terkait dengan atau didukung oleh pemberi kerjanya, lembaga pemerintah mana pun, atau pemberi pinjaman mana pun. Tidak ada isi situs ini yang mewakili pandangan mereka.
+Aminul bekerja di bidang pengadaan sektor publik di Indonesia dan mengembangkan teknologi kesehatan. SistemSehat adalah inisiatif pribadi. Situs ini tidak terkait dengan atau didukung oleh pemberi kerjanya, lembaga pemerintah, pemberi pinjaman, atau perusahaan mana pun. Tidak ada isi situs ini yang mewakili pandangan mereka. Jika sebuah artikel membahas teknologi yang pernah ia kerjakan, artikel itu menyebutkannya.
 
 ## Cara kerjanya
 {: #how}
@@ -44,7 +52,7 @@ Aminul bekerja di bidang pengadaan sektor publik di Indonesia. SistemSehat adala
 - **Hanya sumber publik.** Setiap angka dan persyaratan berasal dari dokumen yang dapat diunduh siapa saja, dan masing-masing dikutip.
 - **Tanpa uang dari penjual.** Tidak ada dana, hadiah, atau konten bersponsor dari produsen maupun distributor.
 - **Bukan tender yang sedang berjalan.** Tidak ada yang diterbitkan tentang tender yang masih dalam tahap evaluasi.
-- **Tanpa pemeringkatan merek.** Panduan ini menjelaskan apa yang perlu diminta dan cara membelinya, bukan produk mana yang harus dipilih.
+- **Tanpa pemeringkatan atau promosi.** Panduan ini menjelaskan cara mengembangkan, memilih, dan membeli teknologi, bukan produk mana yang harus dipilih. Proyek terbuka yang dicantumkan bukan berarti direkomendasikan.
 - **Koreksi secara terbuka.** Jika ada yang keliru atau sudah tidak berlaku, akan diperbaiki dan perubahannya dicatat di halaman itu.
 
 ## Status

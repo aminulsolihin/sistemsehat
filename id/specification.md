@@ -5,6 +5,7 @@ description: >-
   beberapa produsen.
 lang: id
 layout: guide
+pillar: buy
 order: 1
 number: "1"
 label: Spesifikasi

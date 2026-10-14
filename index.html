@@ -1,58 +1,96 @@
 ---
-title: 'SistemSehat: independent guidance on buying medical equipment'
+title: 'SistemSehat: independent guidance on medical technology'
 description: >-
-  Free, independent guidance on specifying, pricing and buying medical equipment for Indonesia's
-  public health facilities.
+  Free, independent guidance on developing, sharing and buying medical technology for
+  Indonesia's health system.
 lang: en
 layout: home
 
 hero:
   lines:
-    - Ask for the right device.
-    - Pay a fair price.
-    - Run a tender that works.
+    - Build the right device.
+    - Buy it the right way.
+    - Share what works.
   lead: >-
-    SistemSehat is free, independent guidance on buying medical equipment for Indonesia's public
-    health facilities. It covers what to ask for, what it should cost, and how to run the
-    tender. The name means "healthy system" in Indonesian.
+    SistemSehat is free, independent guidance on medical technology in Indonesia. It covers how to
+    develop it, how to share it openly, and how to buy it for public health facilities. The name
+    means "healthy system" in Indonesian.
   search_label: Search the guides
-  search_placeholder: 'For example: calibration'
+  search_placeholder: 'For example: risk class'
   search_button: Search
   browse: Browse the guides
-  checklist: Open the checklist
+  articles: Read the articles
 
 glance:
   label: SistemSehat at a glance
   items:
     - label: Purpose
-      text: Guidance on specifying, pricing and buying medical equipment
+      text: Guidance on developing, sharing and buying medical technology
     - label: For
       text: >-
-        Procurement officials, clinicians and technical staff in district health offices and
-        public hospitals in Indonesia
+        Innovators, researchers and engineers, and the officials, clinicians and technical staff
+        who buy equipment for public health facilities in Indonesia
     - label: Sources
       text: Public documents only, each one cited
     - label: Funding
       text: None from manufacturers or distributors
     - label: Status
-      text: Guides published. Device dossiers in preparation.
+      text: Eight guides published. Device dossiers in preparation.
+
+paths:
+  heading: Two ways in
+  items:
+    - pillar: build
+      title: I develop medical technology
+      text: From a clinical need to a device on the market, and how to use and share open designs.
+      links:
+        - label: Design
+          url: design.html
+        - label: Route to market
+          url: to-market.html
+        - label: Open source
+          url: open-source.html
+        - label: Open projects
+          url: projects.html
+    - pillar: buy
+      title: I buy medical equipment
+      text: What to ask for, what it should cost, and how to run a tender that does not fail.
+      links:
+        - label: Specification
+          url: specification.html
+        - label: Pricing
+          url: pricing.html
+        - label: Process
+          url: process.html
+        - label: Checklist
+          url: checklist.html
 
 howto:
   heading: How to use this site
   steps:
-    - title: Find your task
-      text: Choose what you need to do from the list below, or open the guide that matches it.
+    - title: Choose your half
+      text: >-
+        Build if you develop technology, Buy if you purchase it. The two halves link to each other
+        where they meet.
     - title: Read the rules
       text: >-
         Each rule says what to do, gives an example, and ends with a question to ask yourself.
     - title: Use the checklist
       text: >-
-        Take all 35 questions to your planning meeting or document review, on screen or on
-        paper.
+        Take all {questions} questions to your design review, planning meeting or document check, on
+        screen or on paper.
 
 tasks:
   heading: What do you need to do?
   items:
+    - label: Turn a clinical problem into a device brief
+      url: design.html
+    - label: Get a locally made device to market
+      url: to-market.html
+    - label: Use or share an open-source design
+      url: open-source.html
+    - label: Judge a new technology a supplier is offering
+      url: technology.html#rule-b-7
     - label: Write a specification
       url: specification.html
     - label: Set a budget or cost estimate I can explain
@@ -61,14 +99,17 @@ tasks:
       url: regulation.html
     - label: Run a tender again after it failed
       url: process.html#rule-3-7
-    - label: Judge a new technology a supplier is offering
-      url: technology.html#rule-b-7
-    - label: Get a checklist for a meeting
-      url: checklist.html
+
+build:
+  heading: Develop medical technology
+  all: Open projects
+  lead: >-
+    Three guides for people who design, test and share devices and software, written for
+    Indonesia's rules.
 
 questions:
   heading: Three questions every purchase must answer
-  all: All guides
+  all: All Buy guides
   lead: >-
     Answer them in this order. A weak answer to one question cannot be fixed by the next one.
 
@@ -78,34 +119,49 @@ support:
     Like the annexes of a bidding document, they give the background that all three answers
     depend on.
 
+dossiers:
+  heading: Device dossiers
+  all: About dossiers
+  text: >-
+    A dossier is a short report on one device. It answers all three questions for that device: a
+    model specification, a reference price range, and lessons for running the purchase. The first
+    three are being written.
+
 tools:
   heading: Tools
   items:
     - title: Checklist
       url: checklist.html
       icon: check
-      text: All 35 questions from the guides. Tick them on screen or print them on two pages.
+      text: All {questions} questions from the guides. Tick them on screen or print them.
+    - title: Open projects
+      url: projects.html
+      icon: cube
+      text: Open-source medical hardware and software, with the licence each one uses.
     - title: Glossary
       url: glossary.html
       icon: book
-      text: Indonesian terms, procurement words and abbreviations, explained in plain English.
+      text: Indonesian terms, procurement and engineering words, and abbreviations, explained in plain English.
     - title: Sources
       url: library.html
       icon: shelf
-      text: >-
-        The public documents behind the guides: specifications, prices, process and evidence.
+      text: The public documents behind the guides, from regulations to design standards.
 
-dossiers:
-  heading: Device dossiers
-  all: About dossiers
-  text: >-
-    A dossier is a short report on one device. It answers all three questions for that device: a
-    model specification, a reference price range, and lessons for running the purchase. The
-    first three are being written.
+latest:
+  heading: Latest articles
+  all: All articles
 
 updates:
   heading: Latest updates
   items:
+    - date: October 2026
+      type: Guides
+      text: Three new guides for people who develop medical technology
+      url: guides.html#build
+    - date: October 2026
+      type: Site
+      text: Open projects, a list of open-source medical hardware and software
+      url: projects.html
     - date: October 2026
       type: Guides
       text: Every rule now has an example
@@ -115,14 +171,6 @@ updates:
       text: SistemSehat is now also in Bahasa Indonesia
       url: id/index.html
       hreflang: id
-    - date: October 2026
-      type: Guides
-      text: Five guides published, with 35 rules
-      url: guides.html
-    - date: October 2026
-      type: Dossiers
-      text: First three device dossiers in preparation
-      url: dossiers.html
 
 independence:
   heading: How this site stays independent
@@ -133,7 +181,9 @@ independence:
         Every figure and requirement comes from a document anyone can download, and each one is
         cited.
     - title: No money from sellers
-      text: No funding, gifts or sponsored content from manufacturers or distributors.
+      text: >-
+        No funding, gifts or sponsored content from manufacturers or distributors. No product or
+        project is ranked or promoted.
     - title: No current tenders
       text: Nothing is published about a tender that is still being evaluated.
     - title: Public corrections

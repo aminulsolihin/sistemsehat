@@ -5,6 +5,7 @@ description: >-
   standar internasional.
 lang: id
 layout: guide
+pillar: buy
 order: 4
 number: "A"
 label: Regulasi

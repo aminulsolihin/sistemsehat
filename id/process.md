@@ -5,6 +5,7 @@ description: >-
   mencari penyebab tender gagal.
 lang: id
 layout: guide
+pillar: buy
 order: 3
 number: "3"
 label: Proses

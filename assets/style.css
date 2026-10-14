@@ -1786,6 +1786,106 @@ tbody th > a {
   background: var(--tint);
 }
 
+/* Topic filter on the article list: the chosen topic is filled in */
+
+.topic-filter {
+  margin: 0 0 1.5rem;
+}
+
+.topic-filter a[aria-current="true"] {
+  background: var(--pine);
+  border-color: var(--pine);
+  color: #fff;
+}
+
+.topic-filter .count {
+  font-weight: 400;
+  margin-left: 0.2rem;
+  opacity: 0.85;
+}
+
+/* The two halves of the site: Buy and Build */
+
+.pillar {
+  margin-bottom: 3rem;
+}
+
+.pillar-tag {
+  display: inline-block;
+  vertical-align: 0.2em;
+  margin-right: 0.4rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+  background: var(--tint-strong);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.pillar-tag-build {
+  background: var(--amber-wash);
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.8rem;
+}
+
+/* Home page: two ways in, one for each half */
+
+.paths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paths > li {
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--pine);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 1.3rem 1.4rem 1.2rem;
+}
+
+.paths > li.path-build {
+  border-top-color: var(--amber);
+}
+
+.paths h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0.4rem;
+}
+
+.paths p {
+  margin-bottom: 0.7rem;
+}
+
+.paths .path-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paths .path-links a {
+  display: inline-block;
+  padding: 0.6rem 0;
+  font-weight: 600;
+}
+
+@media (max-width: 40rem) {
+  .paths {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {

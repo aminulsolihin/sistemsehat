@@ -4,6 +4,7 @@ description: >-
   Tujuh prinsip dengan contoh untuk menilai teknologi kesehatan dan bukti di baliknya.
 lang: id
 layout: guide
+pillar: buy
 order: 5
 number: "B"
 label: Teknologi

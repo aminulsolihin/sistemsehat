@@ -5,6 +5,7 @@ description: >-
   explain and defend.
 lang: en
 layout: guide
+pillar: buy
 order: 2
 number: "2"
 label: Pricing

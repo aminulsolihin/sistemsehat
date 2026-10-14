@@ -4,6 +4,7 @@ description: >-
   Seven rules, with examples, for judging medical technology and the evidence behind it.
 lang: en
 layout: guide
+pillar: buy
 order: 5
 number: "B"
 label: Technology

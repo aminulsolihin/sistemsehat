@@ -5,6 +5,7 @@ description: >-
   dipertanggungjawabkan.
 lang: id
 layout: guide
+pillar: buy
 order: 2
 number: "2"
 label: Harga

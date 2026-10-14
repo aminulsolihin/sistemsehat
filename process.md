@@ -5,6 +5,7 @@ description: >-
   finding why a tender failed.
 lang: en
 layout: guide
+pillar: buy
 order: 3
 number: "3"
 label: Process

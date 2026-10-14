@@ -8,18 +8,19 @@ nav:
     label: Panduan
   - url: articles.html
     label: Artikel
+  - url: projects.html
+    label: Proyek terbuka
   - url: dossiers.html
     label: Kajian alat
   - url: checklist.html
     label: Daftar periksa
   - url: glossary.html
     label: Glosarium
-  - url: library.html
-    label: Sumber rujukan
   - url: about.html
     label: Tentang
 
 labels:
+  projects.html: Proyek terbuka
   articles.html: Artikel
   guides.html: Panduan
   dossiers.html: Kajian alat
@@ -36,8 +37,7 @@ home: Beranda
 guides_label: Panduan
 tabs_label: Rangkaian panduan
 f_guides_label: Semua panduan
-og_alt: >-
-  SistemSehat: Minta alat yang tepat. Bayar harga yang wajar. Jalankan tender yang berhasil.
+og_alt: "SistemSehat: Kembangkan alat yang tepat. Beli dengan cara yang benar. Bagikan yang berhasil."
 search_label: Cari di situs ini
 search_placeholder: Cari prinsip dan istilah
 search: Cari
@@ -53,8 +53,8 @@ f_about_site: Tentang SistemSehat
 f_independent: Cara menjaga independensi
 f_dossiers: Kajian alat
 legal: >-
-  Panduan di sini bersifat umum dan tidak menggantikan aturan pengadaan yang berlaku di instansi
-  Anda.
+  Panduan di sini bersifat umum dan tidak menggantikan aturan pengadaan dan regulasi yang berlaku
+  bagi Anda atau instansi Anda.
 test: Tanyakan
 example: Contoh
 check_count: '{n} dari {total} dicentang'
@@ -103,3 +103,36 @@ by: Oleh
 all_articles: Semua artikel
 prev_article: Artikel lebih baru
 next_article: Artikel lebih lama
+
+# The two halves of the site
+pillars:
+  build:
+    label: Kembangkan
+    heading: Mengembangkan teknologi kesehatan
+    lead: >-
+      Untuk inovator, peneliti, insinyur, dan tim teknologi rumah sakit. Dari kebutuhan klinis sampai
+      alat yang boleh dijual di Indonesia, serta cara memakai dan membagikan teknologi sumber terbuka.
+  buy:
+    label: Beli
+    heading: Membeli alat kesehatan
+    lead: >-
+      Untuk pejabat pengadaan, klinisi, petugas teknis, dan perencana: apa yang harus diminta, berapa
+      harga yang wajar, dan bagaimana menjalankan tendernya.
+
+# Topik artikel. "topic:" pada sebuah artikel diisi salah satu id ini.
+topics:
+  - id: innovation
+    label: Inovasi
+  - id: open-source
+    label: Sumber terbuka
+  - id: research
+    label: Riset
+  - id: procurement
+    label: Pengadaan
+  - id: regulation
+    label: Regulasi
+all_topics: Semua topik
+k_project: Proyek terbuka
+f_build: Kembangkan
+f_buy: Beli
+rel_projects: Perangkat keras dan lunak sumber terbuka, dengan lisensi dan statusnya

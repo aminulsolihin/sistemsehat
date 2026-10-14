@@ -1,10 +1,15 @@
 ---
 layout: default
 ---
-{%- comment -%} Placeholders in the words of _data/*/ui.yml {%- endcomment -%}
+{%- comment -%}
+  The list of guides, in two halves: Buy (pillar: buy) and Build (pillar: build).
+  Cards come from the guide pages themselves (question, summary, icon).
+{%- endcomment -%}
 {%- assign ph_n = "{n}" -%}
-{%- comment -%} The list of guides. Cards come from the guide pages themselves (question, summary, icon). {%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
 {%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" | sort: "order" -%}
+{%- assign buy = guides | where: "pillar", "buy" -%}
+{%- assign build = guides | where: "pillar", "build" -%}
 {%- assign total = 0 -%}
 {%- for g in guides -%}{%- assign total = total | plus: g.rules.size -%}{%- endfor -%}
     <div class="wrap">
@@ -14,23 +19,35 @@ layout: default
         <p class="reviewed">{{ page.note }}</p>
       </header>
 
-      <div class="section-head">
-        <h2 class="section-title">{{ page.main_heading }}</h2>
-      </div>
-      <ul class="cards cards-3">
-{%- for g in guides limit: 3 %}
-{% include guide-card.html guide=g heading="h2" %}
+      <section class="pillar" id="buy" aria-labelledby="buy-title">
+        <div class="section-head">
+          <h2 class="section-title" id="buy-title"><span class="pillar-tag">{{ t.pillars.buy.label }}</span> {{ t.pillars.buy.heading }}</h2>
+        </div>
+        <p class="section-lead">{{ t.pillars.buy.lead }}</p>
+        <ul class="cards cards-3">
+{%- for g in buy limit: 3 %}
+{% include guide-card.html guide=g %}
 {%- endfor %}
-      </ul>
+        </ul>
+        <h3 class="sub-title">{{ page.support_heading }}</h3>
+        <ul class="cards cards-2">
+{%- for g in buy offset: 3 %}
+{% include guide-card.html guide=g %}
+{%- endfor %}
+        </ul>
+      </section>
 
-      <div class="section-head section-head-sub">
-        <h2 class="section-title">{{ page.support_heading }}</h2>
-      </div>
-      <ul class="cards cards-2">
-{%- for g in guides offset: 3 %}
-{% include guide-card.html guide=g heading="h2" %}
+      <section class="pillar" id="build" aria-labelledby="build-title">
+        <div class="section-head">
+          <h2 class="section-title" id="build-title"><span class="pillar-tag pillar-tag-build">{{ t.pillars.build.label }}</span> {{ t.pillars.build.heading }}</h2>
+        </div>
+        <p class="section-lead">{{ t.pillars.build.lead }}</p>
+        <ul class="cards cards-3">
+{%- for g in build %}
+{% include guide-card.html guide=g %}
 {%- endfor %}
-      </ul>
+        </ul>
+      </section>
 
       <section class="related related-spaced" aria-labelledby="related-title">
         <h2 id="related-title">{{ page.related_heading }}</h2>

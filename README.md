@@ -1,6 +1,11 @@
 # SistemSehat website
 
-Independent guidance on specifying, pricing and procuring medical equipment, in English and Indonesian.
+Independent guidance on medical technology in Indonesia, in English and Indonesian. The site has two halves of equal weight:
+
+- **Build**, for people who develop medical technology: guides C (Design), D (Route to market) and E (Open source), and the Open projects list.
+- **Buy**, for people who purchase it: guides 1 (Specification), 2 (Pricing), 3 (Process), A (Regulation) and B (Technology), and the device dossiers.
+
+Articles, the checklist, the glossary, sources and search are shared by both.
 
 The site is managed with **Jekyll**, which GitHub runs for you. The words live in plain text files (Markdown and YAML) that you can edit on github.com. Each time you save a change, GitHub rebuilds the site, checks it, and publishes it, usually within two minutes. You do not need to install anything.
 
@@ -12,15 +17,16 @@ English pages are at the top of the repository, Indonesian pages in `id/` with t
 
 | To change | Edit |
 | --- | --- |
-| A rule in a guide (heading, explanation, example, question) | `specification.md`, `pricing.md`, `process.md`, `regulation.md`, `technology.md`, and the same files in `id/`. The rules are in the `rules:` list at the top. |
+| A rule in a guide (heading, explanation, example, question) | Buy: `specification.md`, `pricing.md`, `process.md`, `regulation.md`, `technology.md`. Build: `design.md`, `to-market.md`, `open-source.md`. The same files in `id/`. The rules are in the `rules:` list at the top. |
 | A table or the text under the rules of a guide | The same file: tables are in `tables:` at the top, the text is below the second `---` line. |
+| The Open projects list | `_data/en/projects.yml` and `_data/id/projects.yml` |
 | An article (the blog) | `_posts/` (English) and `id/_posts/` (Indonesian). See "Write an article" below. |
 | The About or Dossiers page | `about.md`, `dossiers.md` (and `id/`) |
 | The home page | `index.html` and `id/index.html`. All the words are in the top section. |
 | A glossary term | `_data/en/glossary.yml` and `_data/id/glossary.yml` |
 | The Sources page | `_data/en/sources.yml` and `_data/id/sources.yml` |
 | Dossiers in preparation (table on the home and dossiers pages) | `_data/en/dossiers.yml` and `_data/id/dossiers.yml` |
-| Menu, buttons, labels, the "Last reviewed" date | `_data/en/ui.yml` and `_data/id/ui.yml` |
+| Menu, buttons, labels, the "Last reviewed" date, the Build and Buy descriptions, article topics | `_data/en/ui.yml` and `_data/id/ui.yml` |
 | Colours, type, behaviour | `assets/style.css`, `assets/site.js` |
 | Page design (shared by many pages) | `_layouts/` and `_includes/`. You rarely need these. |
 
@@ -72,14 +78,31 @@ Articles are short pieces on one question, listed newest first on the Articles p
    title: How to read a test report
    description: One or two sentences. Shown under the title, in the list of articles and in link previews.
    author: Aminul Solihin
+   topic: research
    ---
    ```
+
+   `topic` is one of `innovation`, `open-source`, `research`, `procurement` or `regulation`. Readers can filter the list of articles by topic, and the count beside each topic shows whether the two halves are getting equal attention. The topics and their names are in `_data/en/ui.yml` and `_data/id/ui.yml`.
 
    Keep the title to 56 characters or fewer and the description to 160 or fewer; the check fails otherwise.
 4. Write the article below the second `---` in Markdown: a blank line between paragraphs, `## ` for a heading, `[text](address)` for a link, `*word*` for italics. To link to a guide, put `../` in front: `[the pricing guide](../pricing.html#rule-2-2)`.
 5. For the Indonesian version, save a file with **the same name** in `id/_posts/`. The EN | ID switch then moves between the two. An article can also be in one language only; the switch then opens the other language's list of articles.
 
 The date in the file name is the publication date shown on the page. The site adds the reading time, the search entry, the sitemap entry, and links to glossary terms. A file dated in the future is skipped. It appears with the first build after that date, which happens on your next commit (or click **Run workflow** in the Actions tab).
+
+## Add a guide
+
+Copy a guide file in the same half and change the top section. Three lines place it on the site:
+
+- `pillar: build` or `pillar: buy` puts it in that half: on the home page, the Guides page, the tabs at the top of each guide, and the previous/next links.
+- `order:` sets its place in the lists (Buy guides are 1 to 5, Build guides 6 to 8).
+- `number:` is the letter or number shown on its card and in its rule numbers, for example `"F"` with rules `"F.1"`, `"F.2"`.
+
+A guide checked more recently than the others can carry its own date: `reviewed: 14 October 2026`.
+
+## Add an open project
+
+Add an entry to `_data/en/projects.yml` and the same `id` to `_data/id/projects.yml`. Say what the project is, its licence, and what its own documents say about medical use. Link to the source of each claim. Listing is not a recommendation: never rate or praise a project.
 
 ## Things the site does for you
 
@@ -106,7 +129,7 @@ If either fails, the live site stays as it was. Fix what the message names and c
 
 ## Before you publish widely
 
-1. Get written approval from your supervisor. The disclosure on the About page says you work in public-sector procurement and does not name your employer.
+1. Get written approval from your supervisor. The disclosure on the About page says you work in public-sector procurement and develop medical technology, and does not name your employer.
 2. Add a contact line to `about.md` and `id/about.md`. Search for `CONTACT` and `KONTAK`.
 3. Check the name: the domain, the PDKI trademark database, and the similarity to the Ministry of Health's SATUSEHAT.
 4. Read every page once, in both languages, on a computer and on a phone.

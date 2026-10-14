@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-{%- comment -%} The list of articles in this language, newest first. {%- endcomment -%}
+{%- comment -%}
+  The list of articles in this language, newest first. Each article has a topic (from the topics
+  list in _data/LANGUAGE/ui.yml); the topic buttons filter the list (assets/site.js).
+{%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
 {%- assign articles = site.posts | where: "lang", page.lang -%}
     <div class="wrap">
       <header class="page-head">
@@ -13,10 +17,22 @@ layout: default
 {%- if articles.size == 0 %}
         <p>{{ page.empty }}</p>
 {%- else %}
-        <ul class="updates article-list">
+        <nav class="topic-filter js-only" aria-label="{{ page.filter_label }}">
+          <ul class="chips">
+            <li><a href="articles.html" data-topic="" aria-current="true">{{ t.all_topics }} <span class="count">{{ articles.size }}</span></a></li>
+{%- for topic in t.topics %}
+{%- assign in_topic = articles | where: "topic", topic.id %}
+{%- if in_topic.size > 0 %}
+            <li><a href="articles.html?topic={{ topic.id }}" data-topic="{{ topic.id }}">{{ topic.label }} <span class="count">{{ in_topic.size }}</span></a></li>
+{%- endif %}
+{%- endfor %}
+          </ul>
+        </nav>
+        <ul class="updates article-list" id="article-list">
 {%- for a in articles %}
-          <li>
-            <span class="update-meta">{% include date.html date=a.date lang=page.lang %}<span class="update-type">{% include reading-time.html html=a.content lang=page.lang %}</span></span>
+{%- assign topic = t.topics | where: "id", a.topic | first %}
+          <li data-topic="{{ a.topic }}">
+            <span class="update-meta">{% include date.html date=a.date lang=page.lang %}{% if topic %}<span class="update-type">{{ topic.label }}</span>{% endif %}</span>
             <a href="articles/{{ a.url | split: '/' | last }}">{{ a.title }}</a>
 {%- if a.description %}
             <p>{{ a.description }}</p>
