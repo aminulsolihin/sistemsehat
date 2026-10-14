@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{%- comment -%} The Toolkit: tools that go with the guides, then printable templates (listed in the page's front matter). {%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign ph_q = "{questions}" -%}
+{%- assign ph_t = "{terms}" -%}
+{%- assign guides = site.pages | where: "lang", page.lang | where: "layout", "guide" -%}
+{%- assign questions = 0 -%}
+{%- for g in guides -%}{%- assign questions = questions | plus: g.rules.size -%}{%- endfor -%}
+{%- assign terms = site.data[page.lang].glossary | size -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+      </header>
+
+      <section aria-labelledby="templates-title">
+        <div class="section-head">
+          <h2 class="section-title" id="templates-title">{{ page.templates_heading }}</h2>
+        </div>
+        <p class="section-lead">{{ page.templates_lead }}</p>
+        <ul class="cards cards-2">
+{%- for item in page.templates %}
+          <li class="card">
+            <div class="card-top"><span class="pillar-tag{% if item.pillar == 'build' %} pillar-tag-build{% endif %}">{{ t.pillars[item.pillar].label }}</span>{% include icon.html name="doc" %}</div>
+            <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+            <p>{{ item.text }}</p>
+          </li>
+{%- endfor %}
+        </ul>
+      </section>
+
+      <section class="related related-spaced" aria-labelledby="tools-title">
+        <h2 id="tools-title">{{ page.tools_heading }}</h2>
+        <ul class="link-list">
+{%- for item in page.tools %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a><span>{{ item.text | replace: ph_q, questions | replace: ph_t, terms }}</span></li>
+{%- endfor %}
+        </ul>
+      </section>
+    </div>

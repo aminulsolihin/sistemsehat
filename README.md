@@ -2,10 +2,12 @@
 
 Independent guidance on medical technology in Indonesia, in English and Indonesian. The site has two halves of equal weight:
 
-- **Build**, for people who develop medical technology: guides C (Design), D (Route to market) and E (Open source), and the Open projects list.
+- **Build**, for people who develop medical technology: guides C (Design), D (Route to market) and E (Open source), and the Innovation page.
 - **Buy**, for people who purchase it: guides 1 (Specification), 2 (Pricing), 3 (Process), A (Regulation) and B (Technology), and the device dossiers.
 
-Articles, the checklist, the glossary, sources and search are shared by both.
+Shared by both: Regulations (the rules in force), Articles, and the Toolkit (templates, checklist, glossary, sources).
+
+The menu is: **Guides · Innovation · Regulations · Articles · Toolkit · About** (set in `nav:` in `_data/en/ui.yml` and `_data/id/ui.yml`). Dossiers are reached from the Buy section of the home and Guides pages; put `dossiers.html` back in the menu when the first dossier is published.
 
 The site is managed with **Jekyll**, which GitHub runs for you. The words live in plain text files (Markdown and YAML) that you can edit on github.com. Each time you save a change, GitHub rebuilds the site, checks it, and publishes it, usually within two minutes. You do not need to install anything.
 
@@ -19,7 +21,9 @@ English pages are at the top of the repository, Indonesian pages in `id/` with t
 | --- | --- |
 | A rule in a guide (heading, explanation, example, question) | Buy: `specification.md`, `pricing.md`, `process.md`, `regulation.md`, `technology.md`. Build: `design.md`, `to-market.md`, `open-source.md`. The same files in `id/`. The rules are in the `rules:` list at the top. |
 | A table or the text under the rules of a guide | The same file: tables are in `tables:` at the top, the text is below the second `---` line. |
-| The Open projects list | `_data/en/projects.yml` and `_data/id/projects.yml` |
+| The Regulations page (rules, status, which guide explains them) | `_data/en/regulations.yml` and `_data/id/regulations.yml`; the checked date is in `regulations.html` and `id/regulations.html` |
+| A template in the Toolkit | `toolkit/*.md` and `id/toolkit/*.md`; the list of templates is in `toolkit.html` and `id/toolkit.html` |
+| The Innovation page (new technologies and open-source projects) | `_data/en/innovation.yml` and `_data/id/innovation.yml`; the section headings are in `innovation.html` and `id/innovation.html` |
 | An article (the blog) | `_posts/` (English) and `id/_posts/` (Indonesian). See "Write an article" below. |
 | The About or Dossiers page | `about.md`, `dossiers.md` (and `id/`) |
 | The home page | `index.html` and `id/index.html`. All the words are in the top section. |
@@ -100,9 +104,29 @@ Copy a guide file in the same half and change the top section. Three lines place
 
 A guide checked more recently than the others can carry its own date: `reviewed: 14 October 2026`.
 
-## Add an open project
+## Keep the Regulations page current
 
-Add an entry to `_data/en/projects.yml` and the same `id` to `_data/id/projects.yml`. Say what the project is, its licence, and what its own documents say about medical use. Link to the source of each claim. Listing is not a recommendation: never rate or praise a project.
+Recheck the page every three months, and whenever you hear of a new regulation:
+
+1. Look up each rule on [pasal.id](https://pasal.id) or [peraturan.bpk.go.id](https://peraturan.bpk.go.id). Both show whether a rule has been amended or revoked, and by what.
+2. Update its `status` in `_data/en/regulations.yml` and `_data/id/regulations.yml`. Add `changed: true` to a rule that changed in the past two years; it then appears in the box at the top. Remove the line after two years.
+3. Change the checked date in the `note` at the top of `regulations.html` and `id/regulations.html`.
+4. If a change affects a guide, update the guide too: the Guide column says which.
+
+## Add a template
+
+Copy a file in `toolkit/` (for example `toolkit/risk-table.md`) and its twin in `id/toolkit/`, with the same name. Change the top section: the title, the table's `columns` and `rows`, and the steps below it. Then add it to the `templates:` list in `toolkit.html` and `id/toolkit.html`, with `pillar: build` or `pillar: buy`.
+
+## Add to the Innovation page
+
+Add an entry to `_data/en/innovation.yml` and the same `id` to `_data/id/innovation.yml`. Each entry has:
+
+- `kind`: `technology` for a type of technology changing care (AI reading of X-rays, telemedicine), or `hardware` / `software` for an open-source project.
+- `what`: what it does, in one sentence.
+- `basis`: for a technology, what WHO, a regulation or the evidence says; for an open project, its licence.
+- `status`: for a technology, where it stands in Indonesia; for an open project, what its own documents say about medical use.
+
+Describe types of technology, not brands. Link to the source of each claim, and never rate or praise. To add a new section (for example `kind: research` for Indonesian research projects), add a group with its heading and column names to the top of `innovation.html` and `id/innovation.html`.
 
 ## Things the site does for you
 

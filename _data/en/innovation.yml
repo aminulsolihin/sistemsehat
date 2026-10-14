@@ -1,0 +1,148 @@
+# The Innovation page (innovation.html). Keep each id the same in both languages.
+# kind: technology (technologies changing care), hardware or software (open-source projects).
+#   what: what it does, in one sentence.
+#   basis: for a technology, the evidence or guidance behind it; for an open project, its licence.
+#   status: for a technology, where it stands in Indonesia; for an open project, what its own
+#           documents say about medical use.
+# Listing is not a recommendation. Cite each claim; do not praise or rank.
+
+- id: ai-chest-xray-tb
+  name: Artificial intelligence reading of chest X-rays for TB
+  url: https://tbksp.who.int/en/node/1317
+  kind: technology
+  what: >-
+    Software reads a digital chest X-ray and scores how likely TB is, to decide who needs a
+    confirmatory test.
+  basis: >-
+    WHO (2021): may be used instead of a human reader for TB screening and triage in people aged 15
+    and over. A conditional recommendation, based on low-certainty evidence.
+  status: >-
+    The Ministry of Health is expanding TB screening with these X-rays, including portable units.
+    It is supplying about 10,000 X-ray units to puskesmas in stages
+    ([Ministry of Health, 2026](https://www.kemkes.go.id/id/kemenkes-perluas-skrining-tb-sasar-pesantren-dan-pemukiman-padat-di-seluruh-indonesia)).
+
+- id: rapid-molecular-tb
+  name: Rapid molecular tests for TB
+  url: https://www.who.int/news/item/30-06-2020-who-urges-countries-to-expand-access-to-rapid-molecular-tests-for-the-detection-of-tb-and-drug-resistant-tb
+  kind: technology
+  what: >-
+    Cartridge-based tests that detect TB bacteria, and resistance to the drug rifampicin, in a
+    sputum sample.
+  basis: >-
+    WHO (2020): recommended as the first test for TB, instead of sputum smear microscopy.
+  status: >-
+    The Ministry of Health's main test for diagnosing TB, called *tes cepat molekuler*
+    ([circular letter, February 2025](https://jdih.kemkes.go.id/common/dokumen/2025sepp348.pdf)).
+
+- id: ultrasound-primary-care
+  name: Ultrasound in primary care
+  url: https://www.kemkes.go.id/id/kemenkes-lengkapi-10-000-usg-di-puskesmas-dan-300-000-antropometri-di-posyandu
+  kind: technology
+  what: >-
+    Ultrasound scans during antenatal care, to find risks to mother and baby early.
+  basis: >-
+    WHO antenatal care guidance recommends one ultrasound scan before 24 weeks of pregnancy.
+  status: >-
+    The Ministry of Health is supplying 10,000 ultrasound units to puskesmas. In 2023 it raised the
+    minimum number of antenatal visits from four to six, two of them with a doctor.
+
+- id: telemedicine
+  name: Telemedicine between health facilities
+  url: https://jdih.kemkes.go.id/common/dokumen/2019permenkes020.pdf
+  kind: technology
+  what: >-
+    Sending X-ray, ultrasound or heart-tracing images, or a clinical question, to a specialist in
+    another facility.
+  basis: >-
+    Minister of Health Regulation 20 of 2019 covers teleradiology, tele-electrocardiography,
+    tele-ultrasound and clinical teleconsultation between facilities.
+  status: In force since August 2019.
+
+- id: connected-medical-records
+  name: Connected electronic medical records
+  url: https://peraturan.bpk.go.id/Details/245544
+  kind: technology
+  what: >-
+    Patient records kept electronically and shared between facilities through a national platform.
+  basis: >-
+    Minister of Health Regulation 24 of 2022 required every health facility to keep electronic
+    medical records by 31 December 2023.
+  status: >-
+    Records must connect to the Ministry of Health's SATUSEHAT platform. Software must also meet
+    the Personal Data Protection Law (Law 27 of 2022).
+
+- id: genomic-medicine
+  name: Genomic medicine
+  url: https://bgsi.kemkes.go.id/about-bgsi/about-us
+  kind: technology
+  what: >-
+    Reading the genome of a patient, or of a germ, to diagnose disease and guide treatment.
+  basis: Used to diagnose and study cancer, infectious diseases and genetic disorders.
+  status: >-
+    The Ministry of Health launched BGSi, a national genomics programme, in August 2022, with six
+    national hospitals as its first hubs. Its focus includes cancer, infectious diseases, brain and
+    metabolic diseases, and genetic disorders.
+
+# Open-source projects
+
+- id: openflexure-microscope
+  name: OpenFlexure Microscope
+  url: https://openflexure.org/projects/microscope/
+  kind: hardware
+  what: A laboratory microscope with a motorised stage, made mostly from 3D-printed parts.
+  basis: CERN-OHL-S version 2 (reciprocal)
+  status: >-
+    Not certified as a medical device. Partners in Tanzania are working towards certification
+    for malaria screening ([project page](https://openflexure.org/about/malaria)).
+
+- id: openmrs
+  name: OpenMRS
+  url: https://openmrs.org/
+  kind: software
+  what: An electronic medical record system for health facilities, first built for low-resource settings.
+  basis: Mozilla Public License 2.0 with a Healthcare Disclaimer (weakly reciprocal)
+  status: Started in 2004. Used in many countries, mostly in Africa.
+
+- id: dhis2
+  name: DHIS2
+  url: https://dhis2.org/
+  kind: software
+  what: A system for collecting, reporting and analysing health programme data.
+  basis: BSD 3-Clause (permissive)
+  status: Coordinated by the University of Oslo. Used by ministries of health in more than 75 countries.
+
+- id: orthanc
+  name: Orthanc
+  url: https://www.orthanc-server.com/
+  kind: software
+  what: A lightweight server that stores and shares medical images in the DICOM format.
+  basis: GNU GPL version 3 (strongly reciprocal)
+  status: Started at the University Hospital of Liège in 2011.
+
+- id: ohif-viewer
+  name: OHIF Viewer
+  url: https://ohif.org/
+  kind: software
+  what: A medical image viewer that runs in a web browser.
+  basis: MIT (permissive)
+  status: >-
+    Several commercial viewers cleared by the US Food and Drug Administration are built on it.
+    The open project itself is not a cleared device.
+
+- id: 3d-slicer
+  name: 3D Slicer
+  url: https://www.slicer.org/
+  kind: software
+  what: Analysis and 3D display of medical images, used mostly in research.
+  basis: BSD-style Slicer licence (permissive)
+  status: Its documentation says it is not approved for clinical use by any regulator.
+
+- id: simrs-khanza
+  name: SIMRS Khanza
+  url: https://github.com/mas-elkhanza/SIMRS-Khanza
+  kind: software
+  what: A hospital information system written in Indonesia, also used by clinics and puskesmas.
+  basis: >-
+    Aladdin Free Public License: free to use, but it may not be sold. This is not open source as
+    the Open Source Initiative defines it.
+  status: Its developer reports use in more than 1,000 health facilities in Indonesia.

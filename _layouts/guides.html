@@ -35,6 +35,8 @@ layout: default
 {% include guide-card.html guide=g %}
 {%- endfor %}
         </ul>
+        <h3 class="sub-title">{{ t.f_dossiers }}</h3>
+        <p>{{ page.dossiers_text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
       </section>
 
       <section class="pillar" id="build" aria-labelledby="build-title">

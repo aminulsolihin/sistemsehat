@@ -145,7 +145,7 @@ What each licence asks of you when you distribute a changed version. This is a s
 
 ## Examples
 
-The [Open projects](projects.html) page lists open-source medical hardware and software, with the licence each one uses and what its own documents say about medical use.
+The [Innovation](innovation.html#hardware) page lists open-source medical hardware and software, with the licence each one uses and what its own documents say about medical use.
 
 ## Sources
 

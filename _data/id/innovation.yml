@@ -1,0 +1,150 @@
+# Halaman Inovasi (innovation.html). Samakan setiap id dengan versi bahasa Inggris.
+# kind: technology (teknologi yang mengubah layanan), hardware atau software (proyek sumber terbuka).
+#   what: apa fungsinya, dalam satu kalimat.
+#   basis: untuk teknologi, bukti atau pedoman di baliknya; untuk proyek terbuka, lisensinya.
+#   status: untuk teknologi, posisinya di Indonesia; untuk proyek terbuka, apa kata dokumennya
+#           sendiri tentang pemakaian medis.
+# Dicantumkan bukan berarti direkomendasikan. Kutip setiap klaim; jangan memuji atau memeringkat.
+
+- id: ai-chest-xray-tb
+  name: Kecerdasan artifisial untuk membaca rontgen dada TBC
+  url: https://tbksp.who.int/en/node/1317
+  kind: technology
+  what: >-
+    Perangkat lunak membaca rontgen dada digital dan memberi skor kemungkinan TBC, untuk menentukan
+    siapa yang perlu tes konfirmasi.
+  basis: >-
+    WHO (2021): boleh dipakai menggantikan pembaca manusia untuk skrining dan triase TBC pada usia 15
+    tahun ke atas. Rekomendasi bersyarat, dengan tingkat kepastian bukti rendah.
+  status: >-
+    Kementerian Kesehatan memperluas skrining TBC dengan rontgen ini, termasuk unit portabel. Sekitar
+    10.000 unit rontgen disalurkan ke puskesmas secara bertahap
+    ([Kementerian Kesehatan, 2026](https://www.kemkes.go.id/id/kemenkes-perluas-skrining-tb-sasar-pesantren-dan-pemukiman-padat-di-seluruh-indonesia)).
+
+- id: rapid-molecular-tb
+  name: Tes cepat molekuler untuk TBC
+  url: https://www.who.int/news/item/30-06-2020-who-urges-countries-to-expand-access-to-rapid-molecular-tests-for-the-detection-of-tb-and-drug-resistant-tb
+  kind: technology
+  what: >-
+    Tes berbasis kartrid yang mendeteksi kuman TBC, dan resistansi terhadap obat rifampisin, dalam
+    sampel dahak.
+  basis: >-
+    WHO (2020): direkomendasikan sebagai tes pertama untuk TBC, menggantikan pemeriksaan mikroskopis
+    dahak.
+  status: >-
+    Kementerian Kesehatan menetapkan tes cepat molekuler (TCM) sebagai alat diagnosis utama TBC
+    ([surat edaran, Februari 2025](https://jdih.kemkes.go.id/common/dokumen/2025sepp348.pdf)).
+
+- id: ultrasound-primary-care
+  name: USG di layanan primer
+  url: https://www.kemkes.go.id/id/kemenkes-lengkapi-10-000-usg-di-puskesmas-dan-300-000-antropometri-di-posyandu
+  kind: technology
+  what: >-
+    Pemeriksaan USG selama pemeriksaan kehamilan, untuk menemukan risiko pada ibu dan bayi sejak dini.
+  basis: >-
+    Pedoman pemeriksaan kehamilan WHO menganjurkan satu kali USG sebelum usia kehamilan 24 minggu.
+  status: >-
+    Kementerian Kesehatan menyalurkan 10.000 unit USG ke puskesmas, dan menaikkan jumlah minimal
+    pemeriksaan kehamilan dari empat menjadi enam kali, dua di antaranya oleh dokter (2023).
+
+- id: telemedicine
+  name: Telemedisin antarfasilitas kesehatan
+  url: https://jdih.kemkes.go.id/common/dokumen/2019permenkes020.pdf
+  kind: technology
+  what: >-
+    Mengirim citra rontgen, USG, atau rekaman jantung, atau pertanyaan klinis, kepada dokter spesialis
+    di fasilitas lain.
+  basis: >-
+    Peraturan Menteri Kesehatan Nomor 20 Tahun 2019 mengatur teleradiologi, teleelektrokardiografi,
+    teleultrasonografi, dan telekonsultasi klinis antarfasilitas.
+  status: Berlaku sejak Agustus 2019.
+
+- id: connected-medical-records
+  name: Rekam medis elektronik yang terhubung
+  url: https://peraturan.bpk.go.id/Details/245544
+  kind: technology
+  what: >-
+    Rekam medis pasien yang disimpan secara elektronik dan dibagikan antarfasilitas melalui platform
+    nasional.
+  basis: >-
+    Peraturan Menteri Kesehatan Nomor 24 Tahun 2022 mewajibkan setiap fasilitas kesehatan
+    menyelenggarakan rekam medis elektronik paling lambat 31 Desember 2023.
+  status: >-
+    Rekam medis wajib terhubung dengan platform SATUSEHAT Kementerian Kesehatan. Perangkat lunaknya
+    juga harus memenuhi Undang-Undang Pelindungan Data Pribadi (Nomor 27 Tahun 2022).
+
+- id: genomic-medicine
+  name: Kedokteran genomik
+  url: https://bgsi.kemkes.go.id/about-bgsi/about-us
+  kind: technology
+  what: >-
+    Membaca genom pasien, atau genom kuman, untuk mendiagnosis penyakit dan menentukan pengobatan.
+  basis: Dipakai untuk mendiagnosis dan meneliti kanker, penyakit infeksi, dan kelainan genetik.
+  status: >-
+    Kementerian Kesehatan meluncurkan BGSi, program genomik nasional, pada Agustus 2022, dengan enam
+    rumah sakit nasional sebagai pusat pertamanya. Fokusnya antara lain kanker, penyakit infeksi,
+    penyakit otak dan metabolik, serta kelainan genetik.
+
+# Open-source projects
+
+- id: openflexure-microscope
+  name: OpenFlexure Microscope
+  url: https://openflexure.org/projects/microscope/
+  kind: hardware
+  what: Mikroskop laboratorium dengan meja geser bermotor, sebagian besar dari komponen cetak 3D.
+  basis: CERN-OHL-S versi 2 (resiprokal)
+  status: >-
+    Belum tersertifikasi sebagai alat kesehatan. Mitra di Tanzania sedang menuju sertifikasi
+    untuk skrining malaria ([halaman proyek](https://openflexure.org/about/malaria)).
+
+- id: openmrs
+  name: OpenMRS
+  url: https://openmrs.org/
+  kind: software
+  what: Sistem rekam medis elektronik untuk fasilitas kesehatan, awalnya dibuat untuk tempat dengan sumber daya terbatas.
+  basis: Mozilla Public License 2.0 dengan Healthcare Disclaimer (resiprokal lemah)
+  status: Dimulai pada 2004. Dipakai di banyak negara, sebagian besar di Afrika.
+
+- id: dhis2
+  name: DHIS2
+  url: https://dhis2.org/
+  kind: software
+  what: Sistem untuk mengumpulkan, melaporkan, dan menganalisis data program kesehatan.
+  basis: BSD 3-Clause (permisif)
+  status: Dikoordinasikan oleh University of Oslo. Dipakai kementerian kesehatan di lebih dari 75 negara.
+
+- id: orthanc
+  name: Orthanc
+  url: https://www.orthanc-server.com/
+  kind: software
+  what: Server ringan untuk menyimpan dan berbagi citra medis dalam format DICOM.
+  basis: GNU GPL versi 3 (resiprokal kuat)
+  status: Dimulai di Rumah Sakit Universitas Liège pada 2011.
+
+- id: ohif-viewer
+  name: OHIF Viewer
+  url: https://ohif.org/
+  kind: software
+  what: Penampil citra medis yang berjalan di peramban web.
+  basis: MIT (permisif)
+  status: >-
+    Beberapa penampil komersial yang sudah mendapat izin dari Food and Drug Administration
+    Amerika Serikat dibangun di atasnya. Proyek terbukanya sendiri tidak berizin sebagai alat kesehatan.
+
+- id: 3d-slicer
+  name: 3D Slicer
+  url: https://www.slicer.org/
+  kind: software
+  what: Analisis dan tampilan 3D citra medis, terutama untuk riset.
+  basis: Lisensi Slicer bergaya BSD (permisif)
+  status: Dokumentasinya menyatakan bahwa perangkat lunak ini belum disetujui regulator mana pun untuk pemakaian klinis.
+
+- id: simrs-khanza
+  name: SIMRS Khanza
+  url: https://github.com/mas-elkhanza/SIMRS-Khanza
+  kind: software
+  what: Sistem informasi rumah sakit buatan Indonesia, juga dipakai klinik dan puskesmas.
+  basis: >-
+    Aladdin Free Public License: gratis dipakai, tetapi tidak boleh dijual. Ini bukan sumber terbuka
+    menurut definisi Open Source Initiative.
+  status: Pengembangnya melaporkan pemakaian di lebih dari 1.000 fasilitas kesehatan di Indonesia.

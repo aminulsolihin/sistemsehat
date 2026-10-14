@@ -1786,6 +1786,41 @@ tbody th > a {
   background: var(--tint);
 }
 
+/* Regulations: the box of recent changes, and the "Changed" label */
+
+.recent-changes {
+  max-width: var(--measure);
+  background: var(--amber-wash);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem 1rem;
+  margin: 0 0 2rem;
+}
+
+.recent-changes h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.6rem;
+}
+
+.recent-changes ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.recent-changes li {
+  margin-bottom: 0.5rem;
+}
+
+/* Templates: blank rows tall enough to write in by hand */
+
+.template-page tbody th,
+.template-page tbody td {
+  height: 2.6rem;
+}
+
+.status-changed {
+  margin-right: 0.3rem;
+}
+
 /* Topic filter on the article list: the chosen topic is filled in */
 
 .topic-filter {

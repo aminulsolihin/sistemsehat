@@ -6,21 +6,21 @@ reviewed: 11 Oktober 2026
 nav:
   - url: guides.html
     label: Panduan
+  - url: innovation.html
+    label: Inovasi
+  - url: regulations.html
+    label: Peraturan
   - url: articles.html
     label: Artikel
-  - url: projects.html
-    label: Proyek terbuka
-  - url: dossiers.html
-    label: Kajian alat
-  - url: checklist.html
-    label: Daftar periksa
-  - url: glossary.html
-    label: Glosarium
+  - url: toolkit.html
+    label: Alat bantu
   - url: about.html
     label: Tentang
 
 labels:
-  projects.html: Proyek terbuka
+  regulations.html: Peraturan
+  toolkit.html: Alat bantu
+  innovation.html: Inovasi
   articles.html: Artikel
   guides.html: Panduan
   dossiers.html: Kajian alat
@@ -132,7 +132,7 @@ topics:
   - id: regulation
     label: Regulasi
 all_topics: Semua topik
-k_project: Proyek terbuka
+k_innovation: Inovasi
 f_build: Kembangkan
 f_buy: Beli
-rel_projects: Perangkat keras dan lunak sumber terbuka, dengan lisensi dan statusnya
+rel_innovation: Teknologi baru dan proyek sumber terbuka, beserta bukti di baliknya

@@ -42,7 +42,7 @@
   <meta name="description" content="{{ page.description | strip }}">
 {%- if page.noindex %}
   <meta name="robots" content="noindex">
-{%- elsif page.crumb == nil %}
+{%- else %}
   <link rel="canonical" href="{% if lang == 'id' %}{{ url_id }}{% else %}{{ url_en }}{% endif %}">
 {%- if has_twin %}
   <link rel="alternate" hreflang="en" href="{{ url_en }}">
@@ -97,7 +97,8 @@
           <ul class="main-nav">
 {%- for item in t.nav %}
             <li><a href="{{ root }}{{ item.url }}"
-              {%- if page.crumb and item.url == "dossiers.html" %} aria-current="true"
+              {%- if page.parent and item.url == page.parent %} aria-current="true"
+              {%- elsif page.crumb and page.parent == nil and item.url == "dossiers.html" %} aria-current="true"
               {%- elsif item.url == rel and page.crumb == nil %} aria-current="page"
               {%- elsif item.url == "guides.html" and is_guide %} aria-current="page"
               {%- elsif item.url == "articles.html" and is_article %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
@@ -118,7 +119,9 @@
     <div class="wrap">
       <nav class="crumbs" aria-label="{{ t.crumbs_label }}">
         <ol><li><a href="{{ root }}index.html">{{ t.home }}</a></li>
-          {%- if page.crumb -%}
+          {%- if page.parent -%}
+          <li><a href="{{ root }}{{ page.parent }}">{{ t.labels[page.parent] }}</a></li><li aria-current="page">{{ page.crumb | default: t.labels[rel] | default: page.heading }}</li>
+          {%- elsif page.crumb -%}
           <li><a href="{{ root }}dossiers.html">{{ t.labels["dossiers.html"] }}</a></li><li aria-current="page">{{ page.crumb }}</li>
           {%- elsif is_article -%}
           <li><a href="{{ root }}articles.html">{{ t.labels["articles.html"] }}</a></li><li aria-current="page">{{ page.title }}</li>
@@ -163,8 +166,9 @@
       <nav aria-label="{{ t.f_tools }}">
         <h2>{{ t.f_tools }}</h2>
         <ul>
+          <li><a href="{{ root }}toolkit.html">{{ t.labels["toolkit.html"] }}</a></li>
           <li><a href="{{ root }}checklist.html">{{ t.labels["checklist.html"] }}</a></li>
-          <li><a href="{{ root }}projects.html">{{ t.labels["projects.html"] }}</a></li>
+          <li><a href="{{ root }}regulations.html">{{ t.labels["regulations.html"] }}</a></li>
           <li><a href="{{ root }}glossary.html">{{ t.labels["glossary.html"] }}</a></li>
           <li><a href="{{ root }}library.html">{{ t.labels["library.html"] }}</a></li>
           <li><a href="{{ root }}search.html">{{ t.labels["search.html"] }}</a></li>
@@ -175,8 +179,9 @@
         <ul>
           <li><a href="{{ root }}about.html">{{ t.f_about_site }}</a></li>
           <li><a href="{{ root }}about.html#how">{{ t.f_independent }}</a></li>
-          <li><a href="{{ root }}dossiers.html">{{ t.f_dossiers }}</a></li>
+          <li><a href="{{ root }}innovation.html">{{ t.labels["innovation.html"] }}</a></li>
           <li><a href="{{ root }}articles.html">{{ t.labels["articles.html"] }}</a></li>
+          <li><a href="{{ root }}dossiers.html">{{ t.f_dossiers }}</a></li>
         </ul>
       </nav>
     </div>

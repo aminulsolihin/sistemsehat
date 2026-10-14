@@ -508,3 +508,38 @@
   find:
     - komisi etik penelitian kesehatan
     - komisi etik penelitian
+
+# Istilah yang ditambahkan bersama halaman Inovasi
+
+- id: tb
+  term: TBC
+  definition: >-
+    Tuberkulosis, penyakit menular yang biasanya menyerang paru. Indonesia termasuk negara dengan
+    jumlah kasus TBC tertinggi di dunia.
+  find:
+    - TBC
+    - tuberkulosis
+
+- id: tcm
+  term: TCM
+  definition: >-
+    Tes cepat molekuler: tes yang mendeteksi kuman TBC dan resistansi obat. Alat diagnosis utama TBC
+    di Indonesia.
+  find:
+    - TCM
+    - tes cepat molekuler
+
+- id: usg
+  term: USG
+  definition: >-
+    Ultrasonografi: pemeriksaan dengan gelombang ultrasonik, atau alat untuk melakukannya.
+  find:
+    - USG
+
+- id: bgsi
+  term: BGSi
+  definition: >-
+    Biomedical and Genome Science Initiative: program genomik nasional Kementerian Kesehatan,
+    diluncurkan pada 2022.
+  find:
+    - BGSi

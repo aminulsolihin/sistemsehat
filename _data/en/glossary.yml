@@ -538,3 +538,39 @@
     Penelitian Kesehatan* (KEPK).
   find:
     - research ethics committee
+
+# Terms added with the Innovation page
+
+- id: tb
+  term: TB
+  definition: >-
+    Tuberculosis, an infectious disease that usually affects the lungs. Indonesia has one of the
+    highest numbers of TB cases in the world. In Indonesian: TBC.
+  find:
+    - TB
+    - tuberculosis
+
+- id: tcm
+  term: TCM
+  definition: >-
+    *Tes cepat molekuler*: a rapid molecular test that detects TB bacteria and drug resistance. The
+    main test for diagnosing TB in Indonesia.
+  find:
+    - TCM
+    - rapid molecular tests
+    - rapid molecular test
+
+- id: usg
+  term: USG
+  definition: >-
+    *Ultrasonografi*: an ultrasound scan, or the machine that makes it.
+  find:
+    - USG
+
+- id: bgsi
+  term: BGSi
+  definition: >-
+    Biomedical and Genome Science Initiative: the Ministry of Health's national genomics programme,
+    launched in 2022.
+  find:
+    - BGSi

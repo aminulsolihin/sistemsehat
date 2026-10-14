@@ -99,7 +99,7 @@ def main():
         all_s, longs, avoid_hits, no_example, unknown = [], [], [], [], {}
         # the main pages in a fixed order, then any other page (new guides, open projects, articles)
         found = sorted(p.relative_to(base).with_suffix("").as_posix()
-                       for pattern in ("*.html", "articles/*.html", "dossiers/*.html") for p in base.glob(pattern))
+                       for pattern in ("*.html", "articles/*.html", "dossiers/*.html", "toolkit/*.html") for p in base.glob(pattern))
         extra = [n for n in found if n not in PAGES and n != "404" and not n.startswith("id/")]
         for name in PAGES + extra:
             texts, raw = blocks(base / f"{name}.html")

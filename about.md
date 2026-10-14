@@ -52,7 +52,7 @@ Aminul works in public-sector procurement in Indonesia and develops medical tech
 - **Public sources only.** Every figure and requirement comes from a document anyone can download, and each one is cited.
 - **No money from sellers.** No funding, gifts or sponsored content from manufacturers or distributors.
 - **No current tenders.** Nothing is published about a tender that is still being evaluated.
-- **No ratings or promotion.** The guidance describes how to develop, choose and buy technology, not which product to pick. Listing an open project is not a recommendation.
+- **No ratings or promotion.** The guidance describes how to develop, choose and buy technology, not which product to pick. Listing a technology or project on the Innovation page is not a recommendation.
 - **Public corrections.** When something is wrong or outdated, it is corrected and the change is noted on the page.
 
 ## Status

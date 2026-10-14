@@ -30,8 +30,11 @@ window.SISTEMSEHAT_INDEX = [
  {"t": {{ s.title | markdownify | strip_html | strip | jsonify }}, "x": {{ text | normalize_whitespace | jsonify }}, "u": "library.html", "k": {{ t.labels["library.html"] | jsonify }}},
 {%- endfor %}
 {%- endfor %}
-{%- for p in site.data[lang].projects %}
- {"t": {{ p.name | jsonify }}, "x": {{ p.what | append: " " | append: p.licence | append: ". " | append: p.status | markdownify | strip_html | normalize_whitespace | strip | jsonify }}, "u": "projects.html#{{ p.id }}", "k": {{ t.k_project | jsonify }}},
+{%- for p in site.data[lang].innovation %}
+ {"t": {{ p.name | jsonify }}, "x": {{ p.what | append: " " | append: p.basis | append: " " | append: p.status | markdownify | strip_html | normalize_whitespace | strip | jsonify }}, "u": "innovation.html#{{ p.id }}", "k": {{ t.k_innovation | jsonify }}},
+{%- endfor %}
+{%- for r in site.data[lang].regulations %}
+ {"t": {{ r.name | jsonify }}, "x": {{ r.covers | append: " " | append: r.status | markdownify | strip_html | normalize_whitespace | strip | jsonify }}, "u": "regulations.html#{{ r.id }}", "k": {{ t.labels["regulations.html"] | jsonify }}},
 {%- endfor %}
 {%- assign articles = site.posts | where: "lang", lang %}
 {%- for a in articles %}
@@ -39,6 +42,6 @@ window.SISTEMSEHAT_INDEX = [
 {%- endfor %}
 {%- assign extra = site.pages | where: "lang", lang | sort: "name" %}
 {%- for p in extra %}{% if p.search %}
- {"t": {{ p.search.title | jsonify }}, "x": {{ p.search.text | jsonify }}, "u": {{ p.name | replace: '.md', '.html' | jsonify }}, "k": {{ t.k_page | jsonify }}},
+ {"t": {{ p.search.title | jsonify }}, "x": {{ p.search.text | jsonify }}, "u": {{ p.url | remove_first: "/" | remove_first: "id/" | jsonify }}, "k": {{ t.k_page | jsonify }}},
 {%- endif %}{% endfor %}
 ];

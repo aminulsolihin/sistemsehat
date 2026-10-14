@@ -1,0 +1,114 @@
+# The Regulations page (regulations.html). Keep each id the same in both languages.
+# area: make (making and registering devices), buy (buying them), use (using devices and data).
+# When you recheck a rule, update its status and the "checked" date at the top of regulations.html.
+# Use pasal.id or peraturan.bpk.go.id to see whether a rule has been amended or revoked.
+
+- id: health-law
+  area: make
+  name: Law 17 of 2023 on Health
+  url: https://peraturan.bpk.go.id/Details/258028
+  covers: >-
+    The main health law. Among much else, it requires a marketing authorisation for medical devices.
+  status: In force. Its implementing regulation is Government Regulation 28 of 2024.
+  guides: '[A](regulation.html), [D](to-market.html)'
+
+- id: business-licensing
+  area: make
+  name: Government Regulation 28 of 2025, and Minister of Health Regulation 11 of 2025
+  url: https://jdih.kemkes.go.id/documents/peraturan-menteri-kesehatan-nomor-11-tahun-2025
+  covers: >-
+    Risk-based business licensing through OSS, including licences to produce and distribute
+    medical devices.
+  status: >-
+    In force since October 2025. Regulation 11 of 2025 replaced Minister of Health Regulation 14
+    of 2021.
+  changed: true
+  guides: '[D](to-market.html)'
+
+- id: marketing-authorisation
+  area: make
+  name: Minister of Health Regulation 62 of 2017
+  url: https://jdih.kemkes.go.id/storage/documents/pdfs/2017permenkes062.pdf
+  covers: >-
+    Marketing authorisation (*izin edar*) for medical devices and in vitro diagnostic devices: risk
+    classes, documents, and validity of five years.
+  status: In force, as amended by Minister of Health Regulation 26 of 2018.
+  guides: '[A](regulation.html), [D](to-market.html)'
+
+- id: clinical-investigation
+  area: make
+  name: Minister of Health Regulation 63 of 2017
+  url: https://farmalkes.kemkes.go.id/en/unduh/permenkes-63-2017/
+  covers: >-
+    Good clinical investigation practice for medical devices: ethics approval, and the Ministry's
+    approval for studies before registration.
+  status: In force.
+  guides: '[D](to-market.html)'
+
+- id: distribution
+  area: make
+  name: Minister of Health Regulation 4 of 2014
+  url: https://farmalkes.kemkes.go.id/unduh/modul-cara-distribusi-alat-kesehatan-yang-baik/
+  covers: Good distribution practice for medical devices (CDAKB), which every distributor must apply.
+  status: In force.
+  guides: '[A](regulation.html)'
+
+- id: procurement
+  area: buy
+  name: Presidential Regulation 16 of 2018 on government procurement
+  url: https://peraturan.bpk.go.id/Details/73586
+  covers: >-
+    Government procurement: roles, methods, the e-catalogue, and the duty to use domestic products.
+  status: >-
+    In force, amended by Presidential Regulations 12 of 2021 and 46 of 2025. Since the 2025
+    amendment, buying through the e-catalogue is compulsory when the item is listed there.
+  changed: true
+  guides: '[1](specification.html), [3](process.html)'
+
+- id: local-content
+  area: buy
+  name: Minister of Industry Regulation 35 of 2025
+  url: https://peraturan.bpk.go.id/Details/333003/permenperin-no-35-tahun-2025
+  covers: How local content (TKDN) is calculated and certified.
+  status: >-
+    In force since September 2025. It replaced Minister of Industry Regulation 16 of 2011.
+  changed: true
+  guides: '[A](regulation.html), [D](to-market.html)'
+
+- id: calibration
+  area: use
+  name: Minister of Health Regulation 54 of 2015
+  url: https://peraturan.bpk.go.id/Download/107180/Permenkes%20Nomor%2054%20Tahun%202015.pdf
+  covers: >-
+    Testing and calibration of every medical device used in a health facility, at least once a
+    year.
+  status: In force, as amended by Minister of Health Regulation 26 of 2018.
+  guides: '[A](regulation.html)'
+
+- id: medical-records
+  area: use
+  name: Minister of Health Regulation 24 of 2022
+  url: https://peraturan.bpk.go.id/Details/245544
+  covers: >-
+    Medical records: every health facility must keep electronic records, connected to the national
+    platform (SATUSEHAT).
+  status: In force. The deadline for electronic records was 31 December 2023.
+  guides: '[E](open-source.html)'
+
+- id: data-protection
+  area: use
+  name: Law 27 of 2022 on Personal Data Protection
+  url: https://peraturan.bpk.go.id/Details/229798
+  covers: Personal data, including health data, which the law treats as sensitive.
+  status: In force. Its two-year transition period ended in October 2024.
+  guides: '[E](open-source.html)'
+
+- id: telemedicine
+  area: use
+  name: Minister of Health Regulation 20 of 2019
+  url: https://jdih.kemkes.go.id/common/dokumen/2019permenkes020.pdf
+  covers: >-
+    Telemedicine between health facilities: teleradiology, tele-electrocardiography,
+    tele-ultrasound and clinical teleconsultation.
+  status: In force.
+  guides: '[Innovation](innovation.html#telemedicine)'

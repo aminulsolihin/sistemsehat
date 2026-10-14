@@ -6,21 +6,21 @@ reviewed: 11 October 2026
 nav:
   - url: guides.html
     label: Guides
+  - url: innovation.html
+    label: Innovation
+  - url: regulations.html
+    label: Regulations
   - url: articles.html
     label: Articles
-  - url: projects.html
-    label: Open projects
-  - url: dossiers.html
-    label: Dossiers
-  - url: checklist.html
-    label: Checklist
-  - url: glossary.html
-    label: Glossary
+  - url: toolkit.html
+    label: Toolkit
   - url: about.html
     label: About
 
 labels:
-  projects.html: Open projects
+  regulations.html: Regulations
+  toolkit.html: Toolkit
+  innovation.html: Innovation
   articles.html: Articles
   guides.html: Guides
   dossiers.html: Dossiers
@@ -132,7 +132,7 @@ topics:
   - id: regulation
     label: Regulation
 all_topics: All topics
-k_project: Open project
+k_innovation: Innovation
 f_build: Build
 f_buy: Buy
-rel_projects: Open-source hardware and software, with licence and status
+rel_innovation: New technologies and open-source projects, with the evidence behind them

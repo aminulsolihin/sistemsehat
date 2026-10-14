@@ -1,0 +1,115 @@
+# Halaman Peraturan (regulations.html). Samakan setiap id dengan versi bahasa Inggris.
+# area: make (membuat dan mendaftarkan alat), buy (membelinya), use (memakai alat dan data).
+# Saat memeriksa ulang, perbarui status dan tanggal "diperiksa" di bagian atas id/regulations.html.
+# Gunakan pasal.id atau peraturan.bpk.go.id untuk melihat apakah aturan sudah diubah atau dicabut.
+
+- id: health-law
+  area: make
+  name: Undang-Undang Nomor 17 Tahun 2023 tentang Kesehatan
+  url: https://peraturan.bpk.go.id/Details/258028
+  covers: >-
+    Undang-undang utama bidang kesehatan. Di antaranya mewajibkan izin edar untuk alat kesehatan.
+  status: Berlaku. Peraturan pelaksananya adalah Peraturan Pemerintah Nomor 28 Tahun 2024.
+  guides: '[A](regulation.html), [D](to-market.html)'
+
+- id: business-licensing
+  area: make
+  name: Peraturan Pemerintah Nomor 28 Tahun 2025, dan Peraturan Menteri Kesehatan Nomor 11 Tahun 2025
+  url: https://jdih.kemkes.go.id/documents/peraturan-menteri-kesehatan-nomor-11-tahun-2025
+  covers: >-
+    Perizinan berusaha berbasis risiko melalui OSS, termasuk perizinan produksi dan distribusi alat
+    kesehatan.
+  status: >-
+    Berlaku sejak Oktober 2025. Peraturan Nomor 11 Tahun 2025 menggantikan Peraturan Menteri
+    Kesehatan Nomor 14 Tahun 2021.
+  changed: true
+  guides: '[D](to-market.html)'
+
+- id: marketing-authorisation
+  area: make
+  name: Peraturan Menteri Kesehatan Nomor 62 Tahun 2017
+  url: https://jdih.kemkes.go.id/storage/documents/pdfs/2017permenkes062.pdf
+  covers: >-
+    Izin edar alat kesehatan dan alat kesehatan diagnostik in vitro: kelas risiko, dokumen, dan masa
+    berlaku lima tahun.
+  status: Berlaku, sebagaimana diubah dengan Peraturan Menteri Kesehatan Nomor 26 Tahun 2018.
+  guides: '[A](regulation.html), [D](to-market.html)'
+
+- id: clinical-investigation
+  area: make
+  name: Peraturan Menteri Kesehatan Nomor 63 Tahun 2017
+  url: https://farmalkes.kemkes.go.id/en/unduh/permenkes-63-2017/
+  covers: >-
+    Cara uji klinik alat kesehatan yang baik: persetujuan etik, dan persetujuan Kementerian untuk uji
+    sebelum pendaftaran.
+  status: Berlaku.
+  guides: '[D](to-market.html)'
+
+- id: distribution
+  area: make
+  name: Peraturan Menteri Kesehatan Nomor 4 Tahun 2014
+  url: https://farmalkes.kemkes.go.id/unduh/modul-cara-distribusi-alat-kesehatan-yang-baik/
+  covers: Cara distribusi alat kesehatan yang baik (CDAKB), yang wajib diterapkan setiap distributor.
+  status: Berlaku.
+  guides: '[A](regulation.html)'
+
+- id: procurement
+  area: buy
+  name: Peraturan Presiden Nomor 16 Tahun 2018 tentang Pengadaan Barang/Jasa Pemerintah
+  url: https://peraturan.bpk.go.id/Details/73586
+  covers: >-
+    Pengadaan pemerintah: peran, metode, katalog elektronik, dan kewajiban memakai produk dalam
+    negeri.
+  status: >-
+    Berlaku, diubah dengan Peraturan Presiden Nomor 12 Tahun 2021 dan Nomor 46 Tahun 2025. Sejak
+    perubahan 2025, pembelian melalui katalog elektronik wajib jika barangnya tersedia di sana.
+  changed: true
+  guides: '[1](specification.html), [3](process.html)'
+
+- id: local-content
+  area: buy
+  name: Peraturan Menteri Perindustrian Nomor 35 Tahun 2025
+  url: https://peraturan.bpk.go.id/Details/333003/permenperin-no-35-tahun-2025
+  covers: Cara menghitung dan menyertifikasi tingkat komponen dalam negeri (TKDN).
+  status: >-
+    Berlaku sejak September 2025. Menggantikan Peraturan Menteri Perindustrian Nomor 16 Tahun 2011.
+  changed: true
+  guides: '[A](regulation.html), [D](to-market.html)'
+
+- id: calibration
+  area: use
+  name: Peraturan Menteri Kesehatan Nomor 54 Tahun 2015
+  url: https://peraturan.bpk.go.id/Download/107180/Permenkes%20Nomor%2054%20Tahun%202015.pdf
+  covers: >-
+    Pengujian dan kalibrasi setiap alat kesehatan yang dipakai di fasilitas kesehatan, paling sedikit
+    sekali setahun.
+  status: Berlaku, sebagaimana diubah dengan Peraturan Menteri Kesehatan Nomor 26 Tahun 2018.
+  guides: '[A](regulation.html)'
+
+- id: medical-records
+  area: use
+  name: Peraturan Menteri Kesehatan Nomor 24 Tahun 2022
+  url: https://peraturan.bpk.go.id/Details/245544
+  covers: >-
+    Rekam medis: setiap fasilitas kesehatan wajib menyelenggarakan rekam medis elektronik yang
+    terhubung dengan platform nasional (SATUSEHAT).
+  status: Berlaku. Batas waktu rekam medis elektronik adalah 31 Desember 2023.
+  guides: '[E](open-source.html)'
+
+- id: data-protection
+  area: use
+  name: Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi
+  url: https://peraturan.bpk.go.id/Details/229798
+  covers: Data pribadi, termasuk data kesehatan, yang digolongkan sebagai data pribadi sensitif.
+  status: Berlaku. Masa transisi dua tahunnya berakhir pada Oktober 2024.
+  guides: '[E](open-source.html)'
+
+- id: telemedicine
+  area: use
+  name: Peraturan Menteri Kesehatan Nomor 20 Tahun 2019
+  url: https://jdih.kemkes.go.id/common/dokumen/2019permenkes020.pdf
+  covers: >-
+    Telemedisin antarfasilitas kesehatan: teleradiologi, teleelektrokardiografi, teleultrasonografi,
+    dan telekonsultasi klinis.
+  status: Berlaku.
+  guides: '[Inovasi](innovation.html#telemedicine)'

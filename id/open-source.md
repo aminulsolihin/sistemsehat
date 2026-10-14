@@ -149,7 +149,7 @@ Apa yang diminta setiap lisensi saat Anda menyebarkan versi yang diubah. Ini rin
 
 ## Contoh
 
-Halaman [Proyek terbuka](projects.html) memuat perangkat keras dan lunak kesehatan sumber terbuka, beserta lisensinya dan apa kata dokumennya sendiri tentang pemakaian medis.
+Halaman [Inovasi](innovation.html#hardware) memuat perangkat keras dan lunak kesehatan sumber terbuka, beserta lisensinya dan apa kata dokumennya sendiri tentang pemakaian medis.
 
 ## Sumber
 

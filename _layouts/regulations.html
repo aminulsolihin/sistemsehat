@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{%- comment -%}
+  The Regulations page: the Indonesian rules that matter for building and buying devices, grouped by
+  area, from _data/LANGUAGE/regulations.yml. Rules marked "changed: true" are flagged as recently changed.
+{%- endcomment -%}
+{%- assign rules = site.data[page.lang].regulations -%}
+{%- assign recent = rules | where: "changed", true -%}
+{%- assign h = page.columns -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        <p class="reviewed">{{ page.note }}</p>
+      </header>
+
+      <aside class="recent-changes" aria-labelledby="recent-title">
+        <h2 id="recent-title">{{ page.recent_heading }}</h2>
+        <ul>
+{%- for r in recent %}
+          <li><a href="#{{ r.id }}">{{ r.name }}</a>: {{ r.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+{%- endfor %}
+        </ul>
+      </aside>
+
+      <div class="prose library regulations">
+{%- for group in page.groups %}
+{%- assign items = rules | where: "area", group.area %}
+        <h2 id="{{ group.area }}">{{ group.heading }}</h2>
+        <div class="table-wrap">
+          <table role="table">
+            <thead role="rowgroup">
+              <tr role="row">{% for c in h %}<th scope="col" role="columnheader">{{ c }}</th>{% endfor %}</tr>
+            </thead>
+            <tbody role="rowgroup">
+{%- for r in items %}
+              <tr role="row" id="{{ r.id }}"><th scope="row" role="rowheader"><a href="{{ r.url }}">{{ r.name }}</a></th><td role="cell" data-label="{{ h[1] }}">{{ r.covers | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td><td role="cell" data-label="{{ h[2] }}">{% if r.changed %}<span class="status status-changed">{{ page.changed_label }}</span> {% endif %}{{ r.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td><td role="cell" data-label="{{ h[3] }}">{{ r.guides | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td></tr>
+{%- endfor %}
+            </tbody>
+          </table>
+        </div>
+{%- endfor %}
+{{ content }}
+      </div>
+    </div>

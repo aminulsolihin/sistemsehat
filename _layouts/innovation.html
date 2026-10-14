@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- comment -%}
+  The Innovation page: technologies changing care, then open-source projects.
+  Entries come from _data/LANGUAGE/innovation.yml; the sections and their column names from the
+  page's front matter (groups).
+{%- endcomment -%}
+{%- assign t = site.data[page.lang].ui -%}
+{%- assign entries = site.data[page.lang].innovation -%}
+    <div class="wrap">
+      <header class="page-head">
+        <h1>{{ page.heading }}</h1>
+        <p class="lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        <p class="reviewed">{{ page.note }}</p>
+      </header>
+
+      <div class="prose library innovation">
+{%- for group in page.groups %}
+{%- assign items = entries | where: "kind", group.kind %}
+{%- assign h = group.columns %}
+        <h2 id="{{ group.kind }}">{{ group.heading }}</h2>
+{%- if group.lead %}
+        <p>{{ group.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+{%- endif %}
+        <div class="table-wrap">
+          <table role="table">
+            <thead role="rowgroup">
+              <tr role="row">{% for c in h %}<th scope="col" role="columnheader">{{ c }}</th>{% endfor %}</tr>
+            </thead>
+            <tbody role="rowgroup">
+{%- for p in items %}
+              <tr role="row" id="{{ p.id }}"><th scope="row" role="rowheader"><a href="{{ p.url }}">{{ p.name }}</a></th><td role="cell" data-label="{{ h[1] }}">{{ p.what | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td><td role="cell" data-label="{{ h[2] }}">{{ p.basis | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td><td role="cell" data-label="{{ h[3] }}">{{ p.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}</td></tr>
+{%- endfor %}
+            </tbody>
+          </table>
+        </div>
+{%- endfor %}
+{{ content }}
+      </div>
+    </div>

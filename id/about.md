@@ -52,7 +52,7 @@ Aminul bekerja di bidang pengadaan sektor publik di Indonesia dan mengembangkan 
 - **Hanya sumber publik.** Setiap angka dan persyaratan berasal dari dokumen yang dapat diunduh siapa saja, dan masing-masing dikutip.
 - **Tanpa uang dari penjual.** Tidak ada dana, hadiah, atau konten bersponsor dari produsen maupun distributor.
 - **Bukan tender yang sedang berjalan.** Tidak ada yang diterbitkan tentang tender yang masih dalam tahap evaluasi.
-- **Tanpa pemeringkatan atau promosi.** Panduan ini menjelaskan cara mengembangkan, memilih, dan membeli teknologi, bukan produk mana yang harus dipilih. Proyek terbuka yang dicantumkan bukan berarti direkomendasikan.
+- **Tanpa pemeringkatan atau promosi.** Panduan ini menjelaskan cara mengembangkan, memilih, dan membeli teknologi, bukan produk mana yang harus dipilih. Teknologi atau proyek yang dicantumkan di halaman Inovasi bukan berarti direkomendasikan.
 - **Koreksi secara terbuka.** Jika ada yang keliru atau sudah tidak berlaku, akan diperbaiki dan perubahannya dicatat di halaman itu.
 
 ## Status

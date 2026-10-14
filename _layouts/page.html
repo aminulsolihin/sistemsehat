@@ -13,7 +13,7 @@ layout: default
 {%- endif %}
       </header>
 
-      <div class="prose">
+      <div class="prose{% if page.parent == 'toolkit.html' and page.crumb %} template-page{% endif %}">
 {{ content }}
       </div>
     </div>
